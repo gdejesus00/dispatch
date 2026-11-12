@@ -26,6 +26,15 @@ Search the web and open the pages. Prefer primary and wire sources.
 5. **Europe.** NATO, the EU, defense spending, elections and governments, Russia's actions against European states, the Baltic and Black Sea regions. Reuters, AP, Politico Europe, Euronews, DW, the Financial Times, OSW.
 6. **The days ahead.** Dated events in the next two weeks on these topics: summits, ministerials, votes, deadlines, exercises, hearings, post events, anniversaries that matter. Only dates a source confirms.
 
+## Reading pages
+
+Use your web fetch tool when you have one. If it is missing or a site refuses it, two small readers in this repository work from a normal computer:
+
+- `python -I tools/page_links.py <url> [how-many] [filter]` lists the headlines and links on a front page.
+- `python -I tools/page_text.py <url> [start] [length] [start-at-this-phrase]` prints the plain text of an article.
+
+Known to read well: criticalthreats.org (the ISW daily report is at `/analysis/russian-offensive-campaign-assessment-<month>-<day>-<year>`, usually dated yesterday), kyivindependent.com/tag/war/, ukrinform.net/rubric-ato, armytimes.com, militarytimes.com, euronews.com/my-europe, politico.eu. army.mil refuses scripts; use web search for Fort Knox and link the army.mil page the search names.
+
 ## Labels for battlefield claims
 
 Every front axis, every map event, and any war story where it matters carries one status:
