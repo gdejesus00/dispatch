@@ -50,34 +50,33 @@
 <div id="stale" class="stale" hidden></div>
 
 <main id="paper" aria-busy="true">
-  <section class="listen" aria-label="Audio brief">
-    <button id="play" class="play" type="button" aria-label="Play the morning brief"><span class="play-icon" aria-hidden="true"></span></button>
-    <div class="listen-body">
-      <p class="kicker">Listen</p>
-      <p class="listen-title">The Morning Brief <span id="listen-meta"></span></p>
-      <div class="scrub">
-        <span id="t-now">0:00</span>
-        <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Position in the brief">
-        <span id="t-end">–:––</span>
-      </div>
-    </div>
-    <div class="listen-tools">
-      <button id="back15" type="button" title="Back 15 seconds" aria-label="Back 15 seconds">−15</button>
-      <button id="fwd30" type="button" title="Forward 30 seconds" aria-label="Forward 30 seconds">+30</button>
-      <button id="speed" type="button" title="Playback speed" aria-label="Playback speed">1×</button>
-      <a id="download" class="dl" href="#" download hidden title="Save the MP3" aria-label="Save the MP3">MP3</a>
-      <button id="read-btn" type="button" title="Read the script">Script</button>
-    </div>
-    <audio id="audio" preload="metadata"></audio>
-  </section>
-  <section id="script-panel" class="script-panel" hidden aria-label="Script of the audio brief"></section>
-
   <section id="lead" class="lead">
     <article class="lead-story">
       <p class="kicker" id="lead-kicker">Bottom line up front</p>
       <h2 id="lead-headline">Setting today's edition…</h2>
       <p class="dek" id="lead-dek"></p>
       <p class="bottom-line" id="bottom-line"></p>
+      <section class="listen" aria-label="Audio brief">
+        <button id="play" class="play" type="button" aria-label="Play the morning brief"><span class="play-icon" aria-hidden="true"></span></button>
+        <div class="listen-body">
+          <p class="kicker">Listen</p>
+          <p class="listen-title">The Morning Brief <span id="listen-meta"></span></p>
+          <div class="scrub">
+            <span id="t-now">0:00</span>
+            <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Position in the brief">
+            <span id="t-end">–:––</span>
+          </div>
+        </div>
+        <div class="listen-tools">
+          <button id="back15" type="button" title="Back 15 seconds" aria-label="Back 15 seconds">−15</button>
+          <button id="fwd30" type="button" title="Forward 30 seconds" aria-label="Forward 30 seconds">+30</button>
+          <button id="speed" type="button" title="Playback speed" aria-label="Playback speed">1×</button>
+          <a id="download" class="dl" href="#" download hidden title="Save the MP3" aria-label="Save the MP3">MP3</a>
+          <button id="read-btn" type="button" title="Read the script">Script</button>
+        </div>
+        <audio id="audio" preload="metadata"></audio>
+      </section>
+      <section id="script-panel" class="script-panel" hidden aria-label="Script of the audio brief"></section>
     </article>
     <aside class="lead-side">
       <div class="box numbers" id="numbers-box" hidden>

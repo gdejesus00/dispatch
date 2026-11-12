@@ -342,12 +342,22 @@ function setupAudio(ed) {
   const sentences = script.replace(/\s+/g, ' ').match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) || [];
   let sIx = 0;
   let speaking = false;
+  // Devices ship several voices; the default is often the most robotic. Prefer the natural-sounding ones.
+  function bestVoice() {
+    const voices = ('speechSynthesis' in window ? speechSynthesis.getVoices() : []).filter((v) => /^en[-_]/i.test(v.lang));
+    const score = (v) => (/natural|neural/i.test(v.name) ? 8 : 0) + (/google/i.test(v.name) ? 4 : 0) + (/online|enhanced|premium/i.test(v.name) ? 3 : 0)
+      + (/en[-_]US/i.test(v.lang) ? 2 : 0) + (/andrew|ava|brian|emma|guy|aria|jenny/i.test(v.name) ? 1 : 0) + (v.localService ? 0 : 1);
+    return voices.sort((a, b) => score(b) - score(a))[0] || null;
+  }
+  if ('speechSynthesis' in window) speechSynthesis.getVoices();
   function speakNext() {
     if (!speaking) return;
     if (sIx >= sentences.length) { speaking = false; sIx = 0; setPlaying(false); seek.value = 0; return; }
     const u = new SpeechSynthesisUtterance(sentences[sIx]);
     u.rate = speeds[speedIx];
     u.lang = 'en-US';
+    const v = bestVoice();
+    if (v) u.voice = v;
     u.onend = () => { if (speaking) { sIx += 1; seek.value = Math.round((sIx / sentences.length) * 1000); $('t-now').textContent = `${Math.round((sIx / sentences.length) * 100)}%`; speakNext(); } };
     u.onerror = () => { speaking = false; setPlaying(false); };
     speechSynthesis.speak(u);
@@ -396,7 +406,6 @@ function setupAudio(ed) {
   }
 
   play.addEventListener('click', () => {
-    play.closest('.listen').classList.add('used');
     if (mode === 'file') { if (audio.paused) audio.play().catch(() => {}); else audio.pause(); return; }
     if (speaking) { speaking = false; speechSynthesis.cancel(); setPlaying(false); }
     else { speaking = true; setPlaying(true); speechSynthesis.cancel(); speakNext(); }
