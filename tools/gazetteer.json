@@ -1,0 +1,22 @@
+{
+  "note": "Coordinates for places that come up often. Use these for map pins. For a place not listed, look up its coordinates and check them against a neighbour here.",
+  "places": {
+    "Zaporizhzhia": [47.8388, 35.1396], "Huliaipole": [47.6636, 36.2569], "Orikhiv": [47.5681, 35.7856],
+    "Mala Tokmachka": [47.5300, 35.8900], "Robotyne": [47.4470, 35.8360], "Stepnohirsk": [47.5700, 35.2900],
+    "Kamianske": [47.5100, 35.3600], "Vasylivka": [47.4369, 35.2742], "Polohy": [47.4842, 36.2536],
+    "Tokmak": [47.2553, 35.7056], "Melitopol": [46.8489, 35.3653], "Enerhodar (nuclear plant)": [47.5119, 34.5858],
+    "Nikopol": [47.5667, 34.4000], "Kherson": [46.6354, 32.6169], "Antonivka": [46.6730, 32.7200],
+    "Oleshky": [46.6258, 32.7186], "Nova Kakhovka": [46.7545, 33.3486], "Beryslav": [46.8417, 33.4289],
+    "Dnipro delta islands": [46.5600, 32.5500], "Kinburn Spit": [46.5600, 31.5300], "Mykolaiv": [46.9750, 31.9946],
+    "Odesa": [46.4825, 30.7233], "Kryvyi Rih": [47.9105, 33.3918], "Dnipro": [48.4647, 35.0462],
+    "Pokrovsk": [48.2819, 37.1758], "Kostiantynivka": [48.5277, 37.7069], "Kramatorsk": [48.7389, 37.5844],
+    "Lyman": [48.9850, 37.8020], "Kupiansk": [49.7106, 37.6156], "Kharkiv": [49.9935, 36.2304],
+    "Vovchansk": [50.2908, 36.9411], "Sumy": [50.9077, 34.7981], "Kyiv": [50.4501, 30.5234], "Lviv": [49.8397, 24.0297],
+    "Sevastopol": [44.6166, 33.5254], "Moscow": [55.7558, 37.6173], "Minsk": [53.9006, 27.5590],
+    "Brussels": [50.8503, 4.3517], "Warsaw": [52.2297, 21.0122], "Berlin": [52.5200, 13.4050], "Paris": [48.8566, 2.3522],
+    "London": [51.5074, -0.1278], "Vilnius": [54.6872, 25.2797], "Riga": [56.9496, 24.1052], "Tallinn": [59.4370, 24.7536],
+    "Helsinki": [60.1699, 24.9384], "Bucharest": [44.4268, 26.1025], "Chisinau": [47.0105, 28.8638],
+    "Budapest": [47.4979, 19.0402], "Rome": [41.9028, 12.4964], "Ramstein": [49.4369, 7.6003], "Wiesbaden": [50.0782, 8.2398],
+    "Grafenwoehr": [49.6980, 11.9400], "Istanbul": [41.0082, 28.9784]
+  }
+}

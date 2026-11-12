@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Morning Dispatch</title>
+<meta name="description" content="A daily open-source roll-up: Fort Knox, the Army, the war in Ukraine, the southern front and Europe.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#lead">Skip to the news</a>
+
+<header class="top">
+  <div class="rail">
+    <span id="rail-date">&nbsp;</span>
+    <span id="rail-updated" class="rail-mid">&nbsp;</span>
+    <span class="rail-right">
+      <label class="sr" for="edition-pick">Edition</label>
+      <select id="edition-pick" title="Read an earlier edition"></select>
+      <button id="theme-btn" type="button" title="Switch between day and night paper" aria-label="Switch between day and night paper">◐</button>
+    </span>
+  </div>
+  <div class="masthead">
+    <p class="ears ear-left">Open sources only<br><b>24-hour roll-up</b></p>
+    <h1>The Morning Dispatch</h1>
+    <p class="ears ear-right"><span id="ear-edition">Daily edition</span><br><b id="ear-count">&nbsp;</b></p>
+  </div>
+  <nav class="sections" aria-label="Sections">
+    <a href="#lead">Front page</a>
+    <a href="#front">Southern front</a>
+    <a href="#s-ukraine">The war</a>
+    <a href="#s-army">Army</a>
+    <a href="#s-fort-knox">Fort Knox</a>
+    <a href="#s-europe">Europe</a>
+    <a href="#ahead">Days ahead</a>
+    <a href="#sources">Sources</a>
+  </nav>
+</header>
+
+<div id="stale" class="stale" hidden></div>
+
+<main id="paper" aria-busy="true">
+  <section class="listen" aria-label="Audio brief">
+    <button id="play" class="play" type="button" aria-label="Play the morning brief"><span class="play-icon" aria-hidden="true"></span></button>
+    <div class="listen-body">
+      <p class="kicker">Listen</p>
+      <p class="listen-title">The Morning Brief <span id="listen-meta"></span></p>
+      <div class="scrub">
+        <span id="t-now">0:00</span>
+        <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Position in the brief">
+        <span id="t-end">–:––</span>
+      </div>
+    </div>
+    <div class="listen-tools">
+      <button id="back15" type="button" title="Back 15 seconds" aria-label="Back 15 seconds">−15</button>
+      <button id="fwd30" type="button" title="Forward 30 seconds" aria-label="Forward 30 seconds">+30</button>
+      <button id="speed" type="button" title="Playback speed" aria-label="Playback speed">1×</button>
+      <a id="download" class="dl" href="#" download hidden title="Save the MP3" aria-label="Save the MP3">MP3</a>
+      <button id="read-btn" type="button" title="Read the script">Script</button>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+  </section>
+  <section id="script-panel" class="script-panel" hidden aria-label="Script of the audio brief"></section>
+
+  <section id="lead" class="lead">
+    <article class="lead-story">
+      <p class="kicker" id="lead-kicker">Bottom line up front</p>
+      <h2 id="lead-headline">Setting today's edition…</h2>
+      <p class="dek" id="lead-dek"></p>
+      <p class="bottom-line" id="bottom-line"></p>
+    </article>
+    <aside class="lead-side">
+      <div class="box numbers" id="numbers-box" hidden>
+        <h3>By the numbers</h3>
+        <div id="numbers"></div>
+      </div>
+      <div class="box analyst" id="analyst-box" hidden>
+        <h3>Analyst's corner</h3>
+        <p class="indicator" id="an-indicator"></p>
+        <p id="an-judgment"></p>
+        <p class="conf"><span id="an-conf" class="stamp"></span> <span id="an-why"></span></p>
+      </div>
+    </aside>
+  </section>
+
+  <section id="front" class="front">
+    <div class="section-head">
+      <h2>The Southern Front</h2>
+      <p class="section-sub">Zaporizhzhia and Kherson, mapped</p>
+    </div>
+    <p class="front-summary" id="front-summary"></p>
+    <div class="map-tools">
+      <div class="chips" role="group" aria-label="Map view">
+        <button type="button" class="chip on" data-view="south">Southern front</button>
+        <button type="button" class="chip" data-view="ukraine">All Ukraine</button>
+        <button type="button" class="chip" data-view="europe">Europe</button>
+      </div>
+      <div class="chips" id="type-chips" role="group" aria-label="Show event types"></div>
+    </div>
+    <div class="map-wrap">
+      <div id="map" role="application" aria-label="Map of reported events"></div>
+      <ol id="event-list" class="event-list" aria-label="Reported events"></ol>
+    </div>
+    <p class="map-note">Each pin is a reported event placed at the named town, not an exact position. <b>Claimed</b> is one side or one source; <b>corroborated</b> is two independent sources; <b>confirmed</b> is visual evidence or both sides. For the line of contact itself, open <a href="https://deepstatemap.live/en" target="_blank" rel="noopener noreferrer">DeepStateMap</a> or the <a href="https://understandingwar.org/" target="_blank" rel="noopener noreferrer">ISW map</a>.</p>
+    <div class="axes" id="axes"></div>
+  </section>
+
+  <div class="columns" id="columns"></div>
+
+  <section id="ahead" class="ahead">
+    <div class="section-head">
+      <h2>The Days Ahead</h2>
+      <p class="section-sub">Dates worth watching</p>
+    </div>
+    <ol id="ahead-list" class="ahead-list"></ol>
+  </section>
+
+  <section id="sources" class="sources">
+    <details>
+      <summary><h2>Sources for this edition</h2></summary>
+      <ol id="source-list"></ol>
+    </details>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Personal open-source study notes, compiled each morning by Claude from public reporting. Not an official product of any government or service. Summaries link to the original reporting; check the source before relying on a claim.</p>
+  <p id="foot-build"></p>
+</footer>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
