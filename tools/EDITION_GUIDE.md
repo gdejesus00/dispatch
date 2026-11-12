@@ -57,12 +57,6 @@ Write one JSON file with exactly this shape. Limits are checked by `tools/valida
   "lead": { "headline": "the day's main story, 8 to 140 characters", "dek": "one sentence under it, 20 to 320 characters" },
   "bottom_line": "Two to four sentences: what matters most today across all topics. 80 to 900 characters.",
   "numbers": [ { "value": "112", "label": "what the number counts", "source": "who reported it" } ],
-  "analyst": {
-    "indicator": "one indicator or key assumption to watch",
-    "judgment": "one judgment in estimative language: almost certainly, very likely, likely, roughly even chance, unlikely, very unlikely",
-    "confidence": "low | moderate | high",
-    "why": "one sentence on why that confidence"
-  },
   "front": {
     "summary": "two or three sentences on the southern front as a whole",
     "axes": [
@@ -101,7 +95,7 @@ Targets for a normal day: 4 to 6 front axes (Huliaipole, Orikhiv, Stepnohirsk an
 `audio.script` is a 1,100 to 1,600 word spoken brief, about eight to ten minutes. It is read aloud by a speech voice, so:
 
 - Plain paragraphs separated by a blank line. No headings, bullets, links, brackets or symbols. Do not use the characters # * _ | or the at sign.
-- Open with the date and the bottom line. Then the southern front axis by axis, the wider war, the Army, Fort Knox, Europe, the analyst's corner, and close with what to watch in the days ahead.
+- Open with the date and the bottom line. Then the southern front axis by axis, the wider war, the Army, Fort Knox, Europe, and close with what to watch in the days ahead. Do not include an analyst's corner or your own forecasts.
 - Short sentences. Say who reported each battlefield claim and how solid it is, in words ("Ukraine's General Staff says", "that is one side's claim").
 - Write numbers the way they are spoken when it helps ("about fifteen hundred"). Spell out anything a voice would stumble on.
 - It must stand on its own for someone who has not seen the page.

@@ -147,11 +147,6 @@ button, select { font: inherit; color: inherit; }
 .num-value { grid-row: span 2; font-family: var(--display); font-weight: 900; font-size: 2rem; line-height: 1; color: var(--accent); font-variant-numeric: lining-nums; }
 .num-label { font-size: .95rem; line-height: 1.35; }
 .num-src { font-family: var(--label); font-size: 11px; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); }
-.analyst { background: var(--paper-2); padding: 0 16px 14px; }
-.analyst h3 { margin: 0 -16px 12px; padding: 7px 16px 0; }
-.analyst p { margin: 0 0 8px; font-size: .97rem; }
-.analyst .indicator { font-family: var(--display); font-weight: 700; font-size: 1.15rem; line-height: 1.25; }
-.analyst .conf { font-size: .88rem; color: var(--ink-2); }
 
 /* ----- front and map ----- */
 .front { padding-bottom: 30px; }

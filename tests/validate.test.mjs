@@ -21,6 +21,11 @@ test('rejects things that are not an edition', () => {
   assert.ok(validateEdition([]).length);
   assert.ok(validateEdition({}).length > 5);
 });
+test('an edition without the analyst box passes', () => {
+  const ed = makeSample('2026-11-12');
+  delete ed.analyst;
+  assert.deepEqual(validateEdition(ed), []);
+});
 test('rejects markup anywhere', () => bad((e) => { e.sections[0].items[0].summary += ' <img src=x onerror=alert(1)>'; }, /contains < or >/));
 test('rejects a link that is not https', () => bad((e) => { e.sections[1].items[0].url = 'javascript:alert(1)'; }, /https link/));
 test('rejects a missing section', () => bad((e) => { e.sections = e.sections.filter((s) => s.id !== 'fort-knox'); }, /missing "fort-knox"/));

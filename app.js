@@ -132,14 +132,6 @@ function render(ed) {
     });
     $('numbers-box').hidden = false;
   }
-  if (ed.analyst) {
-    $('an-indicator').textContent = ed.analyst.indicator;
-    $('an-judgment').textContent = ed.analyst.judgment;
-    $('an-conf').textContent = `${ed.analyst.confidence} confidence`;
-    $('an-why').textContent = ed.analyst.why;
-    $('analyst-box').hidden = false;
-  }
-
   renderFront(ed);
   renderColumns(ed);
   renderAhead(ed);

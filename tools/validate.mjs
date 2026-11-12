@@ -103,12 +103,15 @@ export function validateEdition(ed) {
   }
 
   const a = ed.analyst;
-  if (!a || typeof a !== 'object') err('analyst is required');
-  else {
+  // The analyst box was removed from the page on request. Old editions still carry it; new ones leave it out.
+  if (a !== undefined) {
+    if (!a || typeof a !== 'object') err('analyst must be an object when present');
+    else {
     if (!isStr(a.indicator, 10, 200)) err('analyst.indicator');
     if (!isStr(a.judgment, 40, 700)) err('analyst.judgment');
     if (!CONFIDENCE.includes(a.confidence)) err(`analyst.confidence: ${CONFIDENCE.join(', ')}`);
     if (!isStr(a.why, 20, 400)) err('analyst.why');
+    }
   }
 
   if (!Array.isArray(ed.numbers) || ed.numbers.length > 6) err('numbers: a list of up to 6');
