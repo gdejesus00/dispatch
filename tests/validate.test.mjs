@@ -26,6 +26,14 @@ test('an edition without the analyst box passes', () => {
   delete ed.analyst;
   assert.deepEqual(validateEdition(ed), []);
 });
+test('every body of text must name its sources', () => {
+  bad((e) => { delete e.lead.sources; }, /lead\.sources/);
+  bad((e) => { e.front.sources = []; }, /front\.sources/);
+  bad((e) => { delete e.front.axes[0].sources; }, /front\.axes\[0\]\.sources/);
+  bad((e) => { e.sections[1].sources = [{ name: 'Wire', url: 'http://example.com' }]; }, /sections\[1\]\.sources\[0\]\.url/);
+  bad((e) => { delete e.numbers[0].url; }, /numbers\[0\]\.url/);
+  bad((e) => { delete e.upcoming[0].url; }, /upcoming\[0\]\.url/);
+});
 test('rejects markup anywhere', () => bad((e) => { e.sections[0].items[0].summary += ' <img src=x onerror=alert(1)>'; }, /contains < or >/));
 test('rejects a link that is not https', () => bad((e) => { e.sections[1].items[0].url = 'javascript:alert(1)'; }, /https link/));
 test('rejects a missing section', () => bad((e) => { e.sections = e.sections.filter((s) => s.id !== 'fort-knox'); }, /missing "fort-knox"/));

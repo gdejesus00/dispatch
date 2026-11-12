@@ -38,6 +38,16 @@ export function validateEdition(ed) {
     if (gap > 36 * 3600 * 1000) err('generated_at is not within a day of date');
   }
 
+  // Every body of text names where it came from: a list of { name, url } links.
+  const srcs = (list, path) => {
+    if (!Array.isArray(list) || list.length < 1 || list.length > 8) return err(`${path}: 1 to 8 sources, each { name, url }`);
+    list.forEach((x, i) => {
+      if (!x || !isStr(x.name, 2, 80)) err(`${path}[${i}].name: the outlet`);
+      if (!x || !isUrl(x.url)) err(`${path}[${i}].url: must be an https link`);
+    });
+  };
+
+  srcs(ed.lead && ed.lead.sources, 'lead.sources');
   if (!ed.lead || !isStr(ed.lead.headline, 8, 140)) err('lead.headline: 8 to 140 characters');
   if (!ed.lead || !isStr(ed.lead.dek, 20, 320)) err('lead.dek: 20 to 320 characters');
   if (!isStr(ed.bottom_line, 80, 900)) err('bottom_line: 80 to 900 characters');
@@ -60,6 +70,7 @@ export function validateEdition(ed) {
       const p = `sections[${i}]`;
       if (!s || !SECTION_IDS.includes(s.id)) return err(`${p}.id: one of ${SECTION_IDS.join(', ')}`);
       if (!isStr(s.summary, 40, 900)) err(`${p}.summary: 40 to 900 characters`);
+      srcs(s.sources, `${p}.sources`);
       if (!Array.isArray(s.items)) return err(`${p}.items must be a list`);
       if (s.items.length > 8) err(`${p}.items: 8 at most`);
       if (s.items.length === 0 && !isStr(s.quiet_note, 10, 300)) err(`${p}: no items needs a quiet_note saying so`);
@@ -71,6 +82,7 @@ export function validateEdition(ed) {
   if (!f || typeof f !== 'object') err('front is required');
   else {
     if (!isStr(f.summary, 60, 900)) err('front.summary: 60 to 900 characters');
+    srcs(f.sources, 'front.sources');
     if (!Array.isArray(f.axes) || f.axes.length < 3 || f.axes.length > 10) err('front.axes: 3 to 10 axes');
     else {
       f.axes.forEach((a, i) => {
@@ -79,6 +91,7 @@ export function validateEdition(ed) {
         if (!a || !SECTORS.includes(a.sector)) err(`${p}.sector: ${SECTORS.join(' or ')}`);
         if (!a || !STATUSES.includes(a.status)) err(`${p}.status: ${STATUSES.join(', ')}`);
         if (!a || !isStr(a.text, 40, 700)) err(`${p}.text: 40 to 700 characters`);
+        srcs(a && a.sources, `${p}.sources`);
       });
       for (const s of SECTORS) if (!f.axes.some((a) => a && a.sector === s)) err(`front.axes: nothing for ${s}`);
     }
@@ -119,6 +132,7 @@ export function validateEdition(ed) {
     if (!n || !isStr(n.value, 1, 14)) err(`numbers[${i}].value: short, like "112" or "38%"`);
     if (!n || !isStr(n.label, 6, 120)) err(`numbers[${i}].label`);
     if (!n || !isStr(n.source, 2, 80)) err(`numbers[${i}].source`);
+    if (!n || !isUrl(n.url)) err(`numbers[${i}].url: must be an https link to where the number came from`);
   });
 
   if (!Array.isArray(ed.upcoming) || ed.upcoming.length < 2 || ed.upcoming.length > 14) err('upcoming: 2 to 14 entries');
@@ -129,7 +143,7 @@ export function validateEdition(ed) {
     if (!isStr(u.title, 6, 120)) err(`${p}.title`);
     if (!isStr(u.detail, 20, 400)) err(`${p}.detail`);
     if (![...SECTION_IDS, 'front'].includes(u.topic)) err(`${p}.topic: ${[...SECTION_IDS, 'front'].join(', ')}`);
-    if (u.url !== undefined && !isUrl(u.url)) err(`${p}.url: must be an https link`);
+    if (!isUrl(u.url)) err(`${p}.url: must be an https link to the source of the date`);
   });
 
   if (!ed.audio || !isStr(ed.audio.script, 1)) err('audio.script is required');

@@ -122,12 +122,15 @@ function render(ed) {
   $('lead-headline').textContent = ed.lead.headline;
   $('lead-dek').textContent = ed.lead.dek;
   $('bottom-line').textContent = ed.bottom_line;
+  fillSources($('lead-sources'), ed.lead.sources);
 
   if (ed.numbers && ed.numbers.length) {
     const box = $('numbers');
     ed.numbers.forEach((n) => {
       const row = el('div', 'num');
-      row.append(el('span', 'num-value', n.value), el('span', 'num-label', n.label), el('span', 'num-src', n.source));
+      const src = el('span', 'num-src');
+      src.append(link(n.url, n.source));
+      row.append(el('span', 'num-value', n.value), el('span', 'num-label', n.label), src);
       box.append(row);
     });
     $('numbers-box').hidden = false;
@@ -147,6 +150,16 @@ function render(ed) {
 }
 
 const safe = (v) => String(v).replace(/[^a-z-]/g, '');
+// "Sources: A \u00b7 B" under a body of text, each one a link to where the text came from.
+function fillSources(node, list) {
+  node.textContent = '';
+  const ok = (list || []).filter((x) => x && x.url);
+  if (!ok.length) { node.hidden = true; return node; }
+  node.append(ok.length > 1 ? 'Sources: ' : 'Source: ');
+  ok.forEach((x, i) => { if (i) node.append(' \u00b7 '); node.append(link(x.url, x.name)); });
+  return node;
+}
+const sourceLine = (list) => fillSources(el('p', 'byline src-line'), list);
 function stamp(status) { return el('span', `stamp s-${status}`, status); }
 
 function storyNode(it) {
@@ -170,7 +183,7 @@ function renderColumns(ed) {
     sec.id = `s-${id}`;
     const head = el('div', 'section-head');
     head.append(el('h2', null, SECTION_TITLES[id][0]), el('p', 'section-sub', SECTION_TITLES[id][1]));
-    sec.append(head, el('p', 'col-summary', s.summary));
+    sec.append(head, el('p', 'col-summary', s.summary), sourceLine(s.sources));
     if (!s.items.length && s.quiet_note) sec.append(el('p', 'quiet', s.quiet_note));
     s.items.forEach((it) => sec.append(storyNode(it)));
     wrap.append(sec);
@@ -190,6 +203,11 @@ function renderAhead(ed) {
     const h = el('h4');
     if (u.url) h.append(link(u.url, u.title)); else h.textContent = u.title;
     body.append(h, el('p', null, u.detail));
+    if (u.url) {
+      let host = 'source';
+      try { host = new URL(u.url).hostname.replace(/^www\./, ''); } catch { /* keep the plain label */ }
+      body.append(sourceLine([{ name: host, url: u.url }]));
+    }
     li.append(d, body);
     list.append(li);
   });
@@ -211,6 +229,7 @@ function setTiles() {
 
 function renderFront(ed) {
   $('front-summary').textContent = ed.front.summary;
+  fillSources($('front-sources'), ed.front.sources);
 
   const axes = $('axes');
   [['zaporizhzhia', 'Zaporizhzhia direction'], ['kherson', 'Kherson direction']].forEach(([sector, title]) => {
@@ -220,7 +239,7 @@ function renderFront(ed) {
       const row = el('div', 'axis');
       const h = el('h4', null, a.name);
       h.append(' ', stamp(a.status));
-      row.append(h, el('p', null, a.text));
+      row.append(h, el('p', null, a.text), sourceLine(a.sources));
       group.append(row);
     });
     axes.append(group);

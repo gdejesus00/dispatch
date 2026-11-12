@@ -109,6 +109,12 @@ button, select { font: inherit; color: inherit; }
 .stamp.s-confirmed { color: var(--paper); background: var(--ink); border-color: var(--ink); }
 .byline { margin: 6px 0 0; font-family: var(--label); font-size: 12px; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
 .byline a { color: var(--ink-2); }
+.src-line { margin-top: 8px; line-height: 1.7; }
+.axis p.src-line, .ahead-body p.src-line, .col p.src-line { font-size: 12px; margin-top: 6px; }
+.bottom-line + .src-line { margin-top: 12px; }
+.col-summary + .src-line { margin: 0 0 10px; }
+.front-summary + .src-line { margin: -6px 0 14px; }
+.num-src a { color: inherit; }
 
 /* ----- listen bar ----- */
 .listen {
