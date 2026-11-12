@@ -1,5 +1,8 @@
-// The Morning Dispatch: reads one edition file and lays out the paper.
+// Reads one edition file and lays out the paper. Which paper (its name, beats and map) comes from profiles.js.
 // Everything from the edition goes on the page as plain text, never as markup.
+import { profileOf } from './profiles.js';
+
+const P = profileOf(document.documentElement.dataset.edition);
 
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls, text) => {
@@ -14,23 +17,9 @@ const link = (href, text, cls) => {
   return a;
 };
 
-const SECTION_TITLES = {
-  ukraine: ['The War in Ukraine', 'Russia, Ukraine and the wider fight'],
-  army: ['Army and Military', 'The force, the Pentagon, the services'],
-  'fort-knox': ['Fort Knox', 'The post and its commands'],
-  europe: ['Europe', 'Security and politics across the continent'],
-};
-const SECTION_ORDER = ['ukraine', 'army', 'fort-knox', 'europe'];
-const TYPE_LABELS = {
-  ground: 'Ground', strike: 'Strike', 'air-defense': 'Air defense', naval: 'River and sea',
-  infrastructure: 'Infrastructure', diplomatic: 'Diplomatic', other: 'Other',
-};
-const TOPIC_LABELS = { ukraine: 'The war', army: 'Army', 'fort-knox': 'Fort Knox', europe: 'Europe', front: 'Southern front' };
-const VIEWS = {
-  south: [[45.95, 31.3], [48.25, 37.1]],
-  ukraine: [[44.2, 22.0], [52.5, 40.5]],
-  europe: [[35.0, -11.0], [66.0, 45.0]],
-};
+const TYPE_LABELS = P.types;
+const TOPIC_LABELS = { ...Object.fromEntries(P.sections.map((s) => [s.id, s.nav])), front: P.front.nav };
+const VIEWS = Object.fromEntries(P.views.map((v) => [v.id, v.bounds]));
 const ET = 'America/New_York';
 
 const fmtLong = (d) => new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(d + 'T12:00:00Z'));
@@ -62,6 +51,40 @@ $('theme-btn').addEventListener('click', () => {
   applyTheme(next);
 });
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => applyTheme());
+
+// ---------- the parts of the page that depend on which paper this is ----------
+function setupChrome() {
+  document.title = P.name;
+  $('mast-name').textContent = P.name;
+  $('brief-name').textContent = P.brief;
+  $('ear-left').append(P.earLeft[0], el('br'), el('b', null, P.earLeft[1]));
+  const other = $('other-paper');
+  other.textContent = P.other.label;
+  other.href = P.other.href;
+  $('front-title').textContent = P.front.title;
+  $('front-sub').textContent = P.front.sub;
+
+  const nav = $('nav');
+  const item = (href, text) => Object.assign(el('a', null, text), { href });
+  nav.append(item('#lead', 'Front page'), item('#front', P.front.nav));
+  P.sections.forEach((s) => nav.append(item(`#s-${s.id}`, s.nav)));
+  nav.append(item('#ahead', 'Days ahead'), item('#sources', 'Sources'));
+
+  const chips = $('view-chips');
+  P.views.forEach((v, i) => {
+    const b = el('button', i === 0 ? 'chip on' : 'chip', v.label);
+    b.type = 'button';
+    b.dataset.view = v.id;
+    chips.append(b);
+  });
+
+  const note = $('map-note');
+  const [claimed, corroborated, confirmed] = P.statusNote;
+  note.append(`${P.mapNote} `, el('b', null, 'Claimed'), ` ${claimed}; `, el('b', null, 'corroborated'), ` ${corroborated}; `, el('b', null, 'confirmed'), ` ${confirmed}.`);
+  P.mapLinks.forEach((l, i) => note.append(i === 0 ? ` ${l.before}` : l.before, link(l.href, l.label)));
+  if (P.mapLinks.length) note.append('.');
+}
+setupChrome();
 
 // ---------- loading ----------
 const params = new URLSearchParams(location.search);
@@ -103,7 +126,7 @@ function fillPicker(idx, current) {
 
 // ---------- render ----------
 function render(ed) {
-  document.title = `The Morning Dispatch: ${fmtShort(ed.date)}`;
+  document.title = `${P.name}: ${fmtShort(ed.date)}`;
   $('rail-date').textContent = fmtLong(ed.date);
   $('rail-updated').textContent = `Updated ${fmtClock(ed.generated_at)}`;
   $('ear-edition').textContent = wanted ? 'From the archive' : 'Daily edition';
@@ -134,6 +157,13 @@ function render(ed) {
       box.append(row);
     });
     $('numbers-box').hidden = false;
+  }
+  if (ed.explainer) {
+    $('ex-title').textContent = ed.explainer.title;
+    const body = $('ex-text');
+    ed.explainer.text.split(/\n\s*\n/).forEach((p) => { if (p.trim()) body.append(el('p', null, p.trim())); });
+    fillSources($('ex-sources'), ed.explainer.sources);
+    $('explainer-box').hidden = false;
   }
   renderFront(ed);
   renderColumns(ed);
@@ -176,13 +206,14 @@ function storyNode(it) {
 
 function renderColumns(ed) {
   const wrap = $('columns');
-  SECTION_ORDER.forEach((id) => {
+  P.sections.forEach((def, i) => {
+    const id = def.id;
     const s = ed.sections.find((x) => x.id === id);
     if (!s) return;
-    const sec = el('section', `col col-${id}`);
+    const sec = el('section', `col ${i === 0 ? 'col-first' : i === P.sections.length - 1 ? 'col-last' : 'col-mid'}`);
     sec.id = `s-${id}`;
     const head = el('div', 'section-head');
-    head.append(el('h2', null, SECTION_TITLES[id][0]), el('p', 'section-sub', SECTION_TITLES[id][1]));
+    head.append(el('h2', null, def.title), el('p', 'section-sub', def.sub));
     sec.append(head, el('p', 'col-summary', s.summary), sourceLine(s.sources));
     if (!s.items.length && s.quiet_note) sec.append(el('p', 'quiet', s.quiet_note));
     s.items.forEach((it) => sec.append(storyNode(it)));
@@ -222,7 +253,7 @@ let activeTypes = new Set();
 function setTiles() {
   if (tiles) return; // one tile set; the night look is done with a filter in the stylesheet
   tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 12, minZoom: 3,
+    maxZoom: 12, minZoom: P.minZoom,
     attribution: '© OpenStreetMap contributors',
   }).addTo(map);
 }
@@ -232,7 +263,7 @@ function renderFront(ed) {
   fillSources($('front-sources'), ed.front.sources);
 
   const axes = $('axes');
-  [['zaporizhzhia', 'Zaporizhzhia direction'], ['kherson', 'Kherson direction']].forEach(([sector, title]) => {
+  P.sectors.forEach(({ id: sector, title }) => {
     const group = el('div', 'axis-group');
     group.append(el('h3', null, title));
     ed.front.axes.filter((a) => a.sector === sector).forEach((a) => {
@@ -246,10 +277,10 @@ function renderFront(ed) {
   });
 
   if (typeof L === 'undefined') { $('map').textContent = 'The map could not load.'; return; }
-  map = L.map('map', { zoomControl: true, scrollWheelZoom: false, worldCopyJump: false, attributionControl: true });
+  map = L.map('map', { zoomControl: true, scrollWheelZoom: false, worldCopyJump: true, attributionControl: true });
   map.attributionControl.setPrefix(false);
   setTiles();
-  map.fitBounds(VIEWS.south);
+  map.fitBounds(P.views[0].bounds);
   map.on('click', () => map.scrollWheelZoom.enable());
   map.on('mouseout', () => map.scrollWheelZoom.disable());
 
@@ -282,7 +313,7 @@ function renderFront(ed) {
     txt.append(el('span', 'event-title', e.title), el('span', 'event-meta', `${e.place} · ${fmtShort(e.date)} · ${e.status}`));
     b.append(txt);
     b.addEventListener('click', () => {
-      map.flyTo([e.lat, e.lon], Math.max(map.getZoom(), 9), { duration: 0.6 });
+      map.flyTo([e.lat, e.lon], Math.max(map.getZoom(), P.minZoom < 3 ? 5 : 9), { duration: 0.6 });
       m.openPopup();
       if (matchMedia('(max-width: 899px)').matches) $('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
@@ -318,7 +349,7 @@ function renderFront(ed) {
     });
   });
   // The map can be laid out before its box has a size (phones especially), so refit until the reader takes over.
-  let view = 'south';
+  let view = P.views[0].id;
   let touched = false;
   map.on('mousedown touchstart wheel', () => { touched = true; });
   document.querySelectorAll('[data-view]').forEach((b) => b.addEventListener('click', () => { view = b.dataset.view; touched = false; }));
@@ -347,7 +378,7 @@ function setupAudio(ed) {
   showSpeed();
 
   let mode = 'file'; // 'file' plays the MP3; 'voice' reads the script with the device's own voice.
-  const setPlaying = (on) => { play.classList.toggle('playing', on); play.setAttribute('aria-label', on ? 'Pause the morning brief' : 'Play the morning brief'); };
+  const setPlaying = (on) => { play.classList.toggle('playing', on); play.setAttribute('aria-label', on ? 'Pause the audio brief' : 'Play the audio brief'); };
 
   // --- device voice fallback ---
   const sentences = script.replace(/\s+/g, ' ').match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) || [];
@@ -395,7 +426,7 @@ function setupAudio(ed) {
       $('t-end').textContent = mmss(audio.duration);
       $('listen-meta').textContent = `· ${Math.max(1, Math.round(audio.duration / 60))} min`;
       const d = $('download');
-      d.href = audio.src; d.download = `morning-dispatch-${ed.date}.mp3`; d.hidden = false;
+      d.href = audio.src; d.download = `${P.id}-${ed.date}.mp3`; d.hidden = false;
     });
     audio.addEventListener('error', useVoice, { once: true });
     audio.addEventListener('timeupdate', () => {
@@ -408,7 +439,7 @@ function setupAudio(ed) {
     audio.addEventListener('ended', () => setPlaying(false));
     audio.playbackRate = speeds[speedIx];
     if ('mediaSession' in navigator) {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: `The Morning Brief, ${fmtShort(ed.date)}`, artist: 'The Morning Dispatch', album: ed.lead.headline });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: `${P.brief}, ${fmtShort(ed.date)}`, artist: P.name, album: ed.lead.headline });
       navigator.mediaSession.setActionHandler('seekbackward', () => { audio.currentTime = Math.max(0, audio.currentTime - 15); });
       navigator.mediaSession.setActionHandler('seekforward', () => { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 30); });
     }

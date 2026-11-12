@@ -85,3 +85,36 @@ test('spokenText says military times and acronyms the way they are spoken', () =
   assert.match(out, /NATO/);
   assert.match(out, /Zaporizhzhia nuclear plant/);
 });
+
+// ---------- the Cyber Dispatch ----------
+import { readFileSync } from 'node:fs';
+import { cyberPage } from '../tools/sync-pages.mjs';
+import { makeCyberSample } from './sample.mjs';
+
+test('the cyber sample edition passes', () => {
+  assert.deepEqual(validateEdition(makeCyberSample('2026-11-12')), []);
+});
+test('a cyber edition needs its own sections, sectors and the explainer', () => {
+  const ed = makeSample('2026-11-12');
+  ed.edition = 'cyber';
+  const errors = validateEdition(ed).join(' | ');
+  assert.match(errors, /missing "threats"/);
+  assert.match(errors, /nothing for state/);
+  assert.match(errors, /explainer is required/);
+});
+test('a cyber pin may be anywhere in the world, but not off the map', () => {
+  const ed = makeCyberSample('2026-11-12');
+  ed.map_events[0].lat = 36.16; ed.map_events[0].lon = -86.78;
+  assert.deepEqual(validateEdition(ed), []);
+  ed.map_events[0].lat = 91;
+  assert.ok(validateEdition(ed).some((e) => /real coordinates/.test(e)));
+});
+test('rejects an unknown paper', () => bad((e) => { e.edition = 'sports'; }, /edition: one of/));
+test('a cyber edition is filed under cyber/data', () => {
+  const files = new Map();
+  finishEdition(makeCyberSample('2026-11-12'), { read: (p) => files.get(p) ?? null, write: (p, s) => files.set(p, s) });
+  assert.deepEqual([...files.keys()].sort(), ['cyber/data/archive/2026-11-12.json', 'cyber/data/index.json', 'cyber/data/latest.json']);
+});
+test('cyber/index.html is in sync with index.html', () => {
+  assert.equal(readFileSync(new URL('../cyber/index.html', import.meta.url), 'utf8'), cyberPage(readFileSync(new URL('../index.html', import.meta.url), 'utf8')));
+});

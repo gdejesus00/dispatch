@@ -2,11 +2,9 @@
 // Exit code 0 means the edition is safe to publish. Anything else keeps yesterday's edition up.
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
+import { PROFILES, profileOf } from '../profiles.js';
 
-export const SECTION_IDS = ['ukraine', 'army', 'fort-knox', 'europe'];
 export const STATUSES = ['claimed', 'corroborated', 'confirmed'];
-export const EVENT_TYPES = ['ground', 'strike', 'air-defense', 'naval', 'infrastructure', 'diplomatic', 'other'];
-export const SECTORS = ['zaporizhzhia', 'kherson'];
 export const CONFIDENCE = ['low', 'moderate', 'high'];
 
 const isStr = (v, min = 1, max = 10000) => typeof v === 'string' && v.trim().length >= min && v.length <= max;
@@ -29,6 +27,14 @@ export function validateEdition(ed) {
     } else if (Array.isArray(v)) v.forEach((x, i) => scan(x, `${path}[${i}]`));
     else if (v && typeof v === 'object') for (const k of Object.keys(v)) scan(v[k], `${path}.${k}`);
   })(ed, 'edition');
+
+  // Which paper this edition belongs to decides its sections, sectors, event types and map limits.
+  if (ed.edition !== undefined && !PROFILES[ed.edition]) err(`edition: one of ${Object.keys(PROFILES).join(', ')}`);
+  const P = profileOf(ed.edition);
+  const SECTION_IDS = P.sections.map((s) => s.id);
+  const SECTORS = P.sectors.map((s) => s.id);
+  const EVENT_TYPES = Object.keys(P.types);
+  const B = P.bounds;
 
   if (ed.schema !== 1) err('schema must be 1');
   if (!isDate(ed.date)) err('date must be YYYY-MM-DD');
@@ -105,8 +111,8 @@ export function validateEdition(ed) {
       if (!isStr(e.title, 6, 120)) err(`${p}.title`);
       if (!isStr(e.summary, 30, 500)) err(`${p}.summary: 30 to 500 characters`);
       if (!isStr(e.place, 2, 80)) err(`${p}.place`);
-      if (typeof e.lat !== 'number' || typeof e.lon !== 'number' || e.lat < 30 || e.lat > 72 || e.lon < -25 || e.lon > 60)
-        err(`${p}: lat/lon must be numbers inside Europe (lat 30 to 72, lon -25 to 60)`);
+      if (typeof e.lat !== 'number' || typeof e.lon !== 'number' || e.lat < B.latMin || e.lat > B.latMax || e.lon < B.lonMin || e.lon > B.lonMax)
+        err(`${p}: lat/lon must be numbers, ${B.label}`);
       if (!EVENT_TYPES.includes(e.type)) err(`${p}.type: ${EVENT_TYPES.join(', ')}`);
       if (!STATUSES.includes(e.status)) err(`${p}.status: ${STATUSES.join(', ')}`);
       if (!isDate(e.date)) err(`${p}.date: YYYY-MM-DD`);
@@ -124,6 +130,16 @@ export function validateEdition(ed) {
     if (!isStr(a.judgment, 40, 700)) err('analyst.judgment');
     if (!CONFIDENCE.includes(a.confidence)) err(`analyst.confidence: ${CONFIDENCE.join(', ')}`);
     if (!isStr(a.why, 20, 400)) err('analyst.why');
+    }
+  }
+
+  if (P.explainer || ed.explainer !== undefined) {
+    const x = ed.explainer;
+    if (!x || typeof x !== 'object') err('explainer is required for this paper: { title, text, sources }');
+    else {
+      if (!isStr(x.title, 8, 120)) err('explainer.title: 8 to 120 characters');
+      if (!isStr(x.text, 250, 1600)) err('explainer.text: 250 to 1600 characters');
+      srcs(x.sources, 'explainer.sources');
     }
   }
 
@@ -163,7 +179,7 @@ export function validateEdition(ed) {
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
-  const file = process.argv[2] || 'data/latest.json';
+  const file = process.argv[2] || 'data/latest.json'; // for the cyber paper pass cyber/data/latest.json
   let ed;
   try { ed = JSON.parse(readFileSync(file, 'utf8')); }
   catch (e) { console.error(`${file}: cannot read as JSON: ${e.message}`); process.exit(2); }

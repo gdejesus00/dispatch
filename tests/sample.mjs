@@ -78,6 +78,25 @@ export function makeSample(date = new Date().toISOString().slice(0, 10)) {
   };
 }
 
+// The same made-up edition reshaped for the Cyber Dispatch.
+export function makeCyberSample(date) {
+  const ed = makeSample(date);
+  const SRC = ed.lead.sources;
+  ed.edition = 'cyber';
+  const ids = ['threats', 'vulns', 'ai-safety', 'ai-policy'];
+  ed.sections.forEach((s, i) => { s.id = ids[i]; });
+  ed.front.axes.forEach((a) => { a.sector = a.sector === 'kherson' ? 'crime' : 'state'; });
+  const types = ['intrusion', 'ransomware', 'breach', 'disruption', 'vulnerability', 'policy', 'other', 'intrusion'];
+  ed.map_events.forEach((e, i) => { e.type = types[i]; });
+  ed.upcoming.forEach((u, i) => { u.topic = [...ids, 'front'][i % 5]; });
+  ed.explainer = {
+    title: 'Sample explainer: what a made-up term means',
+    text: 'This is sample text for the learn-one-thing box. In a real edition it explains one idea from the day in plain words, in two or three short paragraphs, and names the pages it was written from.\n\nIt is here so the layout and the checker have something of a realistic length to work with during testing.',
+    sources: SRC,
+  };
+  return ed;
+}
+
 if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
   const out = process.argv[2];
   if (!out) { console.error('usage: node tests/sample.mjs <out-dir>'); process.exit(2); }

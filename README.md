@@ -2,6 +2,15 @@
 
 A private morning paper: a 24-hour roll-up of open-source news with an interactive map of the southern front in Ukraine, a "days ahead" calendar and an audio brief. It is a static site with no build step and no paid services.
 
+## Two papers, one codebase
+
+- **The Morning Dispatch** at the site root: Fort Knox, the Army, the war in Ukraine, the southern front, Europe.
+- **The Cyber Dispatch** at `cyber/`: threats and incidents, vulnerabilities and patches, AI safety and security, AI policy and industry.
+
+`profiles.js` says how the two differ (name, sections, map views, event types). Both use the same page, styles, checker and filing tool. `cyber/index.html` is generated from `index.html` by `node tools/sync-pages.mjs`; a test fails if they drift. The daily instructions are `tools/EDITION_GUIDE.md` and `tools/CYBER_GUIDE.md`. An edition with `"edition": "cyber"` is filed under `cyber/data/`.
+
+Every body of text in an edition carries links to the pages it was written from, and the checker rejects an edition that is missing any.
+
 ## How it works
 
 1. Each morning a scheduled Claude job researches the news and writes one edition file by following `tools/EDITION_GUIDE.md`.
