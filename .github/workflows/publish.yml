@@ -1,0 +1,93 @@
+name: Publish the papers
+# Runs on every push to main: checks both editions, reads each audio brief into an MP3,
+# and puts the finished site on the gh-pages branch, which is what GitHub Pages serves.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run the tests and check both editions
+        run: |
+          node --test tests/
+          node tools/validate.mjs data/latest.json
+          node tools/validate.mjs cyber/data/latest.json
+      - name: Fetch the site as it is now, to reuse audio that has not changed
+        continue-on-error: true
+        run: git clone --quiet --depth 1 --branch gh-pages "https://github.com/${{ github.repository }}.git" _prev
+      - name: Work out which audio briefs need to be made
+        id: plan
+        run: |
+          mkdir -p _audio/main _audio/cyber
+          need=""
+          for paper in main cyber; do
+            if [ "$paper" = main ]; then data=data/latest.json; prev=_prev/audio; else data=cyber/data/latest.json; prev=_prev/cyber/audio; fi
+            node tools/script.mjs "$data" > "_audio/$paper/script.txt"
+            sha256sum "_audio/$paper/script.txt" | cut -d' ' -f1 > "_audio/$paper/latest.sha"
+            if [ -f "$prev/latest.mp3" ] && [ -f "$prev/latest.sha" ] && cmp -s "$prev/latest.sha" "_audio/$paper/latest.sha"; then
+              cp "$prev/latest.mp3" "_audio/$paper/latest.mp3"
+              echo "$paper: script unchanged, keeping the existing MP3"
+            else
+              need="$need $paper"
+              echo "$paper: needs a new MP3"
+            fi
+          done
+          echo "need=$need" >> "$GITHUB_OUTPUT"
+      - name: Keep the voice models between runs
+        if: steps.plan.outputs.need != ''
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            voice
+          key: voices-kokoro-piper-v1
+      - name: Read the briefs aloud (Kokoro voice, Piper as a fallback)
+        if: steps.plan.outputs.need != ''
+        continue-on-error: true
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg >/dev/null
+          pip install -q "kokoro>=0.9.2" soundfile numpy --extra-index-url https://download.pytorch.org/whl/cpu || true
+          for paper in ${{ steps.plan.outputs.need }}; do
+            dir="_audio/$paper"
+            if ! python tools/tts.py "$dir/script.txt" "$dir/audio.wav" am_michael; then
+              echo "::warning::Kokoro failed for the $paper paper. Trying the Piper voice."
+              pip install -q piper-tts
+              mkdir -p voice
+              ls voice/*.onnx >/dev/null 2>&1 || python -m piper.download_voices en_US-lessac-medium --data-dir voice
+              python -m piper -m "$(ls voice/*.onnx | head -1)" -f "$dir/audio.wav" < "$dir/script.txt" || { echo "::warning::No audio for the $paper paper today."; continue; }
+            fi
+            ffmpeg -y -loglevel error -i "$dir/audio.wav" -ac 1 -codec:a libmp3lame -b:a 56k "$dir/latest.mp3"
+            echo "$paper: $(ffprobe -v error -show_entries format=duration -of csv=p=0 "$dir/latest.mp3") seconds of audio"
+          done
+      - name: Put the site on the gh-pages branch
+        run: |
+          mkdir _site
+          cp -r index.html styles.css app.js profiles.js manifest.webmanifest icons vendor data cyber _site/
+          for paper in main cyber; do
+            if [ "$paper" = main ]; then out=_site/audio; else out=_site/cyber/audio; fi
+            if [ -f "_audio/$paper/latest.mp3" ]; then
+              mkdir -p "$out" && cp "_audio/$paper/latest.mp3" "_audio/$paper/latest.sha" "$out/"
+            else
+              echo "::warning::The $paper paper has no MP3. Its page will read the script with the device voice."
+            fi
+          done
+          touch _site/.nojekyll
+          cd _site
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Site built from ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
