@@ -130,7 +130,7 @@ function fillPicker(idx, current) {
 // ---------- render ----------
 function render(ed) {
   document.title = `${P.name}: ${fmtShort(ed.date)}`;
-  $('rail-date').textContent = fmtLong(ed.date);
+  $('rail-date').replaceChildren(el('span', 'd-long', fmtLong(ed.date)), el('span', 'd-short', `${fmtDow(ed.date)}, ${fmtShort(ed.date)}`));
   $('rail-updated').textContent = `Updated ${fmtClock(ed.generated_at)}`;
   $('ear-edition').textContent = wanted ? 'From the archive' : 'Daily edition';
 
@@ -181,6 +181,13 @@ function render(ed) {
   $('foot-build').textContent = `Edition of ${fmtLong(ed.date)}, set at ${fmtClock(ed.generated_at)}.`;
 
   setupAudio(ed);
+
+  // A link straight to a section (for example .../ai/#playbook) lands there once the page has its content.
+  if (/^#[a-z][\w-]*$/i.test(location.hash)) {
+    const target = document.getElementById(location.hash.slice(1));
+    // The map and web fonts shift the layout as they load, so go there again once things settle.
+    if (target) [50, 600, 1500].forEach((ms) => setTimeout(() => target.scrollIntoView(), ms));
+  }
 }
 
 const safe = (v) => String(v).replace(/[^a-z-]/g, '');
@@ -218,7 +225,10 @@ function renderColumns(ed) {
     sec.id = `s-${id}`;
     const head = el('div', 'section-head');
     head.append(el('h2', null, def.title), el('p', 'section-sub', def.sub));
-    sec.append(head, el('p', 'col-summary', s.summary), sourceLine(s.sources));
+    // The heading, summary and sources stay together so a column never ends on a bare heading.
+    const intro = el('div', 'col-intro');
+    intro.append(head, el('p', 'col-summary', s.summary), sourceLine(s.sources));
+    sec.append(intro);
     if (!s.items.length && s.quiet_note) sec.append(el('p', 'quiet', s.quiet_note));
     s.items.forEach((it) => sec.append(storyNode(it)));
     wrap.append(sec);
@@ -230,7 +240,7 @@ function renderPlaybook(ed) {
   if (!ed.playbook || !ed.playbook.length) return;
   const list = $('playbook-list');
   ed.playbook.forEach((t) => {
-    const card = el('article', 'play');
+    const card = el('article', 'technique');
     const h = el('h4');
     h.append(link(t.url, t.title));
     card.append(el('p', 'kicker', t.who), h, el('p', null, t.summary));
@@ -301,7 +311,7 @@ function renderFront(ed) {
   });
 
   if (typeof L === 'undefined') { $('map').textContent = 'The map could not load.'; return; }
-  map = L.map('map', { zoomControl: true, scrollWheelZoom: false, worldCopyJump: true, attributionControl: true });
+  map = L.map('map', { zoomControl: true, scrollWheelZoom: false, worldCopyJump: true, attributionControl: true, zoomSnap: 0.25 });
   map.attributionControl.setPrefix(false);
   setTiles();
   map.fitBounds(P.views[0].bounds);

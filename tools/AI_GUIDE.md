@@ -4,6 +4,7 @@ You are writing one edition of The AI Dispatch, the third paper beside The Morni
 
 ## Ground rules
 
+- Read `tools/STYLE.md` first. It is the house style for headlines, summaries, numbers and source names, and every edition follows it.
 - Open sources only. Never connect the reporting to the reader or his work, and never name him.
 - Every body of text carries its sources. The lead, the lab board summary, every lab board entry, every section summary and the explainer each have a `sources` list of `{ "name", "url" }` links naming exactly the pages that text was written from. Every story, map pin, number, upcoming date and playbook technique has a `url`. Text you cannot tie to a page you opened today does not go in.
 - No forecasts and no opinions of your own. Report what sources say and who says it. A company's benchmark or speed claim is that company's claim; say so.
