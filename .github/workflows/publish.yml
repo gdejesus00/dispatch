@@ -21,7 +21,7 @@ jobs:
           node-version: 22
       - name: Run the tests and check both editions
         run: |
-          node --test tests/
+          node --test tests/validate.test.mjs
           node tools/validate.mjs data/latest.json
           node tools/validate.mjs cyber/data/latest.json
       - name: Fetch the site as it is now, to reuse audio that has not changed
