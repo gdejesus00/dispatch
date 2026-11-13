@@ -97,6 +97,26 @@ export function makeCyberSample(date) {
   return ed;
 }
 
+// And reshaped for the AI Dispatch, which adds the playbook.
+export function makeAiSample(date) {
+  const ed = makeCyberSample(date);
+  ed.edition = 'ai';
+  const ids = ['models', 'research', 'builders', 'industry'];
+  ed.sections.forEach((s, i) => { s.id = ids[i]; });
+  ed.front.axes.forEach((a) => { a.sector = a.sector === 'crime' ? 'field' : 'labs'; });
+  const types = ['release', 'research', 'funding', 'policy', 'hardware', 'incident', 'other', 'release'];
+  ed.map_events.forEach((e, i) => { e.type = types[i]; });
+  ed.upcoming.forEach((u, i) => { u.topic = [...ids, 'front'][i % 5]; });
+  ed.playbook = [1, 2, 3].map((n) => ({
+    title: `Sample technique number ${n} for layout testing`,
+    who: 'Sample Person, lead developer at Sample Lab',
+    summary: 'Sample text saying what the technique is and when to use it, in two sentences, the way a real edition would.',
+    steps: ['Sample first step, written as a short instruction.', 'Sample second step, written as a short instruction.', 'Sample third step, written as a short instruction.'],
+    source: 'Sample Blog', url: `https://example.com/technique-${n}`, published: date,
+  }));
+  return ed;
+}
+
 if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
   const out = process.argv[2];
   if (!out) { console.error('usage: node tests/sample.mjs <out-dir>'); process.exit(2); }

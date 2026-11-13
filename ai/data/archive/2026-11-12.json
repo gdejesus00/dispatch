@@ -1,0 +1,671 @@
+{
+ "schema": 1,
+ "edition": "ai",
+ "date": "2026-11-12",
+ "generated_at": "2026-11-13T05:05:00Z",
+ "lead": {
+  "headline": "Google replaces Flash with Gemini 4 Hydrogen as Nvidia's chief resigns",
+  "dek": "DeepMind uses AI agents to prove parts of Signal's encryption, TSMC lines up a billion dollars for OpenAI and Anthropic, and GitHub explains how to write an agent skill that lasts.",
+  "sources": [
+   {
+    "name": "Ars Technica: Gemini 4 Hydrogen",
+    "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+   },
+   {
+    "name": "TechCrunch: Nvidia",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+   },
+   {
+    "name": "Ars Technica: Signal",
+    "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
+   },
+   {
+    "name": "Ars Technica: TSMC",
+    "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+   },
+   {
+    "name": "GitHub Blog: agent skills",
+    "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/"
+   }
+  ]
+ },
+ "bottom_line": "Google rolled out Gemini 4 Hydrogen, which replaces Gemini 3.8 Flash across its products and is available immediately; Google claims it is 2.5 times faster in high thinking mode and makes far fewer fabricated claims. Nvidia's board said Jensen Huang resigned as chief executive, effective immediately. Google DeepMind researchers used agentic AI to formally verify key guarantees of the Signal protocol in four weeks. TSMC's board approved up to 500 million dollars each for OpenAI and Anthropic, according to Reuters. For builders, GitHub published a practical guide to agent skills, and United Airlines said it will block AI agents from managing bookings.",
+ "numbers": [
+  {
+   "value": "2.5x",
+   "label": "how much faster Google says Gemini 4 Hydrogen is than Flash 3.8, even in high thinking mode",
+   "source": "Ars Technica, citing Google",
+   "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+  },
+  {
+   "value": "$1B",
+   "label": "TSMC's planned investment, split evenly between OpenAI and Anthropic",
+   "source": "Ars Technica, citing Reuters",
+   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+  },
+  {
+   "value": "1.2B",
+   "label": "commits GitHub saw in a single week this October, more than in all of 2025",
+   "source": "GitHub Blog",
+   "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/"
+  }
+ ],
+ "explainer": {
+  "title": "What formal verification is, and why AI changes the cost",
+  "text": "Formal verification means proving, with mathematics, that a system does what its specification says. Wikipedia's definition is the act of proving or disproving the correctness of a system with respect to a formal specification or property, using formal methods.\n\nThat is different from testing. A test checks the cases you thought of. A proof covers every case the specification describes. Ars Technica notes that proponents have long called it a holy grail of software security for that reason.\n\nThe catch has always been labor. People had to describe the properties they wanted, turn them into formulas, and then build the proof, which Ars calls incredibly time-consuming. Agentic AI cuts the time of that last part, which is how DeepMind checked key guarantees of the Signal protocol in four weeks. The work was limited in scope: it did not verify the whole Signal app.",
+  "sources": [
+   {
+    "name": "Wikipedia: Formal verification",
+    "url": "https://en.wikipedia.org/wiki/Formal_verification"
+   },
+   {
+    "name": "Ars Technica: Signal",
+    "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
+   }
+  ]
+ },
+ "playbook": [
+  {
+   "title": "Write an agent skill once and reuse it on any agent",
+   "who": "Andrea Griffiths, GitHub, with Shishir Tewari, senior manager of data engineering at Procore",
+   "summary": "A skill is a versioned folder built around a SKILL.md file that says when and how to do one repeatable task. It carries instructions, not access: the environment still has to supply the tools, credentials and permissions. Use it for bounded, repeatable work such as a checklist, release, migration or metric pipeline.",
+   "steps": [
+    "Give each skill one clear job with a defined input and output, and say in the file when it applies.",
+    "Do not let an agent grade its own work. Use a separate verifier skill that checks the changes and shows evidence.",
+    "For bigger workflows, split the work into several skills with one responsibility each, and have them share project context instead of rediscovering it.",
+    "Keep project names, databases and conventions in a separate manifest file, not hardcoded in the skill.",
+    "If the workflow needs shared state, an audit trail, long-running control or enforced permissions, build an application instead."
+   ],
+   "source": "GitHub Blog",
+   "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+   "published": "2026-11-12"
+  },
+  {
+   "title": "Put the agent's long pull request description behind a fold",
+   "who": "Simon Willison, developer and author of Simon Willison's Weblog",
+   "summary": "Agent-written pull request descriptions are accurate and thorough, and readers skip them because they read like filler. His fix keeps all of it but leads with a short introduction a person chose, so a reviewer gets the point at a glance and can expand the rest.",
+   "steps": [
+    "Open the pull request with the shortest human-approved paragraph that gets a reader up to speed. Add a screenshot when it helps.",
+    "Wrap the full agent-written description in details and summary tags, which GitHub Markdown renders as a collapsed section.",
+    "Use the model name, and the effort level if you set one, as the summary line so it is obvious who wrote the hidden part."
+   ],
+   "source": "Simon Willison's Weblog",
+   "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+   "published": "2026-11-09"
+  },
+  {
+   "title": "Treat agent work as four stages: plan, build, verify, observe",
+   "who": "Nick Liffen and Philip Holleran, GitHub",
+   "summary": "GitHub's guide argues that faster code generation moves the pressure elsewhere, citing a Faros AI study in which pull requests spent 441 percent longer in review as teams adopted AI heavily. Its answer is to use agents across the whole job, not only for writing code.",
+   "steps": [
+    "Plan first: gather the scattered context, such as the design, the requirement buried in chat and the old pull request, into one place before writing anything.",
+    "Have the agent compare approaches and turn the decisions into a written implementation plan the team agrees on.",
+    "Carry the same plan through build, verify and observe, so review and production checks are part of the work and not an afterthought."
+   ],
+   "source": "GitHub Blog",
+   "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+   "published": "2026-11-06"
+  },
+  {
+   "title": "From March: split long builds across a planner, a generator and an evaluator",
+   "who": "Prithvi Rajasekaran, Anthropic Labs",
+   "summary": "An older piece that is still the clearest description of the pattern. For multi-hour autonomous coding, a single agent tends to go off the rails. Separating planning, building and grading, with a critic that judges against written criteria, produced complete applications.",
+   "steps": [
+    "Turn subjective goals into concrete, gradable criteria before you ask anything to judge the output.",
+    "Break the build into tractable chunks and pass structured artifacts between sessions to carry context.",
+    "Read the model's traces on realistic problems and tune from what you see.",
+    "When a new model arrives, re-examine the harness and strip out the parts that no longer improve results."
+   ],
+   "source": "Anthropic",
+   "url": "https://www.anthropic.com/research/harness-design-long-running-apps",
+   "published": "2026-03-24"
+  }
+ ],
+ "front": {
+  "summary": "Google had the busiest day of the labs, with a new default model and a research result on Signal. The money and hardware story ran through Nvidia's boardroom and TSMC's, while governments and companies kept deciding where AI agents are and are not welcome.",
+  "sources": [
+   {
+    "name": "Ars Technica: Gemini 4 Hydrogen",
+    "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+   },
+   {
+    "name": "Ars Technica: TSMC",
+    "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+   },
+   {
+    "name": "TechCrunch: Nvidia",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+   },
+   {
+    "name": "The Record: United",
+    "url": "https://therecord.media/united-airlines-to-block-customers-using-ai-agents"
+   }
+  ],
+  "axes": [
+   {
+    "name": "Google",
+    "sector": "labs",
+    "status": "confirmed",
+    "text": "Gemini 4 Hydrogen replaced Gemini 3.8 Flash across Google's products with access open immediately, unlike the staged Argon and Carbon releases. It runs at four thinking levels including a new xhigh. A newsletter also reports Google launched Gemini Decision 1, a low-cost decision model, at an engineering conference.",
+    "sources": [
+     {
+      "name": "Ars Technica: Gemini 4 Hydrogen",
+      "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+     },
+     {
+      "name": "Latent Space: AI News",
+      "url": "https://www.latent.space/p/ainews-d-day-decision-models-day/"
+     }
+    ]
+   },
+   {
+    "name": "Google DeepMind",
+    "sector": "labs",
+    "status": "claimed",
+    "text": "Researchers used agentic AI and a new framework called AlphaProof Code to formally verify a number of the Signal protocol's key cryptographic guarantees in a four-week proof-of-concept. Ars Technica notes the scope was limited and that it is unclear how practical the approach is for large amounts of code.",
+    "sources": [
+     {
+      "name": "Ars Technica: Signal",
+      "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
+     }
+    ]
+   },
+   {
+    "name": "Anthropic",
+    "sector": "labs",
+    "status": "confirmed",
+    "text": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on November 9. It says they are the same underlying model, with Fable carrying cybersecurity and biology safeguards. TSMC plans to buy Anthropic common shares at the expected price of its public offering.",
+    "sources": [
+     {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+     },
+     {
+      "name": "Ars Technica: TSMC",
+      "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+     }
+    ]
+   },
+   {
+    "name": "OpenAI",
+    "sector": "labs",
+    "status": "confirmed",
+    "text": "OpenAI said more than 20,000 transitioning servicemembers and veterans have claimed a free year of ChatGPT Plus in the past year, and that it has run more than a dozen trainings for nearly 1,000 members of the military community with seven more scheduled this year.",
+    "sources": [
+     {
+      "name": "OpenAI",
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans/"
+     }
+    ]
+   },
+   {
+    "name": "Chips: Nvidia and TSMC",
+    "sector": "field",
+    "status": "corroborated",
+    "text": "Nvidia's board announced Jensen Huang's resignation as president, chief executive and director. TSMC's board approved up to 500 million dollars of OpenAI preferred stock and 500 million of Anthropic shares, Reuters reported; analysts quoted by Ars warned about circular financing among investors, suppliers and customers.",
+    "sources": [
+     {
+      "name": "TechCrunch: Nvidia",
+      "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+     },
+     {
+      "name": "Ars Technica: TSMC",
+      "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+     }
+    ]
+   },
+   {
+    "name": "Government and schools",
+    "sector": "field",
+    "status": "confirmed",
+    "text": "The FAA expanded an AI tool that advises air traffic controllers to the whole national airspace; the controllers' union says it was not involved in designing or testing it. Families protested in seven US cities against Google's AI in schools after Google confirmed students cannot use Search without AI.",
+    "sources": [
+     {
+      "name": "Ars Technica: FAA",
+      "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
+     },
+     {
+      "name": "Ars Technica: schools",
+      "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+     }
+    ]
+   },
+   {
+    "name": "Agents meet the real world",
+    "sector": "field",
+    "status": "confirmed",
+    "text": "United Airlines will block AI agents from managing reservations and purchases, citing security, privacy and legal risks from shared logins. Fireworks AI, a platform for running open models, confirmed a breach that exposed customer data including Notion users' chat transcripts.",
+    "sources": [
+     {
+      "name": "The Record: United",
+      "url": "https://therecord.media/united-airlines-to-block-customers-using-ai-agents"
+     },
+     {
+      "name": "TechCrunch: Fireworks AI",
+      "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/"
+     }
+    ]
+   }
+  ]
+ },
+ "map_events": [
+  {
+   "title": "Gemini 4 Hydrogen replaces Flash",
+   "summary": "Google rolled the model out across its products with access open immediately. It claims a 2.5 times speed gain over Flash 3.8 in high thinking mode and more than five times fewer fabricated claims.",
+   "place": "Mountain View, California",
+   "lat": 37.3861,
+   "lon": -122.0839,
+   "type": "release",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+  },
+  {
+   "title": "DeepMind formally verifies parts of Signal",
+   "summary": "Researchers used agentic AI and a framework called AlphaProof Code to prove a number of the Signal protocol's key cryptographic guarantees in four weeks.",
+   "place": "London, England",
+   "lat": 51.5074,
+   "lon": -0.1278,
+   "type": "research",
+   "status": "claimed",
+   "date": "2026-11-11",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
+  },
+  {
+   "title": "Nvidia's chief executive resigns",
+   "summary": "The board announced that Jensen Huang resigned as president, chief executive and director, effective immediately, with Colette Kress as interim replacement.",
+   "place": "Santa Clara, California",
+   "lat": 37.3541,
+   "lon": -121.9552,
+   "type": "hardware",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+  },
+  {
+   "title": "TSMC board backs stakes in OpenAI and Anthropic",
+   "summary": "The chipmaker approved up to 500 million dollars of OpenAI preferred stock and 500 million of Anthropic common shares at its expected offering price, according to Reuters.",
+   "place": "Hsinchu, Taiwan",
+   "lat": 24.8138,
+   "lon": 120.9675,
+   "type": "funding",
+   "status": "claimed",
+   "date": "2026-11-11",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+  },
+  {
+   "title": "Claude Fable 5.2 and Mythos 5.2 released",
+   "summary": "Anthropic says the two are the same underlying model, with Fable carrying cybersecurity and biology safeguards, and reports gains in coding, reasoning and vision.",
+   "place": "San Francisco, California",
+   "lat": 37.7749,
+   "lon": -122.4194,
+   "type": "release",
+   "status": "confirmed",
+   "date": "2026-11-09",
+   "source": "Anthropic",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "title": "OpenAI: 20,000 veterans claimed free ChatGPT Plus",
+   "summary": "The company said more than 20,000 transitioning servicemembers and veterans took up a free year in the past twelve months, with more trainings scheduled before year end.",
+   "place": "San Francisco, California",
+   "lat": 37.762,
+   "lon": -122.4148,
+   "type": "other",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "source": "OpenAI",
+   "url": "https://openai.com/index/chatgpt-plus-for-veterans/"
+  },
+  {
+   "title": "Fireworks AI confirms a breach",
+   "summary": "An attacker reached a development system through the company's cloud provider and took billing information and some datasets. Notion says its customers' chat transcripts were accessed.",
+   "place": "Redwood City, California",
+   "lat": 37.4852,
+   "lon": -122.2364,
+   "type": "incident",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/"
+  },
+  {
+   "title": "FAA expands AI advice to all US airspace",
+   "summary": "The agency says its 875 million dollar SMART system helped reroute 180 flights since September 21 over Washington. The controllers' union says it was not involved in design or testing.",
+   "place": "Washington, DC",
+   "lat": 38.9072,
+   "lon": -77.0369,
+   "type": "policy",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
+  },
+  {
+   "title": "Families protest Google's AI in schools",
+   "summary": "Protests took place in seven US cities on Wednesday after Google confirmed there is no way for students to use Search without AI.",
+   "place": "Chicago, Illinois",
+   "lat": 41.8781,
+   "lon": -87.6298,
+   "type": "policy",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+  },
+  {
+   "title": "United Airlines to block AI agents",
+   "summary": "The airline will stop AI agents from managing reservations and purchases, citing cybersecurity, privacy and legal risks when customers share their logins.",
+   "place": "Chicago, Illinois",
+   "lat": 41.9742,
+   "lon": -87.9073,
+   "type": "policy",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "The Record",
+   "url": "https://therecord.media/united-airlines-to-block-customers-using-ai-agents"
+  },
+  {
+   "title": "Finland and Estonia ask for an EU plan for AI incidents",
+   "summary": "In a letter seen by Politico, the two countries call for EU-level arrangements for serious AI incidents, ahead of the first European Council meeting devoted to AI.",
+   "place": "Brussels, Belgium",
+   "lat": 50.8503,
+   "lon": 4.3517,
+   "type": "policy",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Politico Europe",
+   "url": "https://www.politico.eu/article/eu-needs-a-system-to-respond-to-ai-incidents-finland-and-estonia-say/"
+  }
+ ],
+ "sections": [
+  {
+   "id": "models",
+   "summary": "Google's new default model is the day's release. Anthropic's latest pair from earlier in the week is included for reference, with its date.",
+   "sources": [
+    {
+     "name": "Ars Technica: Gemini 4 Hydrogen",
+     "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+    },
+    {
+     "name": "Latent Space: AI News",
+     "url": "https://www.latent.space/p/ainews-d-day-decision-models-day/"
+    },
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    }
+   ],
+   "items": [
+    {
+     "headline": "Gemini 4 Hydrogen takes over from Flash across Google's products",
+     "summary": "Hydrogen is the faster, cheaper tier most people in Google's ecosystem use, and it is available at once instead of in stages. It offers four thinking levels, including a new xhigh. Google's own analysis claims it is 2.5 times faster than Flash 3.8 in high mode and cuts fabricated claims by more than five times.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+     "published": "2026-11-12",
+     "status": "confirmed"
+    },
+    {
+     "headline": "Google launches a low-cost decision model, a newsletter reports",
+     "summary": "Latent Space reports that Google announced Gemini Decision 1 at the AI Engineer conference: a calibrated multimodal decision model that takes up to 1,000 questions, costs ten cents per million input tokens and responds in about 200 milliseconds. The newsletter adds the usual caveat about benchmarks.",
+     "source": "Latent Space",
+     "url": "https://www.latent.space/p/ainews-d-day-decision-models-day/",
+     "published": "2026-11-12",
+     "status": "claimed"
+    },
+    {
+     "headline": "From November 9: Anthropic releases Claude Fable 5.2 and Mythos 5.2",
+     "summary": "Older than today's window. Anthropic says the two are the same underlying model, with Fable carrying strong cybersecurity and biology safeguards so it can be made more widely available. It reports improvements in coding, reasoning and vision.",
+     "source": "Anthropic",
+     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+     "published": "2026-11-09",
+     "status": "confirmed"
+    }
+   ]
+  },
+  {
+   "id": "research",
+   "summary": "Two findings: AI agents helping to prove that encryption works as designed, and a study on chatbots sending shoppers to risky sites.",
+   "sources": [
+    {
+     "name": "Ars Technica: Signal",
+     "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
+    },
+    {
+     "name": "The Verge: shopping study",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations"
+    }
+   ],
+   "items": [
+    {
+     "headline": "DeepMind uses AI agents to formally verify parts of the Signal protocol",
+     "summary": "In a four-week proof-of-concept, researchers proved a number of the protocol's key cryptographic guarantees using a new framework called AlphaProof Code. Ars Technica calls it further independent validation of encryption used by Signal, Google Messages and WhatsApp, and notes the analysis did not cover the whole Signal app.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/",
+     "published": "2026-11-11",
+     "status": "claimed"
+    },
+    {
+     "headline": "Study: chatbots showed risky shopping links in up to 15 percent of conversations",
+     "summary": "A study by the IP protection firm Podqi, shared with The Verge, tested Gemini, Perplexity and ChatGPT and found that shoppers could be directed to imposter and other risky websites. This is one firm's study.",
+     "source": "The Verge",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+     "published": "2026-11-12",
+     "status": "claimed"
+    }
+   ]
+  },
+  {
+   "id": "builders",
+   "summary": "For people who build with these tools, the news was about where agents are allowed to act and what happens to the data they touch. The how-to material is in the Playbook below.",
+   "sources": [
+    {
+     "name": "The Record: United",
+     "url": "https://therecord.media/united-airlines-to-block-customers-using-ai-agents"
+    },
+    {
+     "name": "TechCrunch: Fireworks AI",
+     "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/"
+    },
+    {
+     "name": "GitHub Blog: agentic engineering",
+     "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/"
+    }
+   ],
+   "items": [
+    {
+     "headline": "United Airlines will block AI agents from managing bookings",
+     "summary": "The airline cited cybersecurity, privacy and legal risks when customers hand their logins to third-party agents. The Record notes Bank of America warned customers last week never to share IDs and passwords with agents, and that companies are struggling to tell customers from their assistants.",
+     "source": "The Record",
+     "url": "https://therecord.media/united-airlines-to-block-customers-using-ai-agents",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "Breach at Fireworks AI exposes customers' data",
+     "summary": "Fireworks AI, which developers use to run open models, confirmed an attacker breached its cloud provider to reach a development system and took billing information and some datasets. Notion disclosed that its customers' chat transcripts were accessed. Fireworks lists Harvey and Cursor among its customers.",
+     "source": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+     "published": "2026-11-12",
+     "status": "confirmed"
+    },
+    {
+     "headline": "From November 6: GitHub counts 1.2 billion commits in one week",
+     "summary": "Older than today's window. GitHub says commits in one October week were more than 400 percent above a year earlier and more than it received in all of 2025. The same post cites a Faros AI study in which pull requests spent 441 percent longer in review as teams adopted AI heavily.",
+     "source": "GitHub Blog",
+     "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+     "published": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "id": "industry",
+   "summary": "A leadership shock at the company whose chips power the field, a chipmaker buying into two labs, and governments and families pushing in opposite directions on deployment.",
+   "sources": [
+    {
+     "name": "TechCrunch: Nvidia",
+     "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+    },
+    {
+     "name": "Ars Technica: TSMC",
+     "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+    },
+    {
+     "name": "Ars Technica: FAA",
+     "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
+    },
+    {
+     "name": "Politico Europe: AI incidents",
+     "url": "https://www.politico.eu/article/eu-needs-a-system-to-respond-to-ai-incidents-finland-and-estonia-say/"
+    }
+   ],
+   "items": [
+    {
+     "headline": "Jensen Huang resigns as Nvidia's chief executive",
+     "summary": "The board said Huang resigned as president, chief executive and director, effective immediately, after 33 years, with Colette Kress as interim replacement. TechCrunch reports he stepped down after reports of an alleged affair with a woman suspected of spying for China, and that he has agreed to testify before Congress by Thanksgiving.",
+     "source": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
+     "published": "2026-11-12",
+     "status": "confirmed"
+    },
+    {
+     "headline": "TSMC to invest up to a billion dollars in OpenAI and Anthropic",
+     "summary": "TSMC's board approved up to 500 million dollars of OpenAI preferred stock and 500 million of Anthropic common shares at the expected price of its public offering, according to Reuters. Analysts warned that this kind of circular financing among investors, suppliers and customers carries risk.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
+     "published": "2026-11-11",
+     "status": "claimed"
+    },
+    {
+     "headline": "FAA extends AI advice for controllers to the whole country",
+     "summary": "The 875 million dollar SMART system advises air traffic controllers on rerouting. The FAA says it has helped reroute 180 flights over Washington since September 21, saving about 10 minutes and almost 80 gallons of fuel per flight. The controllers' union says it had no part in designing or testing it.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
+     "published": "2026-11-12",
+     "status": "confirmed"
+    },
+    {
+     "headline": "Families in seven cities protest Google's AI in schools",
+     "summary": "The protests followed Google's confirmation that students cannot use Search without AI. Google said it was giving schools more choice by turning Search, Gemini and Gemini Notebook off by default, but it offers no option for Search without AI.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "OpenAI says 20,000 veterans and servicemembers took its free year of ChatGPT Plus",
+     "summary": "The offer is for transitioning servicemembers and veterans. OpenAI says its academy and partners have held more than a dozen trainings for nearly 1,000 members of the military community, with seven more scheduled before the end of the year.",
+     "source": "OpenAI",
+     "url": "https://openai.com/index/chatgpt-plus-for-veterans/",
+     "published": "2026-11-11"
+    },
+    {
+     "headline": "Finland and Estonia want an EU plan for serious AI incidents",
+     "summary": "In a letter seen by Politico, the two countries say the EU can still compete at the frontier of AI but must govern it responsibly. AI safety and security are on the agenda of Friday's European Council meeting, the first devoted to AI.",
+     "source": "Politico Europe",
+     "url": "https://www.politico.eu/article/eu-needs-a-system-to-respond-to-ai-incidents-finland-and-estonia-say/",
+     "published": "2026-11-12"
+    }
+   ]
+  }
+ ],
+ "upcoming": [
+  {
+   "date": "2026-11-13",
+   "title": "European Council meets on AI",
+   "detail": "The first leaders' meeting devoted to AI, with safety and security on the agenda.",
+   "topic": "industry",
+   "url": "https://www.politico.eu/article/eu-needs-a-system-to-respond-to-ai-incidents-finland-and-estonia-say/"
+  },
+  {
+   "date": "2026-11-26",
+   "title": "Huang due to testify by Thanksgiving",
+   "detail": "The former Nvidia chief agreed to appear before Congress by the holiday after lawmakers threatened a subpoena.",
+   "topic": "industry",
+   "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
+  }
+ ],
+ "audio": {
+  "script": "This is the A I Dispatch for Thursday, November twelfth.\n\nHere is the bottom line. Google has replaced its Flash model with a new one called Gemini four Hydrogen, and it is available to everyone right away. Nvidia's chief executive, Jensen Huang, has resigned. Google DeepMind used A I agents to mathematically prove parts of the encryption behind Signal. And the chipmaker T S M C is putting up to a billion dollars into Open A I and Anthropic.\n\nStart with the models. Gemini four Hydrogen is the faster, cheaper tier that most people in Google's products use. Unlike Google's last two releases, it was not staged. It runs at four thinking levels, including a new one called extra high. Google's own analysis claims it is two and a half times faster than the model it replaces, even in high mode, and that it makes five times fewer fabricated claims. Those are the company's numbers.\n\nA newsletter, Latent Space, also reports that Google launched a low cost decision model called Gemini Decision one at an engineering conference. Treat that as one outlet's report. And for reference, from November ninth, Anthropic released Claude Fable five point two and Claude Mythos five point two. Anthropic says they are the same underlying model, and that Fable carries safeguards for cybersecurity and biology.\n\nOn to research. Google DeepMind researchers used agentic A I, and a new framework called Alpha Proof Code, to formally verify a number of the Signal protocol's key guarantees. They did it in four weeks. Ars Technica notes the limits. The work did not cover the whole Signal app, and it is not yet clear how practical this is for large amounts of code. Separately, a study shared with The Verge found that chatbots showed risky shopping links in as many as fifteen percent of conversations. That is one firm's study.\n\nFor people who build with these tools. United Airlines says it will block A I agents from managing bookings, because customers are handing those agents their logins. And Fireworks A I, a platform for running open models, confirmed a breach. The attacker took billing information and some datasets, and Notion says its customers' chat transcripts were accessed.\n\nIn industry and policy. Nvidia's board says Jensen Huang has resigned as chief executive, effective immediately, after thirty three years. He has agreed to testify before Congress by Thanksgiving. T S M C's board approved up to five hundred million dollars for Open A I and the same for Anthropic, according to Reuters. Analysts warn about money circling between investors, suppliers and customers. The F A A has expanded an A I tool that advises air traffic controllers to the whole country. The controllers' union says it was not involved in designing or testing it. Families in seven American cities protested Google's A I in schools. Open A I says more than twenty thousand veterans and transitioning servicemembers have claimed a free year of Chat G P T Plus. And Finland and Estonia want the European Union to have a plan for serious A I incidents, ahead of tomorrow's leaders' meeting on A I.\n\nNow the playbook. Four techniques from people who build these tools.\n\nOne. Write an agent skill once and reuse it. This comes from Andrea Griffiths at GitHub. A skill is a folder built around one file that says when and how to do a repeatable task. Give each skill one clear job. Do not let an agent grade its own work; use a separate verifier. Keep project names and settings in a separate file, not inside the skill. And remember a skill carries instructions, not access.\n\nTwo. Hide the agent's long pull request description behind a fold. This is from Simon Willison. Agents write accurate, thorough descriptions that nobody reads. So open with a short paragraph a person chose, then tuck the full text into a collapsed section, labelled with the model that wrote it.\n\nThree. Treat agent work as four stages: plan, build, verify and observe. This is from two GitHub engineers. Their point is that faster code moves the pressure to review. So gather the scattered context first, have the agent compare approaches, and write the plan down before any code.\n\nFour, from March, and still worth knowing. For long autonomous builds, split the work across a planner, a generator and an evaluator. This is from Prithvi Rajasekaran at Anthropic. Turn fuzzy goals into criteria that can be graded. Break the build into chunks. Read what the model actually did. And when a new model arrives, strip out the parts of your setup that no longer help.\n\nLearn one thing today. Formal verification means proving with mathematics that a system does what its specification says. A test checks the cases you thought of. A proof covers every case the specification describes. The catch has always been the labor of building the proof. A I agents cut that time, which is how DeepMind checked Signal in four weeks.\n\nIn the days ahead, European leaders meet on A I tomorrow, and Jensen Huang is due before Congress by Thanksgiving.\n\nThat is the A I Dispatch. Every item is linked to its source on the page."
+ },
+ "sources": [
+  {
+   "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash, Ars Technica",
+   "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+  },
+  {
+   "title": "D-Day (Decision Models Day), Latent Space AI News",
+   "url": "https://www.latent.space/p/ainews-d-day-decision-models-day/"
+  },
+  {
+   "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2, Anthropic",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "title": "Google DeepMind just mathematically verified key parts of Signal, Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
+  },
+  {
+   "title": "AI chatbots are recommending fake retail websites, study finds, The Verge",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations"
+  },
+  {
+   "title": "United to block customers from using AI agents, The Record",
+   "url": "https://therecord.media/united-airlines-to-block-customers-using-ai-agents"
+  },
+  {
+   "title": "Cyberattack on Fireworks AI allowed hackers to access Notion customers' chat transcripts, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/"
+  },
+  {
+   "title": "Jensen Huang is out at Nvidia, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+  },
+  {
+   "title": "Jensen Huang agrees to testify before Congress, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
+  },
+  {
+   "title": "Taiwan's chipmaking giant TSMC to invest $1B in Anthropic, OpenAI, Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+  },
+  {
+   "title": "FAA expands AI advice to manage air traffic congestion, Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
+  },
+  {
+   "title": "Google faces calls for AI moratoriums in schools, Ars Technica",
+   "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+  },
+  {
+   "title": "ChatGPT Plus for veterans and servicemembers, OpenAI",
+   "url": "https://openai.com/index/chatgpt-plus-for-veterans/"
+  },
+  {
+   "title": "EU needs a system to respond to AI incidents, Finland and Estonia say, Politico Europe",
+   "url": "https://www.politico.eu/article/eu-needs-a-system-to-respond-to-ai-incidents-finland-and-estonia-say/"
+  },
+  {
+   "title": "Build once, run on any agent: A practical guide to agent skills, GitHub Blog",
+   "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/"
+  },
+  {
+   "title": "Hide your slop PR descriptions behind details and summary, Simon Willison's Weblog",
+   "url": "https://simonwillison.net/2026/Nov/9/details-summary/"
+  },
+  {
+   "title": "Beyond code generation: A developer's guide to agentic engineering, GitHub Blog",
+   "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/"
+  },
+  {
+   "title": "Harness design for long-running apps, Anthropic",
+   "url": "https://www.anthropic.com/research/harness-design-long-running-apps"
+  },
+  {
+   "title": "Formal verification, Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Formal_verification"
+  }
+ ]
+}

@@ -88,8 +88,8 @@ test('spokenText says military times and acronyms the way they are spoken', () =
 
 // ---------- the Cyber Dispatch ----------
 import { readFileSync } from 'node:fs';
-import { cyberPage } from '../tools/sync-pages.mjs';
-import { makeCyberSample } from './sample.mjs';
+import { cyberPage, paperPage, PAGES } from '../tools/sync-pages.mjs';
+import { makeCyberSample, makeAiSample } from './sample.mjs';
 
 test('the cyber sample edition passes', () => {
   assert.deepEqual(validateEdition(makeCyberSample('2026-11-12')), []);
@@ -117,4 +117,31 @@ test('a cyber edition is filed under cyber/data', () => {
 });
 test('cyber/index.html is in sync with index.html', () => {
   assert.equal(readFileSync(new URL('../cyber/index.html', import.meta.url), 'utf8'), cyberPage(readFileSync(new URL('../index.html', import.meta.url), 'utf8')));
+});
+
+// ---------- the AI Dispatch ----------
+test('the AI sample edition passes and is filed under ai/data', () => {
+  const ed = makeAiSample('2026-11-12');
+  assert.deepEqual(validateEdition(ed), []);
+  const files = new Map();
+  finishEdition(ed, { read: (p) => files.get(p) ?? null, write: (p, s) => files.set(p, s) });
+  assert.ok(files.has('ai/data/latest.json'));
+});
+test('the AI paper needs a playbook with real steps and a source', () => {
+  const check = (change, pattern) => {
+    const ed = makeAiSample('2026-11-12');
+    change(ed);
+    const errors = validateEdition(ed);
+    assert.ok(errors.some((e) => pattern.test(e)), `expected ${pattern}, got: ${errors.join(' | ') || 'no errors'}`);
+  };
+  check((e) => { delete e.playbook; }, /playbook: 2 to 6/);
+  check((e) => { e.playbook[0].steps = ['Only one step here, which is too few.']; }, /steps: 2 to 6/);
+  check((e) => { e.playbook[1].url = 'http://example.com'; }, /playbook\[1\]\.url/);
+  check((e) => { delete e.playbook[2].who; }, /playbook\[2\]\.who/);
+});
+test('every generated page is in sync with index.html', () => {
+  const source = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  for (const id of Object.keys(PAGES)) {
+    assert.equal(readFileSync(new URL(`../${id}/index.html`, import.meta.url), 'utf8'), paperPage(source, id), `${id}/index.html`);
+  }
 });

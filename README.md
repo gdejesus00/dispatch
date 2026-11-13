@@ -2,12 +2,13 @@
 
 A private morning paper: a 24-hour roll-up of open-source news with an interactive map of the southern front in Ukraine, a "days ahead" calendar and an audio brief. It is a static site with no build step and no paid services.
 
-## Two papers, one codebase
+## Three papers, one codebase
 
 - **The Morning Dispatch** at the site root: Fort Knox, the Army, the war in Ukraine, the southern front, Europe.
 - **The Cyber Dispatch** at `cyber/`: threats and incidents, vulnerabilities and patches, AI safety and security, AI policy and industry.
+- **The AI Dispatch** at `ai/`: models and releases, research, tools and builders, policy and industry, plus The Playbook, a set of sourced techniques from the people who build these tools.
 
-`profiles.js` says how the two differ (name, sections, map views, event types). Both use the same page, styles, checker and filing tool. `cyber/index.html` is generated from `index.html` by `node tools/sync-pages.mjs`; a test fails if they drift. The daily instructions are `tools/EDITION_GUIDE.md` and `tools/CYBER_GUIDE.md`. An edition with `"edition": "cyber"` is filed under `cyber/data/`.
+`profiles.js` says how they differ (name, sections, map views, event types, extra boxes). All use the same page, styles, checker and filing tool. `cyber/index.html` and `ai/index.html` are generated from `index.html` by `node tools/sync-pages.mjs`; a test fails if they drift. The daily instructions are `tools/EDITION_GUIDE.md`, `tools/CYBER_GUIDE.md` and `tools/AI_GUIDE.md`. An edition's `"edition"` field (`cyber` or `ai`; none for the Morning Dispatch) decides which folder it is filed under.
 
 Every body of text in an edition carries links to the pages it was written from, and the checker rejects an edition that is missing any.
 

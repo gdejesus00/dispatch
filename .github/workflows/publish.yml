@@ -27,17 +27,19 @@ jobs:
           node --test tests/validate.test.mjs
           node tools/validate.mjs data/latest.json
           node tools/validate.mjs cyber/data/latest.json
+          node tools/validate.mjs ai/data/latest.json
+          node tools/sync-pages.mjs --check
       - name: Fetch the site as it is now, to reuse audio that has not changed
         continue-on-error: true
         run: git clone --quiet --depth 1 --branch gh-pages "https://github.com/${{ github.repository }}.git" _prev
       - name: Work out which audio briefs need to be made
         id: plan
         run: |
-          mkdir -p _audio/main _audio/cyber
+          mkdir -p _audio/main _audio/cyber _audio/ai
           VOICE="kokoro-am_michael-1"
           need=""
-          for paper in main cyber; do
-            if [ "$paper" = main ]; then data=data/latest.json; prev=_prev/audio; else data=cyber/data/latest.json; prev=_prev/cyber/audio; fi
+          for paper in main cyber ai; do
+            if [ "$paper" = main ]; then data=data/latest.json; prev=_prev/audio; else data=$paper/data/latest.json; prev=_prev/$paper/audio; fi
             node tools/script.mjs "$data" > "_audio/$paper/script.txt"
             # The fingerprint covers the words and the voice, so changing VOICE below remakes the audio.
             { cat "_audio/$paper/script.txt"; echo "voice:$VOICE"; } | sha256sum | cut -d' ' -f1 > "_audio/$paper/latest.sha"
@@ -79,9 +81,9 @@ jobs:
       - name: Put the site on the gh-pages branch
         run: |
           mkdir _site
-          cp -r index.html styles.css app.js profiles.js manifest.webmanifest icons vendor data cyber _site/
-          for paper in main cyber; do
-            if [ "$paper" = main ]; then out=_site/audio; else out=_site/cyber/audio; fi
+          cp -r index.html styles.css app.js profiles.js manifest.webmanifest icons vendor data cyber ai _site/
+          for paper in main cyber ai; do
+            if [ "$paper" = main ]; then out=_site/audio; else out=_site/$paper/audio; fi
             if [ -f "_audio/$paper/latest.mp3" ]; then
               mkdir -p "$out" && cp "_audio/$paper/latest.mp3" "_audio/$paper/latest.sha" "$out/"
             else

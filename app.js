@@ -58,9 +58,11 @@ function setupChrome() {
   $('mast-name').textContent = P.name;
   $('brief-name').textContent = P.brief;
   $('ear-left').append(P.earLeft[0], el('br'), el('b', null, P.earLeft[1]));
-  const other = $('other-paper');
-  other.textContent = P.other.label;
-  other.href = P.other.href;
+  const papers = $('papers');
+  // Always Morning, Cyber, AI in that order, with the paper being read shown solid.
+  const order = ['Morning', 'Cyber', 'AI'];
+  [{ label: P.shortName }, ...P.others].sort((a, b) => order.indexOf(a.label) - order.indexOf(b.label))
+    .forEach((o) => papers.append(o.href ? Object.assign(el('a', null, o.label), { href: o.href }) : el('b', null, o.label)));
   $('front-title').textContent = P.front.title;
   $('front-sub').textContent = P.front.sub;
 
@@ -68,6 +70,7 @@ function setupChrome() {
   const item = (href, text) => Object.assign(el('a', null, text), { href });
   nav.append(item('#lead', 'Front page'), item('#front', P.front.nav));
   P.sections.forEach((s) => nav.append(item(`#s-${s.id}`, s.nav)));
+  if (P.playbook) nav.append(item('#playbook', 'Playbook'));
   nav.append(item('#ahead', 'Days ahead'), item('#sources', 'Sources'));
 
   const chips = $('view-chips');
@@ -167,6 +170,7 @@ function render(ed) {
   }
   renderFront(ed);
   renderColumns(ed);
+  renderPlaybook(ed);
   renderAhead(ed);
 
   const src = $('source-list');
@@ -219,6 +223,26 @@ function renderColumns(ed) {
     s.items.forEach((it) => sec.append(storyNode(it)));
     wrap.append(sec);
   });
+}
+
+// Techniques from people who build these tools: what to do, in a few steps, with the page it came from.
+function renderPlaybook(ed) {
+  if (!ed.playbook || !ed.playbook.length) return;
+  const list = $('playbook-list');
+  ed.playbook.forEach((t) => {
+    const card = el('article', 'play');
+    const h = el('h4');
+    h.append(link(t.url, t.title));
+    card.append(el('p', 'kicker', t.who), h, el('p', null, t.summary));
+    const steps = el('ol', 'steps');
+    t.steps.forEach((s) => steps.append(el('li', null, s)));
+    card.append(steps);
+    const by = el('p', 'byline src-line');
+    by.append('Source: ', link(t.url, t.source), ` \u00b7 ${fmtShort(t.published)}`);
+    card.append(by);
+    list.append(card);
+  });
+  $('playbook').hidden = false;
 }
 
 function renderAhead(ed) {

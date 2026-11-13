@@ -143,6 +143,22 @@ export function validateEdition(ed) {
     }
   }
 
+  if (P.playbook || ed.playbook !== undefined) {
+    if (!Array.isArray(ed.playbook) || ed.playbook.length < 2 || ed.playbook.length > 6) err('playbook: 2 to 6 techniques for this paper');
+    else ed.playbook.forEach((t, i) => {
+      const p = `playbook[${i}]`;
+      if (!t || typeof t !== 'object') return err(`${p}: not an object`);
+      if (!isStr(t.title, 8, 120)) err(`${p}.title: 8 to 120 characters`);
+      if (!isStr(t.who, 3, 140)) err(`${p}.who: the person or team it comes from, and their role`);
+      if (!isStr(t.summary, 60, 700)) err(`${p}.summary: 60 to 700 characters on what it is and when to use it`);
+      if (!Array.isArray(t.steps) || t.steps.length < 2 || t.steps.length > 6) err(`${p}.steps: 2 to 6 short steps`);
+      else t.steps.forEach((x, j) => { if (!isStr(x, 15, 260)) err(`${p}.steps[${j}]: 15 to 260 characters`); });
+      if (!isStr(t.source, 2, 80)) err(`${p}.source: name of the outlet`);
+      if (!isUrl(t.url)) err(`${p}.url: must be an https link`);
+      if (!isDate(t.published)) err(`${p}.published: YYYY-MM-DD`);
+    });
+  }
+
   if (!Array.isArray(ed.numbers) || ed.numbers.length > 6) err('numbers: a list of up to 6');
   else ed.numbers.forEach((n, i) => {
     if (!n || !isStr(n.value, 1, 14)) err(`numbers[${i}].value: short, like "112" or "38%"`);
