@@ -34,11 +34,13 @@ jobs:
         id: plan
         run: |
           mkdir -p _audio/main _audio/cyber
+          VOICE="kokoro-am_michael-1"
           need=""
           for paper in main cyber; do
             if [ "$paper" = main ]; then data=data/latest.json; prev=_prev/audio; else data=cyber/data/latest.json; prev=_prev/cyber/audio; fi
             node tools/script.mjs "$data" > "_audio/$paper/script.txt"
-            sha256sum "_audio/$paper/script.txt" | cut -d' ' -f1 > "_audio/$paper/latest.sha"
+            # The fingerprint covers the words and the voice, so changing VOICE below remakes the audio.
+            { cat "_audio/$paper/script.txt"; echo "voice:$VOICE"; } | sha256sum | cut -d' ' -f1 > "_audio/$paper/latest.sha"
             if [ -f "$prev/latest.mp3" ] && [ -f "$prev/latest.sha" ] && cmp -s "$prev/latest.sha" "_audio/$paper/latest.sha"; then
               cp "$prev/latest.mp3" "_audio/$paper/latest.mp3"
               echo "$paper: script unchanged, keeping the existing MP3"
