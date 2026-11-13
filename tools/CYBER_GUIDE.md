@@ -60,9 +60,9 @@ Targets for a normal day: 10 to 20 map pins, 4 to 8 threat items, 3 to 5 patch i
 
 1. Read `tools/gazetteer-world.json` and skim `tools/validate.mjs` and `profiles.js`.
 2. Research all six areas.
-3. Write the edition to `edition.json` in the repository folder (it is not committed).
-4. Run `node tools/finish.mjs edition.json`. It checks the edition and, only if it passes, writes `cyber/data/latest.json`, `cyber/data/archive/<date>.json` and `cyber/data/index.json`. Fix every problem it lists and run it again. Never edit those files by hand.
-5. Delete `edition.json`. Commit only the `cyber/data/` folder with the message `Cyber edition <date>` and push to `main`. Do not open a pull request and never force-push.
+3. Write the edition to `cyber-edition.json` in the repository folder (it is not committed). Use that name, not `edition.json`: the Morning Dispatch job may be writing its own file at the same time.
+4. Run `node tools/finish.mjs cyber-edition.json`. It checks the edition and, only if it passes, writes `cyber/data/latest.json`, `cyber/data/archive/<date>.json` and `cyber/data/index.json`. Fix every problem it lists and run it again. Never edit those files by hand.
+5. Delete `cyber-edition.json`. Commit only the `cyber/data/` folder (`git add cyber/data`) with the message `Cyber edition <date>`, run `git pull --rebase --autostash origin main`, and push to `main`. If the push is rejected because the other paper's job pushed first, pull the same way and push again. Do not open a pull request and never force-push.
 6. Report in three lines: the lead headline, how many stories and map pins, and anything you could not cover.
 
 If you cannot produce an edition that passes the check, push nothing. Yesterday's edition stays up and the page tells the reader it is old.

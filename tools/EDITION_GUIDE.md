@@ -110,7 +110,7 @@ Targets for a normal day: 4 to 6 front axes (Huliaipole, Orikhiv, Stepnohirsk an
 2. Research all six areas. Open the pages; do not rely on search snippets.
 3. Write the edition to `edition.json` in the repository folder (it is not committed).
 4. Run `node tools/finish.mjs edition.json`. It checks the edition and, only if it passes, writes `data/latest.json`, `data/archive/<date>.json` and `data/index.json`. Fix every problem it lists and run it again. Never edit the three data files by hand and never change anything outside `data/`.
-5. Delete `edition.json`. Commit only the `data/` folder with the message `Edition <date>` and push to `main`. If the push to `main` is refused, push the same commit to a branch named `claude/edition-<date>` instead; the publish workflow carries it onto main. Do not open a pull request.
+5. Delete `edition.json`. Commit only the `data/` folder (`git add data`) with the message `Edition <date>`, run `git pull --rebase --autostash origin main`, and push to `main`. If the push is rejected because the other paper's job pushed first, pull the same way and push again. Do not open a pull request and never force-push. Pushing starts the publish workflow on GitHub, which checks the edition, makes the MP3 and puts the site up; that takes several minutes.
 6. Report in three lines: the lead headline, how many stories and map events, and anything you could not cover.
 
 If you cannot produce an edition that passes the check, push nothing. Yesterday's edition stays up and the page tells the reader it is old.
