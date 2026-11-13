@@ -19,6 +19,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12' # the Kokoro voice does not install on newer Pythons yet
       - name: Run the tests and check both editions
         run: |
           node --test tests/validate.test.mjs
@@ -52,7 +55,7 @@ jobs:
           path: |
             ~/.cache/huggingface
             voice
-          key: voices-kokoro-piper-v1
+          key: voices-kokoro-piper-v2
       - name: Read the briefs aloud (Kokoro voice, Piper as a fallback)
         if: steps.plan.outputs.need != ''
         continue-on-error: true
