@@ -1,60 +1,56 @@
 {
  "schema": 1,
- "date": "2026-11-13",
- "generated_at": "2026-11-13T10:30:00Z",
+ "date": "2026-11-14",
+ "generated_at": "2026-11-14T10:03:29Z",
  "lead": {
-  "headline": "Putin repeats his territorial demands after the Abu Dhabi talks; Europe is promised a seat next round",
-  "dek": "ISW reads the Kremlin's post-talks statements as no movement, while Witkoff and Kushner brief Zelensky near Dublin and say Europeans will join the next meeting. Overnight Russian strikes hit Kyiv, Odesa, Rivne and Vinnytsia.",
+  "headline": "EU leaders agree a joint team for Ukraine talks as Russia seeks a wider European deal",
+  "dek": "Dublin summit sets who speaks for Europe, while Kyiv says Russian pressure on Zaporizhzhia continues and Starshield service is restricted.",
   "sources": [
    {
-    "name": "ISW: Nov 12 assessment",
-    "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+    "name": "Politico Europe: Dublin summit",
+    "url": "https://www.politico.eu/article/eu-deal-on-ukraine-talks-overshadows-ai-focused-summit-in-dublin/"
    },
    {
-    "name": "Euronews: Dublin summit",
-    "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks"
+    "name": "Euronews: shifting the debate",
+    "url": "https://www.euronews.com/2026/11/13/from-ukraine-peace-to-europes-future-how-russia-is-shifting-the-debate"
    },
    {
-    "name": "Ukrinform: Witkoff on next meeting",
-    "url": "https://www.ukrinform.net/rubric-polytics/4184163-next-meeting-of-negotiating-teams-already-scheduled-witkoff.html"
-   },
-   {
-    "name": "Ukrinform: overnight drones",
-    "url": "https://www.ukrinform.net/rubric-ato/4184168-air-defense-downs-80-of-117-russian-drones-launched-overnight.html"
+    "name": "ISW: November 13",
+    "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
    }
   ]
  },
- "bottom_line": "After two days of talks in Abu Dhabi, ISW says Putin told US envoys Russia still wants all of the four annexed oblasts and rejects foreign troops in Ukraine. The envoys then met Zelensky near Dublin and said a further meeting is scheduled with Europeans at the table. On the southern front ISW saw no Russian advances on November 11 and 12, while glide bomb use near Orikhiv is rising.",
+ "bottom_line": "EU leaders agreed in Dublin that future Ukraine talks will include security officials from Germany, France, the UK, Italy and Poland plus EU institutions, while Moscow pushes to widen talks into European security. On the southern front ISW saw no Russian advance at Huliaipole, and a strike on Zaporizhzhia injured 50 people. Ukraine says Starshield service is restricted; SpaceX denies it.",
  "numbers": [
   {
-   "value": "175",
-   "label": "Russian assault attempts on the front over the past day, per Ukraine's General Staff",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
-  },
-  {
-   "value": "80 of 117",
-   "label": "Russian strike drones downed or suppressed overnight November 12 to 13, per the Air Force",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184168-air-defense-downs-80-of-117-russian-drones-launched-overnight.html"
-  },
-  {
-   "value": "12 to 30",
-   "label": "Glide bomb strikes a day in the Orikhiv direction, per a Ukrainian brigade spokesperson",
+   "value": "117",
+   "label": "Russian drones launched overnight November 12 to 13, per ISW citing Ukraine's Air Force",
    "source": "ISW",
-   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
+  },
+  {
+   "value": "50",
+   "label": "People injured in the November 13 strike on Zaporizhzhia, per local authorities",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russia-strikes-zaporizhzhia-injures-13-including-5-children/"
+  },
+  {
+   "value": "55",
+   "label": "People killed in the November 2 Komyshuvakha strike, per a Ukrainian SBU official",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
   }
  ],
  "front": {
-  "summary": "ISW reported no Russian advances on the Huliaipole axis or in western Zaporizhzhia Oblast on November 11 and 12, and no ground activity in the Kherson direction on November 12. Ukraine's General Staff counted nine Russian attacks in the Huliaipole sector and none in the Orikhiv and Dnipro River sectors. Glide bomb use near Orikhiv is rising, and drones are still striking civilians in Kherson city.",
+  "summary": "ISW reports no Russian advance at Huliaipole on November 12 and 13 and only an infiltration mission near Orikhiv, with no ground activity reported in the Kherson direction on November 13. Russian strikes on Zaporizhzhia city and the Komyshuvakha rescue site continue, according to local authorities and a Ukrainian security service official.",
   "sources": [
    {
-    "name": "ISW: Nov 12 assessment",
-    "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+    "name": "ISW: November 13",
+    "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
    },
    {
-    "name": "Ukrinform: General Staff update",
-    "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
+    "name": "Kyiv Independent: Zaporizhzhia strike",
+    "url": "https://kyivindependent.com/russia-strikes-zaporizhzhia-injures-13-including-5-children/"
    }
   ],
   "axes": [
@@ -62,15 +58,11 @@
     "name": "Huliaipole",
     "sector": "zaporizhzhia",
     "status": "corroborated",
-    "text": "Russian forces continued offensive operations on November 11 and 12 but did not advance, according to ISW. The General Staff said defenders repelled nine attacks near Ternuvate, Dolynka and Bilohiria. Ukraine's 7th Corps said it struck a launch site for Molniya-type drones in occupied Huliaipole, which is Ukraine's claim.",
+    "text": "ISW says Russian forces continued offensive operations toward Huliaipole on November 12 and 13 but did not advance, citing Ukrainian General Staff reporting and Russian sources.",
     "sources": [
      {
-      "name": "ISW: Nov 12 assessment",
-      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
-     },
-     {
-      "name": "Ukrinform: General Staff update",
-      "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
+      "name": "ISW: November 13",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
      }
     ]
    },
@@ -78,47 +70,43 @@
     "name": "Orikhiv",
     "sector": "zaporizhzhia",
     "status": "claimed",
-    "text": "ISW saw no Russian advance in western Zaporizhzhia Oblast. A Ukrainian brigade spokesperson said Russian forces are dropping 12 to 30 glide bombs a day on positions in the direction, which ISW reads as likely preparation for later offensive operations. The General Staff recorded no Russian offensive operations in the Orikhiv sector over the past day.",
+    "text": "ISW says a Russian infiltration mission northwest of Orikhiv was followed by a Ukrainian strike on a Russian position south of Lukyanivske, based on geolocated footage. No territorial change is reported.",
     "sources": [
      {
-      "name": "ISW: Nov 12 assessment",
-      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
-     },
-     {
-      "name": "Ukrinform: General Staff update",
-      "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
+      "name": "ISW: November 13",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
      }
     ]
    },
    {
-    "name": "Dnipro line and islands",
+    "name": "Zaporizhzhia city and Komyshuvakha",
+    "sector": "zaporizhzhia",
+    "status": "corroborated",
+    "text": "A Russian attack on November 13 injured 50 people in Zaporizhzhia, according to the acting oblast governor. A Ukrainian security service official says drones strike rescuers daily at Komyshuvakha, where at least 55 died on November 2.",
+    "sources": [
+     {
+      "name": "Kyiv Independent: Zaporizhzhia strike",
+      "url": "https://kyivindependent.com/russia-strikes-zaporizhzhia-injures-13-including-5-children/"
+     },
+     {
+      "name": "ISW: November 13",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
+     }
+    ]
+   },
+   {
+    "name": "Kherson and Oleshky",
     "sector": "kherson",
     "status": "claimed",
-    "text": "The General Staff recorded no Russian offensive operations in the Dnipro River sector over the past day, and ISW saw no ground activity in the Kherson direction on November 12. Ukrainian marine units say Russia used the October 27 to November 1 Oleshky ceasefire to rotate units, bring in ammunition and strengthen positions, which the Kyiv Independent reported on November 10.",
+    "text": "Neither side reported ground activity in the Kherson direction on November 13, per ISW. Ukraine's ombudsman says weekly civilian evacuations from occupied areas have begun after the Oleshky ceasefire; this is his account.",
     "sources": [
      {
-      "name": "ISW: Nov 12 assessment",
-      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+      "name": "ISW: November 13",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
      },
      {
-      "name": "Ukrinform: General Staff update",
-      "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
-     },
-     {
-      "name": "Kyiv Independent: Oleshky ceasefire",
-      "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
-     }
-    ]
-   },
-   {
-    "name": "Kherson city",
-    "sector": "kherson",
-    "status": "confirmed",
-    "text": "ISW cites geolocated footage published on November 12 showing a drone operator of Russia's 98th Airborne Division striking a civilian woman driving a car in Kherson city. ISW describes this as part of a long-running pattern of drone attacks on civilians there.",
-    "sources": [
-     {
-      "name": "ISW: Nov 12 assessment",
-      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+      "name": "Kyiv Independent: evacuations",
+      "url": "https://kyivindependent.com/ukraine-russia-launch-new-format-for-evacuating-civilians-from-occupied-territories-ombudsman-says/"
      }
     ]
    }
@@ -126,140 +114,116 @@
  },
  "map_events": [
   {
-   "title": "Molniya drone site hit in Huliaipole",
-   "summary": "Ukraine's 7th Corps said it struck a Russian launch site for Molniya-type strike drones in occupied Huliaipole, as relayed by ISW.",
+   "title": "Strike on apartment buildings in Zaporizhzhia",
+   "summary": "A Russian attack injured 50 people, including eight children, local authorities said; Suspilne reported Tornado-S rockets.",
+   "place": "Zaporizhzhia",
+   "lat": 47.8388,
+   "lon": 35.1396,
+   "type": "strike",
+   "status": "corroborated",
+   "date": "2026-11-13",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russia-strikes-zaporizhzhia-injures-13-including-5-children/"
+  },
+  {
+   "title": "Drone strikes on rescuers at Komyshuvakha",
+   "summary": "A Ukrainian security service official said Russian FPV drones strike emergency workers daily at the site of the November 2 strike.",
+   "place": "Komyshuvakha",
+   "lat": 47.755,
+   "lon": 35.4,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-13",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
+  },
+  {
+   "title": "Russian offensive at Huliaipole without advance",
+   "summary": "ISW says Russian operations on November 12 and 13 did not advance.",
    "place": "Huliaipole",
    "lat": 47.6636,
    "lon": 36.2569,
-   "type": "strike",
-   "status": "claimed",
-   "date": "2026-11-12",
-   "source": "ISW",
-   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
-  },
-  {
-   "title": "Nine Russian attacks in the Huliaipole sector",
-   "summary": "Ukraine's General Staff said defenders repelled nine attacks near Ternuvate, Dolynka and Bilohiria over the past day.",
-   "place": "Huliaipole",
-   "lat": 47.67,
-   "lon": 36.2,
    "type": "ground",
-   "status": "claimed",
+   "status": "corroborated",
    "date": "2026-11-13",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
   },
   {
-   "title": "Glide bombs increase near Orikhiv",
-   "summary": "A Ukrainian brigade spokesperson said Russia drops 12 to 30 glide bombs a day in the Orikhiv direction.",
+   "title": "Infiltration mission northwest of Orikhiv",
+   "summary": "ISW reports a Russian infiltration and a Ukrainian strike south of Lukyanivske, per geolocated footage.",
    "place": "Orikhiv",
    "lat": 47.5681,
    "lon": 35.7856,
-   "type": "strike",
-   "status": "claimed",
-   "date": "2026-11-12",
-   "source": "ISW",
-   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
-  },
-  {
-   "title": "Drone strike on a civilian car in Kherson",
-   "summary": "ISW cites geolocated footage of a Russian 98th Airborne Division drone operator striking a woman driving in Kherson city.",
-   "place": "Kherson",
-   "lat": 46.6354,
-   "lon": 32.6169,
-   "type": "strike",
+   "type": "ground",
    "status": "confirmed",
    "date": "2026-11-12",
    "source": "ISW",
-   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
   },
   {
-   "title": "13 Russian attacks near Kostiantynivka",
-   "summary": "The General Staff recorded 13 attacks in the Kostiantynivka sector, the busiest of the day with Pokrovsk.",
+   "title": "Weekly civilian evacuations after Oleshky ceasefire",
+   "summary": "Ukraine's ombudsman said 16 people were returned on November 12 under a new arrangement; one side's account.",
+   "place": "Oleshky",
+   "lat": 46.6258,
+   "lon": 32.7186,
+   "type": "diplomatic",
+   "status": "claimed",
+   "date": "2026-11-13",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/ukraine-russia-launch-new-format-for-evacuating-civilians-from-occupied-territories-ombudsman-says/"
+  },
+  {
+   "title": "Russian offensive at Kostiantynivka without advance",
+   "summary": "ISW says Russian forces did not advance in or around the town on November 12 and 13 and rejects Russian claims of control.",
    "place": "Kostiantynivka",
    "lat": 48.5277,
    "lon": 37.7069,
    "type": "ground",
+   "status": "corroborated",
+   "date": "2026-11-13",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
+  },
+  {
+   "title": "Repelled mechanized assault near Dobropillia",
+   "summary": "A Ukrainian military source says an assault with three tanks and three infantry fighting vehicles toward Hruzke was repelled.",
+   "place": "Dobropillia",
+   "lat": 48.4667,
+   "lon": 37.0833,
+   "type": "ground",
    "status": "claimed",
    "date": "2026-11-13",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
   },
   {
-   "title": "Kyiv hospital damaged",
-   "summary": "Debris from a Russian drone hit a medical facility in Kyiv, partly destroying a second floor and injuring three patients, the Health Ministry said.",
-   "place": "Kyiv",
-   "lat": 50.4501,
-   "lon": 30.5234,
-   "type": "strike",
-   "status": "claimed",
-   "date": "2026-11-13",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184199-russian-overnight-attack-partially-destroys-second-floor-of-kyiv-hospital-injures-three-patients.html"
-  },
-  {
-   "title": "Ballistic missiles and drones hit Kyiv",
-   "summary": "Mayor Klitschko said one person was killed and eight injured in overnight and daytime strikes on November 12.",
-   "place": "Kyiv",
-   "lat": 50.46,
-   "lon": 30.48,
-   "type": "strike",
-   "status": "claimed",
-   "date": "2026-11-12",
-   "source": "Kyiv Independent",
-   "url": "https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/"
-  },
-  {
-   "title": "Odesa attacked",
-   "summary": "Two people were killed and five hospitalized in a Russian attack on Odesa on the morning of November 13, regional officials said.",
-   "place": "Odesa",
-   "lat": 46.4825,
-   "lon": 30.7233,
-   "type": "strike",
-   "status": "claimed",
-   "date": "2026-11-13",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184185-death-toll-from-russian-attack-on-odesa-rises-to-two-five-injured.html"
-  },
-  {
-   "title": "Apartment block hit in Rivne",
-   "summary": "Six people, including two children, were injured when a Russian drone struck a residential building; 42 residents were evacuated.",
-   "place": "Rivne",
-   "lat": 50.6199,
-   "lon": 26.2516,
-   "type": "strike",
-   "status": "claimed",
-   "date": "2026-11-13",
-   "source": "Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184173-fire-in-rivne-apartment-building-after-russian-strike-extinguished-six-injured-including-two-children.html"
-  },
-  {
-   "title": "Zelensky meets US envoys near Dublin",
-   "summary": "Zelensky met Witkoff and Kushner at an airbase outside Dublin after their Moscow meeting with Putin.",
+   "title": "EU leaders agree Ukraine talks team",
+   "summary": "Politico Europe reports leaders agreed a team of E5 security officials plus EU institutions.",
    "place": "Dublin",
    "lat": 53.3498,
    "lon": -6.2603,
    "type": "diplomatic",
    "status": "confirmed",
-   "date": "2026-11-12",
-   "source": "Euronews",
-   "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks"
+   "date": "2026-11-13",
+   "source": "Politico Europe",
+   "url": "https://www.politico.eu/article/eu-deal-on-ukraine-talks-overshadows-ai-focused-summit-in-dublin/"
   },
   {
-   "title": "Drone fragments found in Moldova",
-   "summary": "Moldovan police found drone fragments in a vineyard near Antonesti, about 10 kilometers from Odesa Oblast. The origin is under examination.",
-   "place": "Antonesti, Stefan Voda district",
-   "lat": 46.45,
-   "lon": 29.8,
+   "title": "Suspected drones at RAF Lakenheath",
+   "summary": "US Air Force security responded; the UK Defence Ministry reported no injuries or damage and an unknown origin.",
+   "place": "RAF Lakenheath",
+   "lat": 52.4093,
+   "lon": 0.561,
    "type": "other",
-   "status": "claimed",
-   "date": "2026-11-12",
+   "status": "confirmed",
+   "date": "2026-11-13",
    "source": "Kyiv Independent",
-   "url": "https://kyivindependent.com/moldovan-police-find-drone-fragments-in-vineyard-near-ukrainian-border/"
+   "url": "https://kyivindependent.com/us-air-force-responds-to-suspected-drone-activity-at-military-base-in-uk/"
   },
   {
-   "title": "Poland base decision pending",
-   "summary": "Poland's defense minister said the Pentagon has greenlit a permanent US troop presence; the White House decides in early December.",
+   "title": "Decision on US troop presence in Poland due",
+   "summary": "A Polish official says the Pentagon greenlit a permanent presence; the White House decides in early December.",
    "place": "Warsaw",
    "lat": 52.2297,
    "lon": 21.0122,
@@ -273,280 +237,226 @@
  "sections": [
   {
    "id": "ukraine",
-   "summary": "The day was dominated by what the Abu Dhabi talks produced: ISW sees no Russian shift, while the US envoys say Europe will join the next round. Russian strikes continued on cities as air defense supplies and satellite service restrictions drew warnings from Kyiv.",
+   "summary": "The day combined diplomacy over who joins talks with continued strikes and a dispute over Starshield. Ukrainian commanders describe a slowed Russian offensive.",
    "sources": [
     {
-     "name": "ISW: Nov 12 assessment",
-     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+     "name": "ISW: November 13",
+     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
     },
     {
-     "name": "Ukrinform: Witkoff on next meeting",
-     "url": "https://www.ukrinform.net/rubric-polytics/4184163-next-meeting-of-negotiating-teams-already-scheduled-witkoff.html"
-    },
-    {
-     "name": "Ukrinform: Zelensky and Rutte",
-     "url": "https://www.ukrinform.net/rubric-ato/4184096-zelensky-rutte-discuss-air-defense-missile-shortages-starshield-disruptions.html"
+     "name": "Kyiv Independent: Starshield",
+     "url": "https://kyivindependent.com/ukraine-seeks-explanation-on-starshield-speed-restrictions-from-us/"
     }
    ],
    "items": [
     {
-     "headline": "ISW says Putin held to his demands after the Abu Dhabi talks",
-     "summary": "ISW's assessment says Putin told Witkoff and Kushner that Russia's own border is the only clear demarcation line and rejected foreign troops in Ukraine. ISW concludes the Kremlin has not moved from its original demands. This is ISW's reading of Russian statements.",
-     "source": "ISW",
-     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026",
-     "published": "2026-11-12"
-    },
-    {
-     "headline": "Witkoff says another round of talks is scheduled",
-     "summary": "After meeting Zelensky near Dublin, Witkoff said the next meeting of negotiating teams is already on the schedule and that Trump wants to lead efforts to end the war. He called the Abu Dhabi meeting constructive.",
-     "source": "Ukrinform",
-     "url": "https://www.ukrinform.net/rubric-polytics/4184163-next-meeting-of-negotiating-teams-already-scheduled-witkoff.html",
-     "published": "2026-11-13"
-    },
-    {
-     "headline": "Zelensky tells Rutte interceptor shortages and Starshield limits hurt air defense",
-     "summary": "Zelensky said Russia fired 115 missiles in the first week of November and that restrictions on Starshield service limit Ukraine's ability to stop jet-powered Shahed drones. He thanked NATO for its willingness to help with PAC-2 and PAC-3 missiles.",
-     "source": "Ukrinform",
-     "url": "https://www.ukrinform.net/rubric-ato/4184096-zelensky-rutte-discuss-air-defense-missile-shortages-starshield-disruptions.html",
-     "published": "2026-11-12"
-    },
-    {
-     "headline": "Russian drones hit 24 locations overnight as air defense downs 80 of 117",
-     "summary": "Ukraine's Air Force said 117 strike drones, 63 of them jet-powered, were launched from the evening of November 12. Strikes hit Kyiv, Odesa and Rivne, among other places.",
-     "source": "Ukrinform",
-     "url": "https://www.ukrinform.net/rubric-ato/4184168-air-defense-downs-80-of-117-russian-drones-launched-overnight.html",
-     "published": "2026-11-13"
-    },
-    {
-     "headline": "Ukraine confirms Omsk refinery strike 2,500 kilometers from its border",
-     "summary": "Ukraine's Special Operations Forces said they struck the Omsk refinery on November 11, the farthest Ukrainian drone strike on a Russian refinery so far. The unit's own statement is the main source for the damage.",
+     "headline": "Ukraine seeks US explanation on Starshield speed limit; SpaceX denies it",
+     "summary": "Zelensky says Starshield is limited to 161 kilometers per hour, hampering drone interception. SpaceX told Axios the claim is false. A Ukrainian defense ministry source says the limit applies only over occupied territory.",
      "source": "Kyiv Independent",
-     "url": "https://kyivindependent.com/russias-largest-oil-refinery-slammed-by-drones-in-8-hr-attack-2-500-km-from-ukraine/",
-     "published": "2026-11-12"
+     "url": "https://kyivindependent.com/ukraine-seeks-explanation-on-starshield-speed-restrictions-from-us/",
+     "published": "2026-11-13",
+     "status": "claimed"
+    },
+    {
+     "headline": "Air Assault Forces commander says Russia's advance has slowed significantly",
+     "summary": "Major General Oleh Apostol said heavy casualties limit Russian offensives and that flag raising overstates gains. The article cites ISW on a net Russian territorial loss of about 27 square kilometers in October.",
+     "source": "Kyiv Independent",
+     "url": "https://kyivindependent.com/russias-advance-in-ukraine-has-slowed-significantly-air-assault-forces-commander-says/",
+     "published": "2026-11-13",
+     "status": "claimed"
+    },
+    {
+     "headline": "Ukraine and Russia start weekly evacuations from occupied areas, ombudsman says",
+     "summary": "Dmytro Lubinets said vulnerable people can return weekly with Red Cross help and that 16 returned on November 12. The arrangement followed the Oleshky evacuation.",
+     "source": "Kyiv Independent",
+     "url": "https://kyivindependent.com/ukraine-russia-launch-new-format-for-evacuating-civilians-from-occupied-territories-ombudsman-says/",
+     "published": "2026-11-13"
+    },
+    {
+     "headline": "Czechia says first four L-39 Skyfox jets could reach Ukraine in 2027",
+     "summary": "Foreign Minister Petr Macinka said funding is secured for four aircraft and eight more are expected in 2028. Deliveries depend on export licenses for foreign components.",
+     "source": "Kyiv Independent",
+     "url": "https://kyivindependent.com/czechia-could-deliver-first-four-l-39-skyfox-jets-to-ukraine-in-2027-foreign-minister-says/",
+     "published": "2026-11-13"
+    },
+    {
+     "headline": "Russia presses for a Kostyantynivka humanitarian mission; ISW sees a military aim",
+     "summary": "Kremlin officials say a local ceasefire is needed to evacuate civilians. ISW assesses Russia does not control the town and may be seeking a buildup toward Druzhkivka.",
+     "source": "ISW",
+     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026",
+     "published": "2026-11-13",
+     "status": "claimed"
     }
    ]
   },
   {
    "id": "army",
-   "summary": "Army Times coverage centered on Pentagon policy and Congress, with a new Army school activated and a veterans bill passed in a disputed voice vote. A soldier's arrest in Britain on suspicion of aiding Russian intelligence also drew official comment.",
+   "summary": "Army news centered on Poland basing, a new public affairs school, a counterintelligence arrest in the UK and a lawsuit over a Pentagon panel.",
    "sources": [
     {
-     "name": "Army Times: public affairs school",
-     "url": "https://www.armytimes.com/news/2026/11/12/army-formally-activates-public-affairs-school/"
+     "name": "Army Times: Poland",
+     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/pentagon-greenlit-permanent-presence-of-us-troops-in-poland-official-says/"
     },
     {
-     "name": "Army Times: service colleges",
-     "url": "https://www.armytimes.com/pentagon/2026/11/09/hegseth-to-cut-civilians-from-military-service-colleges-wants-focus-on-victory/"
-    },
-    {
-     "name": "Army Times: veterans bill",
-     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/house-passes-sweeping-veterans-benefits-bill-with-polarizing-tactic/"
-    },
-    {
-     "name": "Army Times: UK arrest",
-     "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-esp"
+     "name": "Army Times: espionage arrest",
+     "url": "https://www.armytimes.com/global/europe/2026/11/13/us-army-names-officer-held-on-allegations-of-espionage/"
     }
    ],
    "items": [
     {
-     "headline": "Army activates its Public Affairs School at Fort Meade",
-     "summary": "The Army formally activated the U.S. Army Public Affairs School last month and announced it this week. Col. Kamil Sztalkoper takes over as commandant from Col. Stacy M. Hopwood.",
+     "headline": "Pentagon greenlit permanent US troop presence in Poland, Polish official says",
+     "summary": "Poland's defense minister said the Pentagon signaled approval after meeting Secretary Hegseth. The White House is to decide in early December, and the plan concerns about 5,000 additional soldiers.",
+     "source": "Army Times",
+     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/pentagon-greenlit-permanent-presence-of-us-troops-in-poland-official-says/",
+     "published": "2026-11-12",
+     "status": "claimed"
+    },
+    {
+     "headline": "Army formally activates its Public Affairs School at Fort Meade",
+     "summary": "The school was activated last month and will train public affairs soldiers and officers. Colonel Kamil Sztalkoper takes over as commandant.",
      "source": "Army Times",
      "url": "https://www.armytimes.com/news/2026/11/12/army-formally-activates-public-affairs-school/",
      "published": "2026-11-12"
     },
     {
-     "headline": "From November 9: Hegseth orders 33 changes to military service colleges",
-     "summary": "A memorandum released on November 9 directs the colleges to use AI war games in place of long written dissertations and to end lifetime tenure for newly hired civilian faculty. It also asks them to ensure most full-time faculty have military experience.",
+     "headline": "Army names officer held in the UK on allegations of espionage",
+     "summary": "An Army official identified Lieutenant Colonel Brandon Carroll Tyner, arrested under the National Security Act. He remains in custody and the allegations are unproven.",
      "source": "Army Times",
-     "url": "https://www.armytimes.com/pentagon/2026/11/09/hegseth-to-cut-civilians-from-military-service-colleges-wants-focus-on-victory/",
-     "published": "2026-11-09"
+     "url": "https://www.armytimes.com/global/europe/2026/11/13/us-army-names-officer-held-on-allegations-of-espionage/",
+     "published": "2026-11-13"
     },
     {
-     "headline": "House passes veterans benefits package by disputed voice vote",
-     "summary": "The Take Care of America's Veterans Act passed on Veterans Day with more than 60 provisions. Its most contested measure would change how sleep apnea and tinnitus are rated, potentially lowering some future compensation, and veterans groups are divided.",
+     "headline": "Watchdog groups sue over Pentagon future warfare panel",
+     "summary": "The complaint argues Project Meridian violates the Federal Advisory Committee Act on transparency and balance. Army Times reports the allegations as filed.",
      "source": "Army Times",
-     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/house-passes-sweeping-veterans-benefits-bill-with-polarizing-tactic/",
-     "published": "2026-11-12"
-    },
-    {
-     "headline": "From November 10: US soldier arrested in Britain on suspicion of assisting Russia",
-     "summary": "British police said a 41-year-old senior US soldier was arrested near Gloucester under the National Security Act. FBI Director Kash Patel called the allegations of the utmost concern.",
-     "source": "Army Times",
-     "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-esp",
-     "published": "2026-11-10"
+     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/13/lawsuit-says-pentagons-future-warfare-panel-lacks-transparency-and-balance/",
+     "published": "2026-11-13"
     }
    ]
   },
   {
    "id": "fort-knox",
-   "summary": "Fort Knox news in the window was thin; the newest official item found is from November 9.",
+   "summary": "No new Fort Knox news dated within the window turned up on the installation's official page or in search.",
    "sources": [
     {
-     "name": "Defcon Level: Fort Knox statement",
-     "url": "https://www.defconlevel.com/alert/2026-11-09-fort-knox-selfless-service-remains-key-army-leadership-trait-for-fort-knox-soldier-volunteers"
+     "name": "Fort Knox: official page",
+     "url": "https://home.army.mil/knox/"
     }
    ],
-   "items": [
-    {
-     "headline": "From November 9: Fort Knox recruiter coaches high school football as a volunteer",
-     "summary": "A Fort Knox statement profiles Sgt. 1st Class Larry Barner, an Army Recruiting Command recruiter who mentors students and coaches wide receivers and cornerbacks for the Fort Knox High School team. The piece illustrates the Army value of selfless service.",
-     "source": "Defcon Level",
-     "url": "https://www.defconlevel.com/alert/2026-11-09-fort-knox-selfless-service-remains-key-army-leadership-trait-for-fort-knox-soldier-volunteers",
-     "published": "2026-11-09"
-    }
-   ]
+   "items": [],
+   "quiet_note": "No Fort Knox news dated within the last 24 hours was found on the official page or in search."
   },
   {
    "id": "europe",
-   "summary": "European leaders spent the day in Dublin deciding who speaks for the bloc in Ukraine talks, with a decision possibly pushed to a special summit. Sanctions, accession and a possible permanent US presence in Poland were also on the agenda.",
+   "summary": "Europe's day turned on who will represent it in Ukraine talks, with Russia pressing a wider security agenda. Central bank and basing decisions are also pending.",
    "sources": [
     {
-     "name": "Euronews: Dublin summit",
-     "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks"
+     "name": "Politico Europe: Dublin summit",
+     "url": "https://www.politico.eu/article/eu-deal-on-ukraine-talks-overshadows-ai-focused-summit-in-dublin/"
     },
     {
-     "name": "Kyiv Independent: UK sanctions",
-     "url": "https://kyivindependent.com/uk-says-its-1st-country-to-target-all-of-russias-top-10-oil-producers-with-latest-round-of-sanctions/"
-    },
-    {
-     "name": "Army Times: Poland",
-     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/pentagon-greenlit-permanent-presence-of-us-troops-in-poland-official-says/"
+     "name": "Euronews: shifting the debate",
+     "url": "https://www.euronews.com/2026/11/13/from-ukraine-peace-to-europes-future-how-russia-is-shifting-the-debate"
     }
    ],
    "items": [
     {
-     "headline": "EU leaders weigh who should represent Europe in peace talks",
-     "summary": "Euronews reports that Costa and Kallas are both floated, and that the decision may slip to the special summit at the end of the month. Meloni wants a clear mandate, while Tusk said Poland does not feel excluded.",
-     "source": "Euronews",
-     "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks",
+     "headline": "EU leaders agree E5 plus EU institutions team for Ukraine talks",
+     "summary": "Politico Europe reports leaders in Dublin agreed future talks will involve security officials from Germany, France, the UK, Italy and Poland plus Commission and Council representatives. Costa said Europe must speak with one voice.",
+     "source": "Politico Europe",
+     "url": "https://www.politico.eu/article/eu-deal-on-ukraine-talks-overshadows-ai-focused-summit-in-dublin/",
      "published": "2026-11-13"
     },
     {
-     "headline": "Zelensky says Europe will be in the negotiating team next time",
-     "summary": "Zelensky said Europe will take part directly in the next round, and Kushner said no deal can be concluded without Europeans at the table. Euronews notes the Kremlin played down the prospect.",
+     "headline": "Finland rejects reported Russian demand to leave NATO",
+     "summary": "Defense Minister Antti Hakkanen called it outrageous. Bild reported the demand; Politico notes it is unclear which proposals Putin supports.",
+     "source": "Politico Europe",
+     "url": "https://www.politico.eu/article/finland-rejects-reported-russian-demand-to-leave-nato-as-part-of-peace-talks/",
+     "published": "2026-11-14",
+     "status": "claimed"
+    },
+    {
+     "headline": "Russia shifts talks toward a wider European security deal, Euronews reports",
+     "summary": "Euronews says Abu Dhabi talks produced agreement in principle on a prisoner exchange but no ceasefire. Zelensky warned against discussing Europe's architecture before guarantees for Ukraine.",
      "source": "Euronews",
-     "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks",
+     "url": "https://www.euronews.com/2026/11/13/from-ukraine-peace-to-europes-future-how-russia-is-shifting-the-debate",
      "published": "2026-11-13"
     },
     {
-     "headline": "UK targets all of Russia's top 10 oil producers with new sanctions",
-     "summary": "The UK Foreign Ministry said the November 12 package makes Britain the only country to have sanctioned all ten. Prime Minister Andy Burnham plans to press other nations at the Dublin summit for more economic pressure.",
-     "source": "Kyiv Independent",
-     "url": "https://kyivindependent.com/uk-says-its-1st-country-to-target-all-of-russias-top-10-oil-producers-with-latest-round-of-sanctions/",
-     "published": "2026-11-12"
+     "headline": "Two candidates vie for ECB presidency; nominations deadline set",
+     "summary": "Hernandez de Cos and Klaas Knot are the nominees to succeed Lagarde, an EU official said. Nominations for two other board seats close November 18.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/11/13/france-and-germany-near-deal-on-de-cos-for-ecb-top-job-as-eu-confirms-two-candidates",
+     "published": "2026-11-13"
     },
     {
-     "headline": "Ireland aims to open Ukraine's last two EU negotiating clusters by year end",
-     "summary": "Prime Minister Micheal Martin said three clusters are open and he wants the remaining two opened before Ireland's Council presidency ends on December 31. He cited the 21st sanctions package and ongoing disbursement of the EU support loan.",
+     "headline": "US Air Force responds to suspected drone activity at RAF Lakenheath",
+     "summary": "The UK Defence Ministry reported no injuries or damage. The origin of the suspected drones is unknown.",
      "source": "Kyiv Independent",
-     "url": "https://kyivindependent.com/ukraines-future-is-within-the-european-union-irish-pm-aims-to-open-all-eu-negotiation-clusters-for-kyiv-by-end-of-year/",
-     "published": "2026-11-11"
-    },
-    {
-     "headline": "Poland says Pentagon has greenlit a permanent US troop presence",
-     "summary": "Poland's defense minister said the final decision rests with the White House in early December. Sites west of the Vistula, including Bydgoszcz, Poznan, Szczecin and Wroclaw, have been visited.",
-     "source": "Army Times",
-     "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/pentagon-greenlit-permanent-presence-of-us-troops-in-poland-official-says/",
-     "published": "2026-11-12"
+     "url": "https://kyivindependent.com/us-air-force-responds-to-suspected-drone-activity-at-military-base-in-uk/",
+     "published": "2026-11-13"
     }
    ]
   }
  ],
  "upcoming": [
   {
+   "date": "2026-11-16",
+   "title": "Trump departs for the Philippines, then Shenzhen",
+   "detail": "The White House says Trump will meet Xi and Putin in Shenzhen next week; US officials say Ukraine is not on that agenda.",
+   "topic": "europe",
+   "url": "https://www.euronews.com/2026/11/14/trump-xi-and-putin-to-meet-in-china-white-house-says"
+  },
+  {
+   "date": "2026-11-18",
+   "title": "ECB executive board nomination deadline",
+   "detail": "A new deadline for nominations to the chief economist and market operations seats.",
+   "topic": "europe",
+   "url": "https://www.euronews.com/2026/11/13/france-and-germany-near-deal-on-de-cos-for-ecb-top-job-as-eu-confirms-two-candidates"
+  },
+  {
    "date": "2026-11-26",
-   "title": "Special European Council",
-   "detail": "Von der Leyen said the Commission will present an option paper on Ukraine's 2027 financing and the 22nd sanctions package at the summit on 26 and 27 November; the EU envoy question may also be decided.",
+   "title": "EU summit begins ECB presidency consultations",
+   "detail": "Costa aims to start consulting Parliament and the ECB Governing Council at this summit.",
    "topic": "europe",
-   "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks"
-  },
-  {
-   "date": "2026-12-01",
-   "title": "White House decision on a permanent US base in Poland, expected in early December",
-   "detail": "Poland's defense minister said the decision is due in early December; the exact day has not been given.",
-   "topic": "army",
-   "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/pentagon-greenlit-permanent-presence-of-us-troops-in-poland-official-says/"
-  },
-  {
-   "date": "2026-12-31",
-   "title": "Ireland's EU Council presidency ends",
-   "detail": "Ireland aims to open Ukraine's remaining two accession clusters before this date.",
-   "topic": "europe",
-   "url": "https://kyivindependent.com/ukraines-future-is-within-the-european-union-irish-pm-aims-to-open-all-eu-negotiation-clusters-for-kyiv-by-end-of-year/"
+   "url": "https://www.euronews.com/2026/11/13/france-and-germany-near-deal-on-de-cos-for-ecb-top-job-as-eu-confirms-two-candidates"
   }
  ],
  "audio": {
-  "script": "Good morning. This is the Morning Dispatch for Friday, November 13, 2026.\n\nHere is the bottom line. After two days of talks in Abu Dhabi, the Institute for the Study of War says Vladimir Putin has not moved from his original demands. The American envoys, Steve Witkoff and Jared Kushner, then met President Zelensky near Dublin and said another meeting is already scheduled, with Europeans at the table. On the southern front, the institute saw no Russian advances on November 11 and 12. But Russian glide bomb use near Orikhiv is rising. And overnight, Russian drones again struck cities across Ukraine.\n\nWe start with the southern front. Everything here comes from the Institute for the Study of War assessment of November 12, and from the daily update of Ukraine's General Staff, reported by Ukrinform.\n\nOn the Huliaipole axis, the institute says Russian forces kept up offensive operations on November 11 and 12, but did not advance. The General Staff says Ukrainian defenders repelled nine attacks near Ternuvate, Dolynka and Bilohiria. Separately, Ukraine's 7th Corps says it struck a launch site for Molniya type strike drones in occupied Huliaipole. That is a Ukrainian claim, and the institute relays it without independent confirmation.\n\nIn western Zaporizhzhia, near Orikhiv, the institute again saw no Russian advance. The General Staff recorded no Russian offensive operations in the Orikhiv sector over the past day. But a spokesperson for a Ukrainian brigade there says Russia is dropping between twelve and thirty guided glide bombs every day on Ukrainian positions. The institute reads that as likely preparation for later offensive operations. That is the institute's assessment, not a confirmed plan.\n\nOn the Dnipro River line in Kherson Oblast, the General Staff recorded no Russian offensive operations, and the institute saw no ground activity on November 12. The Kyiv Independent reported on November 10 that Ukrainian marine units say Russia used the ceasefire around Oleshky, from October 27 to November 1, to rotate units, bring in ammunition and strengthen positions. That is the Ukrainian military's account. Ukraine's human rights ombudsman said neither side had reported violations.\n\nIn Kherson city, the institute cites geolocated footage published on November 12. It shows a drone operator from Russia's 98th Airborne Division striking a civilian woman who was driving a car. The institute says drone operators have long hunted civilians in the city. Because the footage is geolocated, the institute treats the event as confirmed.\n\nNow the wider war. The General Staff says Russian forces made 175 assault attempts over the past day. The busiest areas were the Kostiantynivka sector, with 13 attacks, and the Pokrovsk sector, with 11. Ukraine's Air Assault Forces commander, Oleh Apostol, told journalists that the Russian pace of advance has slowed considerably, and that capturing a tree line in a month is hardly an operational success. That is one Ukrainian commander's view.\n\nOn the diplomacy, the institute says that after the Abu Dhabi talks Putin told Witkoff and Kushner in Moscow that Russia's own border, which in Russian law includes the four annexed regions, is the only clear demarcation line. He also said that foreign troops in Ukraine are absolutely unacceptable. The institute concludes that the Kremlin has not changed its demands. After Moscow, the envoys met Zelensky at a military airbase outside Dublin. Witkoff said the next meeting of negotiating teams is already on the schedule and called the Abu Dhabi round constructive. Euronews reports that Zelensky said Europe will be in the negotiating team next time, and that Kushner said no deal can be concluded without Europeans at the table. Euronews adds that the Kremlin played down that prospect.\n\nOvernight from November 12 to 13, Ukraine's Air Force says Russia launched 117 strike drones, 63 of them jet powered. Air defenses shot down or suppressed 80. Hits were recorded at 24 locations. Ukrinform reports a Kyiv medical facility was damaged, with three patients injured. In Rivne, six people, including two children, were injured when a drone hit an apartment building. In Odesa, regional officials say two people were killed and five hospitalized. On November 12, the mayor of Kyiv said one person was killed and eight injured in strikes on the capital.\n\nPresident Zelensky told NATO Secretary General Mark Rutte that Russia fired 115 missiles in the first week of November alone. He said Ukraine faces a shortage of anti ballistic interceptors, and that renewed restrictions on Starshield satellite service limit its ability to stop jet powered Shahed drones. He thanked NATO for its willingness to help with Patriot missiles.\n\nUkraine also reached far into Russia. Its Special Operations Forces say they struck the Omsk oil refinery on November 11, about twenty five hundred kilometers from the border. They say it is the farthest Ukrainian drone strike on a Russian refinery so far. The damage is not yet independently assessed.\n\nNow the Army. Army Times reports the Army has formally activated its Public Affairs School at Fort Meade, Maryland. Colonel Kamil Sztalkoper takes over as commandant. Army Times also reports that on November 9 Defense Secretary Pete Hegseth released a memorandum with 33 directives for military service colleges. They would use A I war games in place of long written dissertations, end lifetime tenure for newly hired civilian faculty, and require most full time faculty to have military experience.\n\nIn Congress, the House passed the Take Care of America's Veterans Act by voice vote on Veterans Day. It has more than 60 provisions, including support for surviving spouses and caregivers. Its most contested measure would change how the V A rates sleep apnea and tinnitus, which could lower some future compensation. Veterans groups are divided, and Army Times reports the vote happened while Democratic leaders were off the floor.\n\nArmy Times also reported on November 10 that a 41 year old senior American soldier was arrested near Gloucester, in England, on suspicion of assisting Russian intelligence. FBI Director Kash Patel called the allegations of the utmost concern.\n\nOn Fort Knox, news in the window was thin. The newest official item we found is from November 9. A Fort Knox statement profiles Sergeant First Class Larry Barner, an Army Recruiting Command recruiter who volunteers as an assistant coach for the Fort Knox High School football team, as an example of the Army value of selfless service.\n\nNow Europe. European leaders met in Dublin, and Euronews reports the central question is who speaks for Europe in the Ukraine talks. Council President Antonio Costa and foreign policy chief Kaja Kallas have both been floated. Italy's prime minister, Giorgia Meloni, wants someone with a clear mandate. Poland's prime minister, Donald Tusk, said Poland does not feel excluded. If no decision is taken, it may move to a special summit at the end of the month.\n\nThe United Kingdom announced new sanctions on November 12. Its foreign ministry says Britain is now the only country to have sanctioned all ten of Russia's top oil producers. Irish Prime Minister Micheal Martin says he wants Ukraine's remaining two accession clusters opened before Ireland's presidency of the Council of the EU ends on December 31. Three clusters are now open.\n\nIn Poland, the defense minister says the Pentagon has greenlit a permanent American troop presence, with the final decision at the White House in early December. That is the Polish minister's account. The Pentagon's own statement did not mention a base, according to Army Times. And in Moldova, police found drone fragments in a vineyard near the village of Antonesti, about ten kilometers from Odesa Oblast. Their origin is still being examined.\n\nFinally, the days ahead. On November 26 and 27, EU leaders hold a special European Council. Ursula von der Leyen says the Commission will present an options paper on financing Ukraine in 2027, and the twenty second sanctions package, there. In early December, the White House is due to decide on a permanent American base in Poland. And on December 31, Ireland's presidency of the EU Council ends.\n\nThat is the Morning Dispatch. Every claim here is linked to its source on the page."
+  "script": "Good morning. This is The Morning Dispatch for Saturday, November 14, 2026.\n\nHere is the bottom line. European leaders agreed in Dublin on Friday how Europe will be represented in future Ukraine talks, as Russia pushes to widen those talks into a deal on European security. On the southern front, Russian forces did not advance at Huliaipole according to the Institute for the Study of War, while a Russian strike on the city of Zaporizhzhia injured 50 people. Ukraine also says its Starshield satellite service is restricted, which SpaceX denies.\n\nWe start with the southern front, and every point here comes from the Institute for the Study of War report for November 13 unless I say otherwise.\n\nAt Huliaipole, Russian forces kept up offensive operations on November 12 and 13 but did not advance. That is the Institute's assessment, and it lines up with Ukrainian General Staff reporting that the Institute cites.\n\nNear Orikhiv, the Institute says Russian forces carried out an infiltration mission northwest of the town. Ukrainian forces then struck a Russian position south of Lukyanivske, according to geolocated footage. The Institute rates the infiltration as a probe, not a captured position.\n\nIn the Kherson direction, neither side reported ground activity on November 13. Separately, Ukraine's human rights ombudsman Dmytro Lubinets said on Friday that Kyiv and Moscow have launched a new format for evacuating vulnerable civilians from occupied territory every week. He said 16 Ukrainians were returned on November 12. That follows the ceasefire that allowed civilians to leave Oleshky. This is the ombudsman's account, so treat it as one side's statement.\n\nIn the city of Zaporizhzhia, a Russian morning attack on Friday injured 50 people, including eight children, according to local authorities quoted by the Kyiv Independent. The Ukrainian outlet Suspilne reported that two rockets from a Tornado S launcher hit apartment buildings. A rescue worker was killed by a falling concrete slab while clearing debris.\n\nEast of the city, at Komyshuvakha, a Ukrainian security service official said Russian forces are striking emergency workers with drones almost daily at the site of a November 2 strike on a humanitarian aid site. At least 55 people were killed in that strike. That figure is a Ukrainian official claim reported by the Institute.\n\nNow the wider war. Ukraine says its Starshield satellite communications service is restricted to a speed of 161 kilometers per hour, about 100 miles per hour, which Ukrainian officials say makes it hard to intercept Shahed type drones. President Zelensky said the restriction applies over occupied territory and the front line. SpaceX told Axios that this is false and that there has been no change. Ukraine has asked Washington for an explanation. It remains unclear how far the restriction reaches.\n\nRussia launched 117 drones against Ukraine overnight on November 12 to 13, according to the Ukrainian Air Force as cited by the Institute. About 63 of them were jet powered.\n\nOn the Donetsk front, the Institute reports that Russian forces did not advance at Kostyantynivka or near Lyman. Ukrainian forces advanced east of Slovyansk and south of Novopavlivka, according to Ukrainian military sources. Near Dobropillia, a Ukrainian military source says Russian forces tried a mechanized assault with three tanks and three infantry fighting vehicles in fog and that it was repelled.\n\nThe commander of Ukraine's Air Assault Forces, Major General Oleh Apostol, said Russia's advance has slowed significantly. The Institute estimates Russia had a net territorial loss of about 27 square kilometers in October. Those are Ukrainian and Institute assessments, not Russian ones.\n\nIn Moscow, a car explosion injured Sergei Zavorotny, a former adviser to a former Ukrainian prime minister, according to Russia's Investigative Committee.\n\nCzech Foreign Minister Petr Macinka said Czechia could deliver the first four L 39 Skyfox jets to Ukraine in 2027, with eight more in 2028, if export licenses come through.\n\nOn diplomacy, the Institute reports that US envoys Steve Witkoff and Jared Kushner met Putin on November 12 and Zelensky in Dublin. Kushner said Ukraine and Russia agreed to widen the next round to include European representatives. Russian Foreign Ministry spokesperson Maria Zakharova said Putin did not discuss that. Russia has also proposed a humanitarian mission in Kostyantynivka, and the Institute assesses Russia is seeking to use a local ceasefire to build up forces there.\n\nTurning to the Army. Army Times reports that the Pentagon has greenlit a permanent presence of US troops in Poland, according to a Polish official. The White House is due to make the final decision in early December. Poland's defense minister said the plan involves about 5,000 additional soldiers.\n\nThe Army has formally activated the US Army Public Affairs School at Fort Meade, Maryland. Colonel Kamil Sztalkoper has taken over as commandant.\n\nMilitary Times identified the soldier arrested in the United Kingdom on suspicion of assisting Russian intelligence as Lieutenant Colonel Brandon Carroll Tyner. He was assigned to a British Army base in Gloucestershire. These are allegations, and he remains in custody.\n\nThree watchdog groups have sued over the Pentagon's Project Meridian task force on the future of warfare, arguing it breaks federal advisory committee law. Army Times reports the complaint as filed.\n\nAt Fort Knox, I found no new news dated within the last 24 hours on the installation's official pages or in search.\n\nNow Europe. After an informal summit in Dublin on Friday, Politico Europe reports that EU leaders agreed future talks will involve national security officials from Germany, France, the United Kingdom, Italy and Poland, plus representatives of the European Commission and European Council. European Council President Antonio Costa said it is essential to speak with one voice.\n\nFinland's defense minister Antti Hakkanen rejected a reported Russian demand that Finland leave NATO. The demand was reported by the German newspaper Bild, and Politico notes it is unclear which proposals Putin would back. Euronews reports that Moscow is pushing for a wider deal on European security.\n\nAt the European Central Bank, two candidates are in the race to succeed Christine Lagarde, according to Euronews. They are Pablo Hernandez de Cos and Klaas Knot. A new deadline of November 18 has been set for nominations to two other executive board seats.\n\nA US Air Force unit responded to suspected drone activity at RAF Lakenheath in England on November 13. The UK Defence Ministry said there were no injuries or damage and the origin is unknown.\n\nFinally, the days ahead. Euronews reports the White House says President Trump will meet Xi Jinping and Vladimir Putin in Shenzhen, China, next week. He departs Washington on Monday, November 16, for the Philippines first. US officials say Ukraine is not on that agenda. On November 18 the ECB nomination deadline falls. On November 26 EU leaders meet in a summit where the ECB consultations are due to begin. And in early December the White House is expected to decide on the permanent troop presence in Poland.\n\nThat is the Dispatch for today. Every item is linked on the page, with the source and how solid the claim is."
  },
  "sources": [
   {
-   "title": "Russian Offensive Campaign Assessment, November 12, 2026, ISW",
-   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-12-2026"
+   "title": "Russian Offensive Campaign Assessment, November 13, 2026, ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-13-2026"
   },
   {
-   "title": "War update: 175 clashes on front lines, Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184182-war-update-175-clashes-on-front-lines-over-past-day-most-attacks-recorded-on-kostiantynivka-axis.html"
+   "title": "Russia strikes Zaporizhzhia, Kyiv Independent",
+   "url": "https://kyivindependent.com/russia-strikes-zaporizhzhia-injures-13-including-5-children/"
   },
   {
-   "title": "Air defense downs 80 of 117 drones, Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184168-air-defense-downs-80-of-117-russian-drones-launched-overnight.html"
+   "title": "Starshield speed restrictions, Kyiv Independent",
+   "url": "https://kyivindependent.com/ukraine-seeks-explanation-on-starshield-speed-restrictions-from-us/"
   },
   {
-   "title": "EU leaders in Dublin, Euronews",
-   "url": "https://www.euronews.com/2026/11/13/eu-leaders-gather-in-dublin-to-decide-who-will-speak-for-europe-in-peace-talks"
+   "title": "Air Assault Forces commander, Kyiv Independent",
+   "url": "https://kyivindependent.com/russias-advance-in-ukraine-has-slowed-significantly-air-assault-forces-commander-says/"
   },
   {
-   "title": "Next meeting of negotiating teams scheduled, Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-polytics/4184163-next-meeting-of-negotiating-teams-already-scheduled-witkoff.html"
+   "title": "Evacuations, Kyiv Independent",
+   "url": "https://kyivindependent.com/ukraine-russia-launch-new-format-for-evacuating-civilians-from-occupied-territories-ombudsman-says/"
   },
   {
-   "title": "Zelensky and Rutte discuss air defense, Ukrinform",
-   "url": "https://www.ukrinform.net/rubric-ato/4184096-zelensky-rutte-discuss-air-defense-missile-shortages-starshield-disruptions.html"
-  },
-  {
-   "title": "Oleshky ceasefire buildup, Kyiv Independent",
-   "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
-  },
-  {
-   "title": "Kyiv attacked after talks end, Kyiv Independent",
-   "url": "https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/"
-  },
-  {
-   "title": "Omsk refinery, Kyiv Independent",
-   "url": "https://kyivindependent.com/russias-largest-oil-refinery-slammed-by-drones-in-8-hr-attack-2-500-km-from-ukraine/"
-  },
-  {
-   "title": "UK sanctions, Kyiv Independent",
-   "url": "https://kyivindependent.com/uk-says-its-1st-country-to-target-all-of-russias-top-10-oil-producers-with-latest-round-of-sanctions/"
-  },
-  {
-   "title": "Irish PM on Ukraine accession, Kyiv Independent",
-   "url": "https://kyivindependent.com/ukraines-future-is-within-the-european-union-irish-pm-aims-to-open-all-eu-negotiation-clusters-for-kyiv-by-end-of-year/"
+   "title": "EU deal on talks, Politico Europe",
+   "url": "https://www.politico.eu/article/eu-deal-on-ukraine-talks-overshadows-ai-focused-summit-in-dublin/"
   },
   {
    "title": "Poland troops, Army Times",
    "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/pentagon-greenlit-permanent-presence-of-us-troops-in-poland-official-says/"
   },
   {
-   "title": "Public affairs school, Army Times",
-   "url": "https://www.armytimes.com/news/2026/11/12/army-formally-activates-public-affairs-school/"
-  },
-  {
-   "title": "Service colleges, Army Times",
-   "url": "https://www.armytimes.com/pentagon/2026/11/09/hegseth-to-cut-civilians-from-military-service-colleges-wants-focus-on-victory/"
-  },
-  {
-   "title": "Veterans benefits bill, Army Times",
-   "url": "https://www.armytimes.com/news/pentagon-congress/2026/11/12/house-passes-sweeping-veterans-benefits-bill-with-polarizing-tactic/"
-  },
-  {
-   "title": "Soldier arrested in UK, Army Times",
-   "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-esp"
-  },
-  {
-   "title": "Fort Knox volunteers, Defcon Level",
-   "url": "https://www.defconlevel.com/alert/2026-11-09-fort-knox-selfless-service-remains-key-army-leadership-trait-for-fort-knox-soldier-volunteers"
+   "title": "Euronews: shifting debate",
+   "url": "https://www.euronews.com/2026/11/13/from-ukraine-peace-to-europes-future-how-russia-is-shifting-the-debate"
   }
  ]
 }
