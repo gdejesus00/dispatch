@@ -1,0 +1,804 @@
+{
+ "schema": 1,
+ "date": "2026-11-12",
+ "generated_at": "2026-11-12T18:20:00Z",
+ "lead": {
+  "headline": "Abu Dhabi talks end with a prisoner swap and no ceasefire; Russia strikes Kyiv hours later",
+  "dek": "US envoys carry the talks to Moscow and then to Dublin, where European leaders insist they will not be left out. On the southern front the line holds, but Kherson is watching the river.",
+  "sources": [
+   {
+    "name": "ISW",
+    "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+   },
+   {
+    "name": "Kyiv Independent: Kyiv strikes",
+    "url": "https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/"
+   },
+   {
+    "name": "Kyiv Independent: daily attacks",
+    "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+   },
+   {
+    "name": "Kyiv Independent: Omsk",
+    "url": "https://kyivindependent.com/russias-largest-oil-refinery-slammed-by-drones-in-8-hr-attack-2-500-km-from-ukraine/"
+   },
+   {
+    "name": "Ukrinform: General Staff update",
+    "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+   },
+   {
+    "name": "Kyiv Independent: Oleshky",
+    "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
+   },
+   {
+    "name": "Army Times: arrest",
+    "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-espionage-for-russia/"
+   },
+   {
+    "name": "Euronews: envoys",
+    "url": "https://www.euronews.com/2026/11/12/zelenskyy-to-meet-us-envoys-in-dublin-after-russia-peace-talks"
+   }
+  ]
+ },
+ "bottom_line": "Two days of US-brokered talks in Abu Dhabi produced an agreement in principle on a large prisoner exchange and nothing on a ceasefire, and senior Kremlin officials restated demands that reach well past Donbas. Russia hit Kyiv with ballistic missiles and drones within hours; Ukraine struck the Omsk refinery and the Baltic port of Ust-Luga. In the south, Russian attacks near Huliaipole continued without gains, while Ukrainian officials say Russia used the Oleshky ceasefire to build up across the Dnipro from Kherson. For the Army, the story of the week is a senior US soldier arrested in Britain on suspicion of helping Russian intelligence.",
+ "numbers": [
+  {
+   "value": "167",
+   "label": "combat clashes along the whole front over the past day, with Kostiantynivka the hottest sector",
+   "source": "Ukraine's General Staff, via Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+  },
+  {
+   "value": "123",
+   "label": "attack drones launched at Ukraine overnight into November 12; 89 were reported shot down",
+   "source": "Ukraine's Air Force, via Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+  },
+  {
+   "value": "1,000",
+   "label": "prisoners of war each side may exchange, with 1,500 also discussed; final numbers were due November 12",
+   "source": "ISW, citing Zelensky and Kushner",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  }
+ ],
+ "front": {
+  "summary": "The southern line did not move. Russian attacks continued around Huliaipole and were met with Ukrainian counterattacks, Ukraine's General Staff reported no Russian assaults in the Orikhiv or Dnipro River sectors, and the pressure fell instead on Zaporizhzhia city and on Kherson, where officials say Russia used a five-day ceasefire to bring weapons into Oleshky.",
+  "axes": [
+   {
+    "name": "Huliaipole",
+    "sector": "zaporizhzhia",
+    "status": "corroborated",
+    "text": "ISW assesses Russian forces kept attacking on November 10 and 11 but did not advance, as Ukrainian forces counterattacked. Ukraine's General Staff counted five attacks over the past day near Vozdvyzhivka, Verkhnia Tersa, Bilohiria and Mala Tokmachka. Russia's Defense Ministry claimed Voskresenka, about 27 kilometers beyond the furthest assessed Russian advance; ISW calls the claim inflated.",
+    "sources": [
+     {
+      "name": "ISW",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+     },
+     {
+      "name": "Ukrinform: General Staff update",
+      "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+     }
+    ]
+   },
+   {
+    "name": "Orikhiv",
+    "sector": "zaporizhzhia",
+    "status": "confirmed",
+    "text": "No Russian assaults were reported here over the past day. Geolocated footage published November 10 shows a Ukrainian strike on a Russian soldier northeast of Bilohiria, southeast of Orikhiv, which ISW assesses followed a Russian infiltration mission rather than an advance.",
+    "sources": [
+     {
+      "name": "ISW",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+     },
+     {
+      "name": "Ukrinform: General Staff update",
+      "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+     }
+    ]
+   },
+   {
+    "name": "Zaporizhzhia city and Komyshuvakha",
+    "sector": "zaporizhzhia",
+    "status": "claimed",
+    "text": "Regional officials say an FPV drone injured three men in Zaporizhzhia after earlier hits on a truck, a residential building and infrastructure. An evening power failure put critical services in Zaporizhzhia District on generators. In Komyshuvakha, the emergency service says Russian forces twice struck rescuers on the eighth day of the search at a bombed school, damaging equipment.",
+    "sources": [
+     {
+      "name": "Ukrinform: drone strike",
+      "url": "https://www.ukrinform.net/rubric-ato/4183810-russian-fpv-drone-strike-on-zaporizhzhia-leaves-three-injured.html"
+     },
+     {
+      "name": "Ukrinform: power failure",
+      "url": "https://www.ukrinform.net/rubric-ato/4183998-sweeping-power-outage-hits-zaporizhzhia-district-critical-infrastructure-running-on-generators.html"
+     },
+     {
+      "name": "Ukrinform: Komyshuvakha",
+      "url": "https://www.ukrinform.net/rubric-ato/4183957-russian-forces-attack-rescue-workers-in-komyshuvakha-again.html"
+     }
+    ]
+   },
+   {
+    "name": "Dnipro line and islands",
+    "sector": "kherson",
+    "status": "claimed",
+    "text": "The General Staff reported no Russian assaults in the Dnipro River sector. Ukraine's southern command warns Russia may try another landing on Quarantine Island to gain a foothold beside Kherson's Korabel district, and says it is watching Russian supply routes and the river bank.",
+    "sources": [
+     {
+      "name": "Ukrinform: General Staff update",
+      "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+     },
+     {
+      "name": "Ukrinform: Quarantine Island",
+      "url": "https://www.ukrinform.net/rubric-ato/4183742-russian-military-may-attempt-another-landing-on-quarantine-island-in-kherson-military-intelligence.html"
+     }
+    ]
+   },
+   {
+    "name": "Oleshky",
+    "sector": "kherson",
+    "status": "corroborated",
+    "text": "Kherson's governor says Russian forces used the October 27 to November 1 humanitarian ceasefire to retake positions and bring in drones, artillery, ammunition and rocket launchers. The 34th Marine Brigade gave the Kyiv Independent the same account, and drone footage aired on November 1 showed equipment moving in.",
+    "sources": [
+     {
+      "name": "ISW",
+      "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+     },
+     {
+      "name": "Kyiv Independent: Oleshky",
+      "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
+     }
+    ]
+   },
+   {
+    "name": "Kherson city",
+    "sector": "kherson",
+    "status": "claimed",
+    "text": "The governor reported attacks on Kherson city and 23 other settlements over the past day, with one person killed and a farm building damaged. Residents told the Kyiv Independent that drones and artillery returned as soon as the ceasefire ended.",
+    "sources": [
+     {
+      "name": "Kyiv Independent: daily attacks",
+      "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+     },
+     {
+      "name": "Kyiv Independent: Oleshky",
+      "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
+     }
+    ]
+   }
+  ],
+  "sources": [
+   {
+    "name": "ISW",
+    "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+   },
+   {
+    "name": "Ukrinform: General Staff update",
+    "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+   },
+   {
+    "name": "Kyiv Independent: Oleshky",
+    "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
+   }
+  ]
+ },
+ "map_events": [
+  {
+   "title": "Five Russian attacks near Huliaipole, no advance",
+   "summary": "Ukraine's General Staff counted five attacks in the Huliaipole sector over the past day. ISW assesses Russian forces did not advance on November 10 and 11 and that Ukrainian forces counterattacked.",
+   "place": "Huliaipole",
+   "lat": 47.6636,
+   "lon": 36.2569,
+   "type": "ground",
+   "status": "corroborated",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+  },
+  {
+   "title": "Russia claims Voskresenka; ISW rejects it",
+   "summary": "Russia's Defense Ministry said its forces seized Voskresenka. ISW places the village about 27 kilometers beyond the furthest assessed Russian advance and calls the claim inflated. The pin is approximate.",
+   "place": "Northwest of Huliaipole",
+   "lat": 47.78,
+   "lon": 36.03,
+   "type": "ground",
+   "status": "claimed",
+   "date": "2026-11-11",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "title": "Infiltration group struck near Bilohiria",
+   "summary": "Geolocated footage published November 10 shows a Ukrainian strike on a Russian soldier northeast of Bilohiria. ISW assesses it followed a Russian infiltration mission. The pin is approximate.",
+   "place": "Bilohiria, southeast of Orikhiv",
+   "lat": 47.52,
+   "lon": 35.98,
+   "type": "ground",
+   "status": "confirmed",
+   "date": "2026-11-10",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "title": "Probing near Mala Tokmachka",
+   "summary": "The General Staff listed Mala Tokmachka among the places Russian troops tried to advance over the past day, while reporting no assaults in the Orikhiv sector itself.",
+   "place": "Mala Tokmachka",
+   "lat": 47.53,
+   "lon": 35.89,
+   "type": "ground",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+  },
+  {
+   "title": "FPV drone injures three in Zaporizhzhia",
+   "summary": "The acting regional governor said an FPV drone strike injured three men. Earlier in the day a truck, a residential building and infrastructure were hit.",
+   "place": "Zaporizhzhia",
+   "lat": 47.8388,
+   "lon": 35.1396,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183810-russian-fpv-drone-strike-on-zaporizhzhia-leaves-three-injured.html"
+  },
+  {
+   "title": "Power failure across Zaporizhzhia District",
+   "summary": "The power company said equipment was damaged in the evening, cutting electricity across the district. Critical services switched to generators. The report does not give a cause.",
+   "place": "Zaporizhzhia District",
+   "lat": 47.8,
+   "lon": 35.22,
+   "type": "infrastructure",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183998-sweeping-power-outage-hits-zaporizhzhia-district-critical-infrastructure-running-on-generators.html"
+  },
+  {
+   "title": "Rescuers struck again at Komyshuvakha",
+   "summary": "The State Emergency Service says Russian forces twice hit rescue workers on the eighth day of the search at a school bombed on November 2, where at least 55 people were reported killed. Equipment and a vehicle were damaged.",
+   "place": "Komyshuvakha",
+   "lat": 47.716,
+   "lon": 35.531,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183957-russian-forces-attack-rescue-workers-in-komyshuvakha-again.html"
+  },
+  {
+   "title": "Russian buildup in Oleshky after the ceasefire",
+   "summary": "Kherson's governor and the 34th Marine Brigade say Russia used the October 27 to November 1 ceasefire to retake positions and bring in drones, artillery, ammunition and rocket launchers.",
+   "place": "Oleshky",
+   "lat": 46.6258,
+   "lon": 32.7186,
+   "type": "ground",
+   "status": "corroborated",
+   "date": "2026-11-11",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
+  },
+  {
+   "title": "Warning of another landing on Quarantine Island",
+   "summary": "Ukraine's southern command says Russia may attempt another landing on the island to gain a foothold beside the Korabel district, and that the river bank is under closer watch.",
+   "place": "Quarantine Island, Kherson",
+   "lat": 46.615,
+   "lon": 32.59,
+   "type": "naval",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183742-russian-military-may-attempt-another-landing-on-quarantine-island-in-kherson-military-intelligence.html"
+  },
+  {
+   "title": "Kherson city and 23 settlements attacked",
+   "summary": "The governor reported one person killed and a farm building damaged in attacks on the city and 23 other settlements over the past day.",
+   "place": "Kherson",
+   "lat": 46.6354,
+   "lon": 32.6169,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+  },
+  {
+   "title": "Ballistic missiles and drones hit Kyiv",
+   "summary": "Russia struck the capital overnight and again in daylight, hours after the Abu Dhabi talks ended. The mayor reported one person killed and eight injured; reporters photographed a damaged apartment block.",
+   "place": "Kyiv",
+   "lat": 50.4501,
+   "lon": 30.5234,
+   "type": "strike",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/"
+  },
+  {
+   "title": "Market strike in Chornomorsk kills at least four",
+   "summary": "The Odesa governor said a strike on a market in central Chornomorsk killed at least four people and injured eight.",
+   "place": "Chornomorsk",
+   "lat": 46.3,
+   "lon": 30.655,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+  },
+  {
+   "title": "Fourteen attacks in the Kostiantynivka sector",
+   "summary": "The General Staff called this the fiercest sector of the past day, with fourteen Russian attacks near Kostiantynivka and neighbouring villages.",
+   "place": "Kostiantynivka",
+   "lat": 48.5277,
+   "lon": 37.7069,
+   "type": "ground",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+  },
+  {
+   "title": "Russian advance southeast of Dobropillia",
+   "summary": "ISW assesses that Russian forces recently advanced southeast of Dobropillia, the one confirmed Russian gain in its November 11 report. The pin is approximate.",
+   "place": "Dobropillia",
+   "lat": 48.47,
+   "lon": 37.08,
+   "type": "ground",
+   "status": "corroborated",
+   "date": "2026-11-11",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "title": "Two killed in Sloviansk and Kramatorsk",
+   "summary": "The Donetsk governor said Russian attacks killed two people and injured six in Sloviansk and Kramatorsk over the past day.",
+   "place": "Kramatorsk",
+   "lat": 48.7389,
+   "lon": 37.5844,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+  },
+  {
+   "title": "Kharkiv and seven settlements hit",
+   "summary": "The Kharkiv governor reported two people killed and two injured, with a vegetable store, a fuel station, farm buildings and power lines struck.",
+   "place": "Kharkiv",
+   "lat": 49.9935,
+   "lon": 36.2304,
+   "type": "strike",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+  },
+  {
+   "title": "New drone shelters at Hvardiiske airbase",
+   "summary": "Satellite imagery from November 9, published by a Ukrainian open-source channel, shows about 82 new drone storage structures under construction, ten of them hardened. ISW links it to earlier Ukrainian strikes.",
+   "place": "Hvardiiske, Crimea",
+   "lat": 45.12,
+   "lon": 34.02,
+   "type": "infrastructure",
+   "status": "corroborated",
+   "date": "2026-11-11",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "title": "Ukrainian drones strike Ust-Luga port",
+   "summary": "Ukraine's security service says it hit oil terminals, a rail station and a missile corvette at the Baltic port. The regional governor acknowledged fires, and geolocated footage shows smoke over the port.",
+   "place": "Ust-Luga, Russia",
+   "lat": 59.68,
+   "lon": 28.4,
+   "type": "strike",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "source": "ISW",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "title": "US envoys meet Putin in Moscow",
+   "summary": "Steve Witkoff and Jared Kushner travelled to Moscow after Abu Dhabi to discuss the talks and whether Europeans can join the next round. The Kremlin has said it sees no format that includes them.",
+   "place": "Moscow",
+   "lat": 55.7558,
+   "lon": 37.6173,
+   "type": "diplomatic",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "Euronews",
+   "url": "https://www.euronews.com/2026/11/12/zelenskyy-to-meet-us-envoys-in-dublin-after-russia-peace-talks"
+  },
+  {
+   "title": "European leaders gather in Dublin",
+   "summary": "At the European Political Community summit, Macron, Merz and Kallas said Europe's security order cannot be settled without Europeans. Zelensky is due to be briefed there by the US envoys.",
+   "place": "Dublin",
+   "lat": 53.3498,
+   "lon": -6.2603,
+   "type": "diplomatic",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "source": "Euronews",
+   "url": "https://www.euronews.com/2026/11/12/europe-tells-russia-our-security-architecture-is-for-us-to-decide"
+  },
+  {
+   "title": "US soldier arrested on suspicion of spying for Russia",
+   "summary": "British police arrested a 41-year-old senior US soldier near Gloucester on November 10 under the National Security Act. Police said the allegations relate to Russia.",
+   "place": "Gloucester, England",
+   "lat": 51.8642,
+   "lon": -2.2382,
+   "type": "other",
+   "status": "confirmed",
+   "date": "2026-11-10",
+   "source": "Army Times",
+   "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-espionage-for-russia/"
+  },
+  {
+   "title": "Doubts over a 2027 NATO summit in Tirana",
+   "summary": "Albania's defense minister says the country will host the next summit whenever leaders choose, even online. Alliance diplomats told Politico a 2027 meeting there remains unlikely.",
+   "place": "Tirana",
+   "lat": 41.3275,
+   "lon": 19.8187,
+   "type": "diplomatic",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Politico Europe",
+   "url": "https://www.politico.eu/article/albania-pitches-flexible-nato-summit-as-allies-sour-on-2027-meeting/"
+  }
+ ],
+ "sections": [
+  {
+   "id": "ukraine",
+   "summary": "The talks produced a prisoner deal and exposed how far apart the sides remain. Both countries kept striking deep while the diplomats moved from Abu Dhabi to Moscow and Dublin.",
+   "items": [
+    {
+     "headline": "Kremlin restates maximal demands as Abu Dhabi talks close",
+     "summary": "Russia's lead negotiator said Moscow will take every inch of what it calls its land and ruled out territorial exchanges, and the foreign minister tied any deal to Putin's June 2024 terms. ISW reads this as a demand for capitulation that reaches beyond the regions Russia has annexed on paper. Zelensky said Russian officers presented a false front line to the US team, which rejected it.",
+     "source": "ISW",
+     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026",
+     "published": "2026-11-11"
+    },
+    {
+     "headline": "A large prisoner exchange is agreed in principle",
+     "summary": "Jared Kushner said the two delegations agreed to a large exchange, with numbers to be settled on November 12. Zelensky said 1,000 or 1,500 prisoners a side were discussed, and a Russian military intelligence general said a swap of 1,000 could happen within two to three weeks.",
+     "source": "ISW",
+     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026",
+     "published": "2026-11-11",
+     "status": "corroborated"
+    },
+    {
+     "headline": "Russia hits Kyiv hours after the talks; ten killed across Ukraine",
+     "summary": "Ballistic missiles and drones struck the capital overnight and again in daylight, killing one person and injuring eight, the mayor said. Local authorities counted ten dead and forty injured nationwide over the past day, including at least four at a market in Chornomorsk. The Air Force reported 123 attack drones launched and 89 shot down.",
+     "source": "Kyiv Independent",
+     "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/",
+     "published": "2026-11-12",
+     "status": "corroborated"
+    },
+    {
+     "headline": "Ukraine strikes Omsk refinery and the port of Ust-Luga",
+     "summary": "Ukraine's Special Operations Forces said their drones hit Russia's largest refinery at Omsk on November 11, about 2,500 kilometers from the border, the deepest refinery strike of the war. The security service separately claimed hits on oil terminals and a missile corvette at Ust-Luga; the regional governor acknowledged fires there.",
+     "source": "Kyiv Independent",
+     "url": "https://kyivindependent.com/russias-largest-oil-refinery-slammed-by-drones-in-8-hr-attack-2-500-km-from-ukraine/",
+     "published": "2026-11-12",
+     "status": "corroborated"
+    },
+    {
+     "headline": "Kostiantynivka is the hottest sector; Russia gains near Dobropillia",
+     "summary": "The General Staff recorded 167 clashes over the past day, fourteen of them around Kostiantynivka and six near Pokrovsk. ISW assesses a recent Russian advance southeast of Dobropillia, and notes that Russia has had a net loss of territory in four of the last eight months.",
+     "source": "Ukrinform",
+     "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html",
+     "published": "2026-11-12",
+     "status": "claimed"
+    },
+    {
+     "headline": "Zelensky says Starshield speed limits are back",
+     "summary": "Ukraine's president said on Thursday that speed restrictions on Starshield, the military version of Starlink, have returned weeks after similar limits were lifted. He said they are disrupting drone interception along the front and letting some strikes through.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/11/12/zelenskyy-starlink-again-facing-restrictions-in-ukraine-hampering-russian-drone-intercepti",
+     "published": "2026-11-12",
+     "status": "claimed"
+    }
+   ],
+   "sources": [
+    {
+     "name": "ISW",
+     "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+    },
+    {
+     "name": "Kyiv Independent: Kyiv strikes",
+     "url": "https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/"
+    },
+    {
+     "name": "Kyiv Independent: Omsk",
+     "url": "https://kyivindependent.com/russias-largest-oil-refinery-slammed-by-drones-in-8-hr-attack-2-500-km-from-ukraine/"
+    },
+    {
+     "name": "Euronews: envoys",
+     "url": "https://www.euronews.com/2026/11/12/zelenskyy-to-meet-us-envoys-in-dublin-after-russia-peace-talks"
+    }
+   ]
+  },
+  {
+   "id": "army",
+   "summary": "A counterintelligence case in Britain leads the Army news, alongside a sweeping order on military education. Tricare open season is under way.",
+   "items": [
+    {
+     "headline": "Senior US soldier arrested in Britain on suspicion of aiding Russian intelligence",
+     "summary": "British police arrested a 41-year-old man near Gloucester on November 10 under the National Security Act sections on protected information and assisting a foreign intelligence service, and said the country concerned is Russia. The head of Army Counterintelligence Command called it a reminder that insider threats are real. Reuters notes the arrest came a day after US refuelling aircraft left RAF Mildenhall over a separate reported threat from Iran.",
+     "source": "Army Times",
+     "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-espionage-for-russia/",
+     "published": "2026-11-10"
+    },
+    {
+     "headline": "Hegseth orders an overhaul of the war colleges",
+     "summary": "A memorandum issued November 9 gives 33 directives effective at once. Students are to prove themselves in war games that use artificial intelligence instead of long written papers, new civilian faculty lose lifetime tenure, and most full-time faculty must have military or defense experience. The defense secretary said the colleges should teach how to win.",
+     "source": "Army Times",
+     "url": "https://www.armytimes.com/pentagon/2026/11/09/hegseth-to-cut-civilians-from-military-service-colleges-wants-focus-on-victory/",
+     "published": "2026-11-09"
+    },
+    {
+     "headline": "Tricare open season runs to December 8, with costs up about 4 percent",
+     "summary": "Open season began Monday, November 9. Army Times advises families to compare plans and review their expected health costs for 2027, with increases in the range of four percent.",
+     "source": "Army Times",
+     "url": "https://www.armytimes.com/pay-benefits/military-benefits/health-care-benefits/2026/11/09/check-out-new-costs-for-military-families-as-tricare-open-season-starts/",
+     "published": "2026-11-09"
+    },
+    {
+     "headline": "Tomb sentinel calls for silence as the defense secretary's party passes",
+     "summary": "After a Veterans Day event at Arlington, a sentinel at the Tomb of the Unknown Soldier moved toward the secretary's group and called out that all visitors will maintain silence and respect, after laughter was heard on the steps. Reuters based its account on video of the moment.",
+     "source": "Army Times",
+     "url": "https://www.armytimes.com/veterans/2026/11/11/guard-appears-to-rebuke-hegseths-delegation-at-tomb-of-the-unknown-soldier/",
+     "published": "2026-11-11"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Army Times: arrest",
+     "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-espionage-for-russia/"
+    },
+    {
+     "name": "Army Times: war colleges",
+     "url": "https://www.armytimes.com/pentagon/2026/11/09/hegseth-to-cut-civilians-from-military-service-colleges-wants-focus-on-victory/"
+    },
+    {
+     "name": "Army Times: Tricare",
+     "url": "https://www.armytimes.com/pay-benefits/military-benefits/health-care-benefits/2026/11/09/check-out-new-costs-for-military-families-as-tricare-open-season-starts/"
+    }
+   ]
+  },
+  {
+   "id": "fort-knox",
+   "summary": "A quiet week on post after Veterans Day. The one new item is the second phase of work at the Main Post Cemetery; the installation Thanksgiving meal is the next date on the calendar.",
+   "items": [
+    {
+     "headline": "Second, larger phase of headstone work begins at the Main Post Cemetery",
+     "summary": "Contractors began the next phase on November 10, replacing chipped headstones and resetting those that have sunk or leaned. The project is paid for by Arlington National Cemetery, and the post's public works staff say it keeps the cemetery within the alignment standards for its shrine status.",
+     "source": "Fort Knox News",
+     "url": "https://www.army.mil/knox",
+     "published": "2026-11-10"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Fort Knox News",
+     "url": "https://www.army.mil/knox"
+    },
+    {
+     "name": "army.mil: Thanksgiving meal",
+     "url": "https://www.army.mil/article/296344/"
+    }
+   ]
+  },
+  {
+   "id": "europe",
+   "summary": "Europe spent the day insisting on a seat at the table, from Dublin to London. At home, Spain and the Netherlands both had turbulent days.",
+   "items": [
+    {
+     "headline": "Leaders in Dublin: Europe's security order is ours to decide",
+     "summary": "At the European Political Community summit, Macron said Europeans will define their own security, and Merz said Ukraine, Europe, the United States and Russia must all be at the table. The EU's foreign policy chief set out an order of steps: ceasefire, then peace settlement, then any talk of security architecture. Estonia's prime minister called the Russian push a trap.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/11/12/europe-tells-russia-our-security-architecture-is-for-us-to-decide",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "Britain sanctions all ten of Russia's largest oil producers",
+     "summary": "London announced a package aimed at Russian energy and shipping on November 12 and said it is the first country to have sanctioned all of Russia's top ten oil producers. The prime minister said the aim is to press Moscow toward a full and immediate ceasefire.",
+     "source": "Kyiv Independent",
+     "url": "https://kyivindependent.com/uk-says-its-1st-country-to-target-all-of-russias-top-10-oil-producers-with-latest-round-of-sanctions/",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "EU's bill for Russian Arctic gas reaches 8.7 billion euros",
+     "summary": "An analysis by an environmental campaign group, reported by Euronews, estimates the EU spent 8.7 billion euros on Russian Arctic liquefied gas in the first ten months of 2026. That is 21 percent more than in all of 2025, with an import ban approaching.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/11/12/eu-spent-87bn-on-russian-arctic-lng-in-2026-as-import-ban-looms",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "Allies cool on a 2027 NATO summit in Albania",
+     "summary": "Albania's defense minister told Politico the next summit will be in Tirana whenever leaders decide, and could even be held online. Diplomats cited Albania's low defense spending, rising costs and strained relations with Washington as reasons allies are reluctant to commit.",
+     "source": "Politico Europe",
+     "url": "https://www.politico.eu/article/albania-pitches-flexible-nato-summit-as-allies-sour-on-2027-meeting/",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "Spain's first general strike in fourteen years",
+     "summary": "Hundreds of thousands marched on Wednesday over housing costs and low wages. Riot police clashed with masked protesters in Madrid and Barcelona and more than 70 people were arrested, while unions and employers gave opposite accounts of how widely the strike was observed.",
+     "source": "Euronews",
+     "url": "https://www.euronews.com/2026/11/12/spain-holds-its-first-general-strike-in-14-years-amid-mass-protests-and-police-charges",
+     "published": "2026-11-12"
+    },
+    {
+     "headline": "Dutch coalition strained before a tax vote",
+     "summary": "Two of the three governing parties struck a deal with opposition parties to move about one billion euros of tax from wealth to income, leaving the third coalition partner outside the agreement before Thursday's debate and vote.",
+     "source": "Politico Europe",
+     "url": "https://www.politico.eu/article/dutch-coalition-government-hangs-thread-crucial-tax-vote-jetten-cda-pro-volt/",
+     "published": "2026-11-12"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Euronews: Dublin summit",
+     "url": "https://www.euronews.com/2026/11/12/europe-tells-russia-our-security-architecture-is-for-us-to-decide"
+    },
+    {
+     "name": "Kyiv Independent: UK sanctions",
+     "url": "https://kyivindependent.com/uk-says-its-1st-country-to-target-all-of-russias-top-10-oil-producers-with-latest-round-of-sanctions/"
+    },
+    {
+     "name": "Euronews: Spain",
+     "url": "https://www.euronews.com/2026/11/12/spain-holds-its-first-general-strike-in-14-years-amid-mass-protests-and-police-charges"
+    },
+    {
+     "name": "Politico Europe: Netherlands",
+     "url": "https://www.politico.eu/article/dutch-coalition-government-hangs-thread-crucial-tax-vote-jetten-cda-pro-volt/"
+    }
+   ]
+  }
+ ],
+ "upcoming": [
+  {
+   "date": "2026-11-12",
+   "title": "US envoys brief Zelensky in Dublin",
+   "detail": "Witkoff and Kushner are due from Moscow to report on their meeting with Putin. Watch whether Russia accepts any European role in the next round.",
+   "topic": "ukraine",
+   "url": "https://www.euronews.com/2026/11/12/zelenskyy-to-meet-us-envoys-in-dublin-after-russia-peace-talks"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Prisoner exchange numbers due",
+   "detail": "The delegations were to settle how many prisoners each side releases. Figures of 1,000 and 1,500 were discussed.",
+   "topic": "ukraine",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "date": "2026-11-12",
+   "title": "Dutch parliament votes on the tax plan",
+   "detail": "The vote tests whether the minority coalition survives after two of its parties dealt with the opposition.",
+   "topic": "europe",
+   "url": "https://www.politico.eu/article/dutch-coalition-government-hangs-thread-crucial-tax-vote-jetten-cda-pro-volt/"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Fort Knox installation Thanksgiving meal",
+   "detail": "The post's annual Thanksgiving meal is set for the day before the holiday.",
+   "topic": "fort-knox",
+   "url": "https://www.army.mil/article/296344/"
+  },
+  {
+   "date": "2026-11-25",
+   "title": "Earliest window for the prisoner exchange",
+   "detail": "A Russian military intelligence general said a swap of 1,000 prisoners could take place between about November 25 and December 2.",
+   "topic": "ukraine",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "date": "2026-12-08",
+   "title": "Tricare open season closes",
+   "detail": "The last day to change plans for 2027 without a qualifying life event.",
+   "topic": "army",
+   "url": "https://www.armytimes.com/pay-benefits/military-benefits/health-care-benefits/2026/11/09/check-out-new-costs-for-military-families-as-tricare-open-season-starts/"
+  }
+ ],
+ "audio": {
+  "script": "Good morning. This is the Morning Dispatch for Thursday, November twelfth.\n\nHere is the bottom line. Two days of American-brokered talks in Abu Dhabi ended with an agreement in principle on a large prisoner exchange, and with no movement toward a ceasefire. Within hours, Russia struck Kyiv with ballistic missiles and drones. On the southern front the line did not move, but Ukrainian officials are warning about a Russian buildup across the river from Kherson. And for the Army, a senior American soldier has been arrested in Britain on suspicion of helping Russian intelligence.\n\nStart with the southern front, and with Huliaipole. The Institute for the Study of War assesses that Russian forces kept attacking there on November tenth and eleventh and did not advance, while Ukrainian forces counterattacked. Ukraine's General Staff counted five Russian attacks in that sector over the past day, near Vozdvyzhivka, Verkhnia Tersa, Bilohiria and Mala Tokmachka. Russia's Defense Ministry claimed the capture of a village called Voskresenka, northwest of Huliaipole. Treat that as one side's claim. The Institute places the village about twenty seven kilometers beyond the furthest Russian advance it can verify, and calls the claim inflated.\n\nAround Orikhiv, the General Staff reported no Russian assaults at all in the past day. The one confirmed event is small. Geolocated video published on November tenth shows a Ukrainian strike on a Russian soldier northeast of Bilohiria. The Institute assesses that this followed an infiltration mission, not an advance.\n\nThe pressure in Zaporizhzhia fell on the city and the towns behind the line. Regional officials say a first person view drone injured three men in Zaporizhzhia city, after earlier hits on a truck, an apartment building and infrastructure. In the evening the power failed across Zaporizhzhia District, and critical services moved to generators. The power company said equipment was damaged and did not give a cause. And in Komyshuvakha, where a school being used for aid was bombed on November second with at least fifty five people reported killed, the emergency service says Russian forces struck the rescue teams twice more on the eighth day of the search. That is the emergency service's account, with photographs.\n\nNow Kherson. The General Staff reported no Russian assaults in the Dnipro River sector. The concern is what comes next. Kherson's governor says Russian forces used the humanitarian ceasefire around Oleshky, from October twenty seventh to November first, to retake positions they had been kept out of since last year, and to bring in drones, artillery, ammunition and rocket launchers. Ukraine's thirty fourth Marine Brigade told the Kyiv Independent the same thing, and drone video aired on November first showed equipment moving in. So that buildup is corroborated. Separately, Ukraine's southern command warns that Russia may try another landing on Quarantine Island, to gain a foothold next to Kherson's Korabel district. That is a warning from one side. In Kherson city itself, the governor reported attacks on the city and twenty three other settlements, with one person killed. Residents say the drones and the artillery came back the moment the ceasefire ended.\n\nTo the wider war. In Abu Dhabi, Russia's lead negotiator said Moscow will take every inch of what it calls its land, and ruled out any exchange of territory. The foreign minister tied a deal to the terms Putin set in June of twenty twenty four, which include Ukraine leaving four regions entirely. President Zelensky said Russian officers showed the American team a false map of the front, and that the Americans rejected it. The one result was prisoners. Jared Kushner said the sides agreed to a large exchange. Figures of one thousand and fifteen hundred a side were discussed, and a Russian general said a swap of one thousand could happen in two to three weeks.\n\nThen came the strikes. Russia hit Kyiv overnight and again in daylight. The mayor reported one person killed and eight injured. Across Ukraine, local authorities counted ten dead and forty injured in a day, including at least four at a market in Chornomorsk, near Odesa. Ukraine's Air Force said Russia launched one hundred twenty three attack drones along with ballistic missiles, and that eighty nine drones were shot down.\n\nUkraine struck back at range. Its Special Operations Forces say they hit Russia's largest oil refinery, at Omsk, about twenty five hundred kilometers from the border. They call it the deepest refinery strike of the war. The security service says it also hit oil terminals and a missile ship at the Baltic port of Ust-Luga. The Russian regional governor acknowledged fires there, so that one is confirmed.\n\nOn the rest of the front, the General Staff recorded one hundred sixty seven clashes in a day. Kostiantynivka was the hottest sector, with fourteen attacks. The Institute assesses one recent Russian gain, southeast of Dobropillia, and notes that Russia has had a net loss of territory in four of the last eight months. One more item to watch. Zelensky says speed limits on Starshield, the military version of Starlink, are back, and that they are letting some Russian drones through.\n\nTurning to the Army. British police arrested a forty one year old senior American soldier near Gloucester on November tenth, on suspicion of obtaining protected information and assisting a foreign intelligence service. Police said the country involved is Russia. The commanding general of Army Counterintelligence Command called it a sobering reminder that insider threats are real. This is an arrest on suspicion, and the reporting does not mention charges.\n\nAt the Pentagon, the defense secretary ordered an overhaul of the war colleges, with thirty three directives effective immediately. Students will be tested in war games that use artificial intelligence instead of writing long papers. New civilian professors lose lifetime tenure, and most full time faculty must have military or defense experience. For families, Tricare open season is under way and closes December eighth, with costs rising about four percent. And at Arlington on Veterans Day, a sentinel at the Tomb of the Unknown Soldier called for silence and respect as the secretary's party passed, after laughter was heard on the steps.\n\nAt Fort Knox, it is a quiet week. Contractors have started the second and larger phase of work at the Main Post Cemetery, replacing chipped headstones and resetting those that have sunk or leaned. Arlington National Cemetery is paying for it. The installation Thanksgiving meal is set for November twenty fifth.\n\nIn Europe, leaders met in Dublin and delivered one message. President Macron said Europeans will decide their own security. Chancellor Merz said Ukraine, Europe, the United States and Russia must all sit at the table. The Kremlin says it sees no format that includes Europeans. Britain announced sanctions on all ten of Russia's largest oil producers. A new analysis puts Europe's bill for Russian Arctic gas at eight point seven billion euros in ten months, more than all of last year. Allies are cooling on a NATO summit in Albania next year. Spain held its first general strike in fourteen years, with more than seventy arrests. And the Dutch coalition is under strain ahead of a tax vote.\n\nIn the days ahead, watch for the final prisoner numbers, and for what the American envoys tell Zelensky in Dublin after seeing Putin. The first window for the exchange opens around November twenty fifth.\n\nThat is the Morning Dispatch. Check the sources on the page before relying on any single claim."
+ },
+ "sources": [
+  {
+   "title": "Russian Offensive Campaign Assessment, November 11, 2026, ISW and Critical Threats",
+   "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-november-11-2026"
+  },
+  {
+   "title": "War update: 167 clashes on front line over past day, Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183975-war-update-167-clashes-on-front-line-over-past-day-kostiantynivka-sector-sees-fiercest-fighting.html"
+  },
+  {
+   "title": "Russian forces attack rescue workers in Komyshuvakha again, Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183957-russian-forces-attack-rescue-workers-in-komyshuvakha-again.html"
+  },
+  {
+   "title": "Sweeping power outage hits Zaporizhzhia District, Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183998-sweeping-power-outage-hits-zaporizhzhia-district-critical-infrastructure-running-on-generators.html"
+  },
+  {
+   "title": "Russian FPV drone strike on Zaporizhzhia leaves three injured, Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183810-russian-fpv-drone-strike-on-zaporizhzhia-leaves-three-injured.html"
+  },
+  {
+   "title": "Russian military may attempt another landing on Quarantine Island in Kherson, Ukrinform",
+   "url": "https://www.ukrinform.net/rubric-ato/4183742-russian-military-may-attempt-another-landing-on-quarantine-island-in-kherson-military-intelligence.html"
+  },
+  {
+   "title": "What Russia's military buildup during Oleshky ceasefire could mean for Kherson Oblast, Kyiv Independent",
+   "url": "https://kyivindependent.com/what-russias-military-buildup-during-oleshky-ceasefire-could-mean-for-kherson-oblast/"
+  },
+  {
+   "title": "Russian attacks kill 10, injure 40 across Ukraine over past day, Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-40-across-ukraine-over-past-day-as-peace-talks-end/"
+  },
+  {
+   "title": "Russia attacks Kyiv with ballistic missiles, drones hours after peace talks end, Kyiv Independent",
+   "url": "https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/"
+  },
+  {
+   "title": "Russia's largest oil refinery slammed by drones in 8-hour attack, Kyiv Independent",
+   "url": "https://kyivindependent.com/russias-largest-oil-refinery-slammed-by-drones-in-8-hr-attack-2-500-km-from-ukraine/"
+  },
+  {
+   "title": "UK targets all of Russia's top 10 oil producers with sanctions, Kyiv Independent",
+   "url": "https://kyivindependent.com/uk-says-its-1st-country-to-target-all-of-russias-top-10-oil-producers-with-latest-round-of-sanctions/"
+  },
+  {
+   "title": "Zelenskyy: Starlink again facing restrictions in Ukraine, Euronews",
+   "url": "https://www.euronews.com/2026/11/12/zelenskyy-starlink-again-facing-restrictions-in-ukraine-hampering-russian-drone-intercepti"
+  },
+  {
+   "title": "Europe tells Russia: Our security architecture is for us to decide, Euronews",
+   "url": "https://www.euronews.com/2026/11/12/europe-tells-russia-our-security-architecture-is-for-us-to-decide"
+  },
+  {
+   "title": "Zelenskyy to meet US envoys in Dublin after Russia peace talks, Euronews",
+   "url": "https://www.euronews.com/2026/11/12/zelenskyy-to-meet-us-envoys-in-dublin-after-russia-peace-talks"
+  },
+  {
+   "title": "EU spent 8.7bn euros on Russian Arctic LNG in 2026, Euronews",
+   "url": "https://www.euronews.com/2026/11/12/eu-spent-87bn-on-russian-arctic-lng-in-2026-as-import-ban-looms"
+  },
+  {
+   "title": "Spain grinds to a halt in first general strike in 14 years, Euronews",
+   "url": "https://www.euronews.com/2026/11/12/spain-holds-its-first-general-strike-in-14-years-amid-mass-protests-and-police-charges"
+  },
+  {
+   "title": "Albania pitches flexible NATO summit as allies sour on 2027 meeting, Politico Europe",
+   "url": "https://www.politico.eu/article/albania-pitches-flexible-nato-summit-as-allies-sour-on-2027-meeting/"
+  },
+  {
+   "title": "Crisis engulfs Dutch government ahead of crucial tax vote, Politico Europe",
+   "url": "https://www.politico.eu/article/dutch-coalition-government-hangs-thread-crucial-tax-vote-jetten-cda-pro-volt/"
+  },
+  {
+   "title": "US soldier arrested in UK for suspected espionage for Russia, Reuters via Army Times",
+   "url": "https://www.armytimes.com/news/your-army/2026/11/10/us-soldier-arrested-in-uk-for-suspected-espionage-for-russia/"
+  },
+  {
+   "title": "Hegseth to cut civilians from military service colleges, Army Times",
+   "url": "https://www.armytimes.com/pentagon/2026/11/09/hegseth-to-cut-civilians-from-military-service-colleges-wants-focus-on-victory/"
+  },
+  {
+   "title": "New costs for military families as Tricare open season starts, Army Times",
+   "url": "https://www.armytimes.com/pay-benefits/military-benefits/health-care-benefits/2026/11/09/check-out-new-costs-for-military-families-as-tricare-open-season-starts/"
+  },
+  {
+   "title": "Guard appears to rebuke Hegseth's delegation at Tomb of the Unknown Soldier, Reuters via Army Times",
+   "url": "https://www.armytimes.com/veterans/2026/11/11/guard-appears-to-rebuke-hegseths-delegation-at-tomb-of-the-unknown-soldier/"
+  },
+  {
+   "title": "Fort Knox news, army.mil",
+   "url": "https://www.army.mil/knox"
+  },
+  {
+   "title": "Annual installation Thanksgiving meal set for Nov. 25, army.mil",
+   "url": "https://www.army.mil/article/296344/"
+  }
+ ]
+}
