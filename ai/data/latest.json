@@ -1,89 +1,69 @@
 {
  "schema": 1,
  "edition": "ai",
- "date": "2026-11-13",
- "generated_at": "2026-11-13T12:45:00Z",
+ "date": "2026-11-14",
+ "generated_at": "2026-11-14T12:30:00Z",
  "lead": {
-  "headline": "Jensen Huang resigns from Nvidia; Anthropic sets its IPO price range",
-  "dek": "Colette Kress becomes interim chief executive as Congress and an outside law firm look into the founder's exit, while Anthropic's roadshow names 825 million shares at $70 to $78.",
+  "headline": "OpenAI lets agents check out with a Wallet as United blocks outside AI agents",
+  "dek": "Agent shopping launches to a limited group of US Pro subscribers the same week an airline moves to shut third-party assistants out of its booking systems.",
   "sources": [
    {
-    "name": "TechCrunch: Nvidia",
-    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+    "name": "TechCrunch: ChatGPT Wallet",
+    "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
    },
    {
-    "name": "Latent Space: AI News",
-    "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
-   },
-   {
-    "name": "Anthropic: roadshow",
-    "url": "https://www.anthropic.com/news/roadshow-launch"
+    "name": "TechCrunch: United Airlines",
+    "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/"
    }
   ]
  },
- "bottom_line": "Nvidia's board announced that Jensen Huang has resigned as chief executive, president and director, with chief financial officer Colette Kress serving as interim chief executive. Huang has agreed to testify to House committees, and Democrats opened a separate inquiry into export licences for chips sold to China. Anthropic's roadshow filing sets 825 million shares at $70 to $78 under the symbol ANT, and Thinking Machines released open weights for a 594 billion parameter model.",
+ "bottom_line": "OpenAI launched a Wallet that lets its agents complete purchases for a limited group of US Pro subscribers, while United Airlines said it will restrict outside AI agents from booking flights. Google released Gemini 4 Hydrogen as its new fast tier, and a researcher's analysis of model weights claims leading Chinese open models were trained on banned Blackwell chips. Anthropic published guidance on building safety evaluations.",
  "numbers": [
   {
-   "value": "825M",
-   "label": "Class A shares in Anthropic's proposed offering, 801 million from the company, per its roadshow notice",
+   "value": "93%",
+   "label": "Share of Claude Code permission prompts users approved, per Anthropic's telemetry",
    "source": "Anthropic",
-   "url": "https://www.anthropic.com/news/roadshow-launch"
+   "url": "https://www.anthropic.com/research/how-we-contain-claude"
   },
   {
-   "value": "$40B",
-   "label": "Planned 2027 spending by Nebius, stated on its third-quarter earnings call",
+   "value": "$3B",
+   "label": "LangChain's valuation after a $300 million Series C, announced November 13",
    "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
+   "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
   },
   {
-   "value": "1,100",
-   "label": "Public Claude Code settings files, of over 100,000 found, that held secrets, per Apiiro",
+   "value": "$1B",
+   "label": "Planned TSMC investment across Anthropic and OpenAI, per Reuters via Ars Technica",
    "source": "Ars Technica",
-   "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/"
+   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
   }
  ],
  "front": {
-  "summary": "The lab board is dominated by corporate events: an Nvidia leadership change and Anthropic's public offering terms. On the product side, Thinking Machines released open weights, Anthropic previewed self-hosted agents and Meta's Muse agent gained phone calling. Most performance numbers come from the makers or from one newsletter's roundup.",
+  "summary": "Agent commerce dominates the day: OpenAI launched a Wallet for its agents and Meta's Muse gained phone calling, while United moved to block outside agents. Google's Hydrogen release rests mostly on Google's own benchmark claims. TSMC's planned stakes and a chip-fingerprint analysis tie the labs to the hardware supply chain.",
   "sources": [
    {
-    "name": "Latent Space: AI News",
-    "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+    "name": "TechCrunch: ChatGPT Wallet",
+    "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
    },
    {
-    "name": "TechCrunch: Nvidia",
-    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+    "name": "Ars Technica: Gemini 4 Hydrogen",
+    "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
    },
    {
-    "name": "Anthropic: roadshow",
-    "url": "https://www.anthropic.com/news/roadshow-launch"
+    "name": "Ars Technica: TSMC",
+    "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
    }
   ],
   "axes": [
    {
-    "name": "Anthropic",
-    "sector": "labs",
-    "status": "confirmed",
-    "text": "Anthropic launched its roadshow, offering 825 million Class A shares at an expected $70 to $78 each, and applied to list on Nasdaq as ANT. A newsletter roundup also reports a private beta of self-hosted Claude Managed Agents and a beta of Claude Meetings.",
-    "sources": [
-     {
-      "name": "Anthropic: roadshow",
-      "url": "https://www.anthropic.com/news/roadshow-launch"
-     },
-     {
-      "name": "Latent Space: AI News",
-      "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
-     }
-    ]
-   },
-   {
     "name": "Google DeepMind",
     "sector": "labs",
     "status": "claimed",
-    "text": "DeepMind unveiled Gemini Robotics 2.5 and an open safety benchmark called ASIMOV-jailbreak. Google says success rates rose 30 to 100 percent over the prior version, and Artificial Analysis rated its new Gemini 4 Hydrogen model strong on hallucination but weaker on terminal tasks.",
+    "text": "Google released Gemini 4 Hydrogen as its new fast tier, replacing Gemini 3.8 Flash. Google says it is 2.5 times faster and cuts fabricated claims more than fivefold; Latent Space adds Artificial Analysis results that are strong on hallucination but weaker on terminal tasks.",
     "sources": [
      {
-      "name": "Ars Technica: Gemini Robotics",
-      "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
+      "name": "Ars Technica: Gemini 4 Hydrogen",
+      "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
      },
      {
       "name": "Latent Space: AI News",
@@ -94,16 +74,12 @@
    {
     "name": "OpenAI",
     "sector": "labs",
-    "status": "claimed",
-    "text": "A newsletter roundup says OpenAI launched two cyber products, Daybreak Defense Factory and Daybreak Red Team. At a developer summit, two OpenAI engineers described Codex cloud environments, voice control and personal agents.",
+    "status": "confirmed",
+    "text": "OpenAI launched ChatGPT Wallet, which lets its agents, called dots, complete purchases with a payment token. It starts with a limited number of US Pro subscribers, who approve each purchase with a security check.",
     "sources": [
      {
-      "name": "Latent Space: AI News",
-      "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
-     },
-     {
-      "name": "Latent Space: Codex workshop",
-      "url": "https://www.latent.space/p/codex-work/"
+      "name": "TechCrunch: ChatGPT Wallet",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
      }
     ]
    },
@@ -111,7 +87,7 @@
     "name": "Meta",
     "sector": "labs",
     "status": "confirmed",
-    "text": "Meta's consumer agent Muse can now place phone calls to US businesses for paid subscribers, announced by Alexandr Wang. TechCrunch notes Muse passed 10 million users last month, per the company.",
+    "text": "Meta's Muse agent can now place phone calls to US businesses for paid subscribers, announced by Alexandr Wang. TechCrunch says Muse has over 10 million users, per the company, and plans start at $20 a month.",
     "sources": [
      {
       "name": "TechCrunch: Muse calls",
@@ -120,50 +96,66 @@
     ]
    },
    {
-    "name": "Thinking Machines",
+    "name": "Anthropic",
     "sector": "labs",
-    "status": "claimed",
-    "text": "The company released Inkling 2 Small under an Apache 2.0 licence. A newsletter describes it as a mixture-of-experts model with 594 billion total and 17 billion active parameters, and reports leaderboard results from Arena.",
-    "sources": [
-     {
-      "name": "Latent Space: AI News",
-      "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
-     }
-    ]
-   },
-   {
-    "name": "Nvidia",
-    "sector": "field",
     "status": "confirmed",
-    "text": "Nvidia's board announced that Jensen Huang resigned as chief executive, president and director after reports of affairs, including one with a woman accused of being a Chinese spy. Chief financial officer Colette Kress is interim chief executive, and the company reports earnings on Tuesday.",
+    "text": "Anthropic published a guide to building strong safety evaluations, drawing on its system cards. Separately, TSMC's board reportedly approved $500 million of Anthropic stock at the expected IPO price.",
     "sources": [
      {
-      "name": "TechCrunch: Nvidia",
-      "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+      "name": "Anthropic: safety evaluations",
+      "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
      },
      {
-      "name": "Latent Space: AI News",
-      "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+      "name": "Ars Technica: TSMC",
+      "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
      }
     ]
    },
    {
-    "name": "Compute and policy",
+    "name": "NaiveAI",
+    "sector": "field",
+    "status": "claimed",
+    "text": "The Chinese company's open-weights Naive-N0.5-Flash promises about 2,100 tokens per second. Latent Space's hands-on test found its coding quality holds up against DeepSeek, at a slightly higher cost per question.",
+    "sources": [
+     {
+      "name": "Latent Space: NaiveAI test",
+      "url": "https://www.latent.space/p/naiveai/"
+     }
+    ]
+   },
+   {
+    "name": "TSMC",
     "sector": "field",
     "status": "corroborated",
-    "text": "Huang agreed to testify to House committees, and two Democrats opened an inquiry into Commerce Department chip licences. Separately, Nebius outlined $40 billion of 2027 spending, financed by customer prepayments and contract-backed loans.",
+    "text": "TSMC's board approved plans to invest up to $500 million in OpenAI preferred stock and $500 million in Anthropic shares, according to Reuters as cited by Ars Technica. The Wall Street Journal notes analysts worry about circular financing.",
     "sources": [
      {
-      "name": "TechCrunch: Huang testimony",
-      "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
-     },
+      "name": "Ars Technica: TSMC",
+      "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+     }
+    ]
+   },
+   {
+    "name": "LangChain",
+    "sector": "field",
+    "status": "claimed",
+    "text": "The agent-management startup raised a $300 million Series C at a $3 billion valuation led by CapitalG. It says it has 7,000 LangSmith customers.",
+    "sources": [
      {
-      "name": "TechCrunch: Democrats inquiry",
-      "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
-     },
+      "name": "TechCrunch: LangChain",
+      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
+     }
+    ]
+   },
+   {
+    "name": "Chinese open models",
+    "sector": "field",
+    "status": "claimed",
+    "text": "Researcher Will DePue says weights of models from DeepSeek, Moonshot AI, MiniMax and Ant Group carry fingerprints of Blackwell training. TechCrunch notes the chips could have been used in an offshore data center, so a rule may not have been broken.",
+    "sources": [
      {
-      "name": "TechCrunch: Nebius",
-      "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
+      "name": "TechCrunch: chip fingerprints",
+      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/"
      }
     ]
    }
@@ -171,198 +163,174 @@
  },
  "map_events": [
   {
-   "title": "Nvidia board announces Huang resignation",
-   "summary": "Nvidia said Jensen Huang resigned as chief executive, president and board member; Colette Kress is interim chief executive.",
-   "place": "Santa Clara, California",
-   "lat": 37.3541,
-   "lon": -121.9552,
-   "type": "other",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
-  },
-  {
-   "title": "Huang to testify to House committees",
-   "summary": "House Foreign Affairs chairman Brian Mast said Huang agreed to testify behind closed doors by Thanksgiving, per Bloomberg and NBC News.",
-   "place": "Washington, DC",
-   "lat": 38.9072,
-   "lon": -77.0369,
-   "type": "policy",
-   "status": "corroborated",
-   "date": "2026-11-12",
-   "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
-  },
-  {
-   "title": "Democrats open inquiry into chip licences",
-   "summary": "Rep. Richard Neal and Sen. Ron Wyden wrote to Commerce Secretary Howard Lutnick asking the department to preserve records on Nvidia chip sales to China.",
-   "place": "Washington, DC",
-   "lat": 38.9072,
-   "lon": -77.0369,
-   "type": "policy",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
-  },
-  {
-   "title": "FAA widens its SMART air traffic tool",
-   "summary": "The FAA said its $875 million AI scheduling advisory system will cover all 22 centers; the controllers' union says it was not consulted.",
-   "place": "Washington, DC",
-   "lat": 38.9072,
-   "lon": -77.0369,
-   "type": "policy",
-   "status": "corroborated",
-   "date": "2026-11-10",
-   "source": "Ars Technica",
-   "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
-  },
-  {
-   "title": "Anthropic launches IPO roadshow",
-   "summary": "Anthropic offered 825 million Class A shares at an expected $70 to $78 and applied to list on Nasdaq as ANT.",
-   "place": "San Francisco, California",
-   "lat": 37.7749,
-   "lon": -122.4194,
-   "type": "funding",
-   "status": "confirmed",
-   "date": "2026-11-10",
-   "source": "Anthropic",
-   "url": "https://www.anthropic.com/news/roadshow-launch"
-  },
-  {
-   "title": "AI Engineer Code Summit in San Francisco",
-   "summary": "OpenAI, Anthropic and Google DeepMind ran workshops on day one of the invitation-only coding-agent conference, which runs November 10 to 12.",
-   "place": "San Francisco, California",
-   "lat": 37.7749,
-   "lon": -122.4194,
-   "type": "other",
-   "status": "confirmed",
-   "date": "2026-11-11",
-   "source": "Latent Space",
-   "url": "https://www.latent.space/p/codex-work/"
-  },
-  {
-   "title": "Muse places phone calls for subscribers",
-   "summary": "Meta's Muse agent can call US businesses on a user's behalf; the feature is limited to paid subscribers.",
-   "place": "Menlo Park, California",
-   "lat": 37.453,
-   "lon": -122.1817,
-   "type": "release",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/"
-  },
-  {
-   "title": "Gemini Robotics 2.5 and ASIMOV-jailbreak",
-   "summary": "DeepMind says its robot model has a 30 to 100 percent higher success rate and released an open safety benchmark.",
-   "place": "Mountain View, California",
+   "title": "Google releases Gemini 4 Hydrogen",
+   "summary": "Google replaced Gemini 3.8 Flash with Hydrogen across its products; speed and accuracy figures are Google's own claims.",
+   "place": "Mountain View",
    "lat": 37.3861,
    "lon": -122.0839,
+   "type": "release",
+   "status": "claimed",
+   "date": "2026-11-12",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+  },
+  {
+   "title": "TSMC board approves AI stakes",
+   "summary": "Reuters reports TSMC approved up to $1 billion across OpenAI preferred stock and Anthropic shares.",
+   "place": "Taipei",
+   "lat": 25.033,
+   "lon": 121.5654,
+   "type": "funding",
+   "status": "corroborated",
+   "date": "2026-11-11",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+  },
+  {
+   "title": "OpenAI launches ChatGPT Wallet",
+   "summary": "Agents can complete purchases for a limited number of US Pro subscribers, with a security check on each purchase.",
+   "place": "San Francisco",
+   "lat": 37.7749,
+   "lon": -122.4194,
+   "type": "release",
+   "status": "confirmed",
+   "date": "2026-11-13",
+   "source": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
+  },
+  {
+   "title": "Anthropic publishes safety-eval guide",
+   "summary": "The post sets out recommendations for building safety evaluations, drawing on examples from Anthropic's system cards.",
+   "place": "San Francisco",
+   "lat": 37.7749,
+   "lon": -122.4194,
+   "type": "research",
+   "status": "confirmed",
+   "date": "2026-11-13",
+   "source": "Anthropic",
+   "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
+  },
+  {
+   "title": "DeepMind verifies parts of Signal",
+   "summary": "Google DeepMind researchers used an agentic framework to formally verify key guarantees of the Signal protocol in four weeks.",
+   "place": "London",
+   "lat": 51.5074,
+   "lon": -0.1278,
    "type": "research",
    "status": "claimed",
-   "date": "2026-11-10",
+   "date": "2026-11-11",
    "source": "Ars Technica",
-   "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
+   "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
   },
   {
-   "title": "Nebius data centre delay in New Jersey",
-   "summary": "Nebius said only about half of Microsoft's contracted capacity at its Vineland site arrives this year, with the rest in the second quarter of 2027.",
-   "place": "Vineland, New Jersey",
-   "lat": 39.4864,
-   "lon": -75.0257,
-   "type": "hardware",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
-  },
-  {
-   "title": "Megaspeed linked to chip-routing suspicions",
-   "summary": "US officials suspect the Singapore-based Nvidia customer of helping route advanced chips into China; an executive there is the woman at the centre of the Huang reports.",
-   "place": "Singapore",
-   "lat": 1.3521,
-   "lon": 103.8198,
+   "title": "Chip-fingerprint claim on Chinese models",
+   "summary": "A researcher says the weights of leading Chinese open models show Blackwell training; White House adviser Michael Kratsios earlier said Moonshot used banned chips.",
+   "place": "Washington, DC",
+   "lat": 38.9072,
+   "lon": -77.0369,
    "type": "policy",
    "status": "claimed",
-   "date": "2026-11-12",
+   "date": "2026-11-13",
    "source": "TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+   "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/"
+  },
+  {
+   "title": "Cristiano warns of AI takeover risk",
+   "summary": "At a Toronto lecture, OpenAI Foundation board member Paul Cristiano described a possible AI takeover and said no quantitative model supports a number.",
+   "place": "Toronto",
+   "lat": 43.6532,
+   "lon": -79.3832,
+   "type": "other",
+   "status": "claimed",
+   "date": "2026-11-13",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/"
   }
  ],
  "sections": [
   {
    "id": "models",
-   "summary": "Open weights and independent tests were the model news. Thinking Machines released a large open model, and outside testers gave a mixed picture of Google's Gemini 4 Hydrogen.",
+   "summary": "Google's Hydrogen was the day's main release, with most performance figures coming from Google. An older hands-on test covers a fast open-weights coding model.",
    "sources": [
     {
-     "name": "Latent Space: AI News",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+     "name": "Ars Technica: Gemini 4 Hydrogen",
+     "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+    },
+    {
+     "name": "Latent Space: NaiveAI test",
+     "url": "https://www.latent.space/p/naiveai/"
     }
    ],
    "items": [
     {
-     "headline": "Thinking Machines releases Inkling 2 Small as open weights",
-     "summary": "The weights come under an Apache 2.0 licence, according to a Latent Space roundup that cites the company. The model is a mixture-of-experts design with 594 billion total and 17 billion active parameters, text and image input, and up to 1 million tokens of context. The roundup reports it as the top US open model on the Code Arena WebDev leaderboard.",
-     "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
-     "published": "2026-11-13",
+     "headline": "Google releases Gemini 4 Hydrogen to replace Gemini 3.8 Flash",
+     "summary": "Google says Hydrogen is 2.5 times faster than the model it replaces and cuts fabricated claims more than fivefold. API pricing is $1.50 per million input tokens and $7.50 per million output, per Ars Technica. Latent Space adds independent Artificial Analysis results that are strong on hallucination but weaker on terminal tasks.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+     "published": "2026-11-12",
      "status": "claimed"
     },
     {
-     "headline": "Independent tests give Gemini 4 Hydrogen mixed marks",
-     "summary": "Artificial Analysis scored Hydrogen at 54 on its index at the highest thinking level, one point behind two rival models, and reported an 8 percent hallucination rate. It scored 54 percent on Terminal-Bench 4.0, below the 64 percent it reported for Claude Sonnet 5.5. Testers also reported runaway reasoning on some prompts.",
+     "headline": "From November 10: Latent Space tests NaiveAI's fast open coding model",
+     "summary": "NaiveAI's Naive-N0.5-Flash is an open-weights model tuned for speed, promising about 2,100 tokens per second. Latent Space's reviewer found its coding quality holds up against DeepSeek and GLM, at a slightly higher cost per question.",
      "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
-     "published": "2026-11-13",
-     "status": "claimed"
-    },
-    {
-     "headline": "Perplexity adds span-locating to its open Decider models",
-     "summary": "Perplexity released Decider v1.3 as open weights, adding a locate function that returns span positions for tasks such as entity recognition and personal-data detection. Perplexity says it is 6.54 points more accurate than its production classifiers across 63 tasks. The models are free on OpenRouter for one week, the roundup says.",
-     "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
-     "published": "2026-11-13",
+     "url": "https://www.latent.space/p/naiveai/",
+     "published": "2026-11-10",
      "status": "claimed"
     }
    ]
   },
   {
    "id": "research",
-   "summary": "Research items this edition come with caveats attached. A robotics result is a lab figure, a chip-tracing claim is disputed, and a new engineering benchmark was built by a company that sells to labs.",
+   "summary": "Findings range from a verification milestone to a contested claim about chips behind Chinese models. Each comes with limits stated by its authors or reporters.",
    "sources": [
     {
-     "name": "Ars Technica: Gemini Robotics",
-     "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
+     "name": "Ars Technica: Signal verification",
+     "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
     },
     {
-     "name": "Latent Space: AI News",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+     "name": "TechCrunch: chip fingerprints",
+     "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/"
+    },
+    {
+     "name": "Anthropic: safety evaluations",
+     "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
+    },
+    {
+     "name": "Ars Technica: Cristiano lecture",
+     "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/"
     }
    ],
    "items": [
     {
-     "headline": "From November 10: DeepMind says Gemini Robotics 2.5 handles finer tasks",
-     "summary": "Google DeepMind reports a 30 to 100 percent higher success rate than the prior version, tested on more than 200 activities. Humanoid robots using it kitted car parts in European Mercedes-Benz factories with a 96 percent success rate, and a DeepMind director called closing the last 4 percent a steep road. DeepMind also released an open safety benchmark, ASIMOV-jailbreak.",
-     "source": "Ars Technica",
-     "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/",
-     "published": "2026-11-10",
-     "status": "claimed"
-    },
-    {
-     "headline": "Researcher says weight patterns show Chinese models trained on Blackwell chips",
-     "summary": "Will Depue reports that initialization patterns in released weights identify the GPU type used, and says six Chinese models, including DeepSeek-V4-Pro and Kimi K3, started on Blackwell systems. Critics quoted in the roundup say the scale is small against China's installed compute and that the use was already known. Depue's work is not independently confirmed on the record.",
-     "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+     "headline": "Researcher says Chinese open models bear Blackwell fingerprints",
+     "summary": "Will DePue of Unemployment Labs analysed weights from DeepSeek, Moonshot AI, MiniMax and Ant Group and says they show Blackwell training. TechCrunch notes the chips could have run in an offshore data center, so export rules may not have been broken.",
+     "source": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
      "published": "2026-11-13",
      "status": "claimed"
     },
     {
-     "headline": "Mercor benchmark ranks models on long engineering projects",
-     "summary": "Mercor's OWE-Bench has 26 long-horizon engineering projects. Mercor reports Fable 5.2 at 54.6 percent, GPT-6 Astra at 44.2 percent and Opus 5.5 at 41.6 percent. The roundup notes more than 200 million tokens per problem, and the scores are the benchmark owner's own.",
-     "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+     "headline": "Anthropic sets out how to build strong safety evaluations",
+     "summary": "The post recommends matching the design to the question, measuring appropriate responses rather than refusals, and testing multi-turn conversations. It draws on examples from Anthropic's own system cards.",
+     "source": "Anthropic",
+     "url": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+     "published": "2026-11-13",
+     "status": "confirmed"
+    },
+    {
+     "headline": "From November 11: DeepMind formally verifies parts of the Signal protocol",
+     "summary": "Researchers used an agentic framework called AlphaProof Code to verify key guarantees in four weeks and found no new flaws in the covered parts. They say the work is limited in scope and much remains before it scales.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/",
+     "published": "2026-11-11",
+     "status": "claimed"
+    },
+    {
+     "headline": "OpenAI board member Cristiano describes takeover risk in a lecture",
+     "summary": "Paul Cristiano, who sits on the OpenAI Foundation board, said an AI accident is the likeliest cause of death for most of the audience. He admitted no quantitative model supports a probability, so the figures are his own estimate.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/",
      "published": "2026-11-13",
      "status": "claimed"
     }
@@ -370,11 +338,15 @@
   },
   {
    "id": "builders",
-   "summary": "Agent products moved toward self-hosting and phone calls, while a security researcher showed an AI app builder exposing thousands of shared projects. The pattern is more autonomy shipped alongside more questions about access and sharing.",
+   "summary": "Agents moved toward payments and phone calls, and one major company moved to keep outside agents out. A coding agent's sharing links added a security lesson.",
    "sources": [
     {
-     "name": "Latent Space: AI News",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+     "name": "TechCrunch: ChatGPT Wallet",
+     "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
+    },
+    {
+     "name": "TechCrunch: United Airlines",
+     "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/"
     },
     {
      "name": "TechCrunch: Muse calls",
@@ -387,32 +359,32 @@
    ],
    "items": [
     {
-     "headline": "Anthropic previews self-hosted Claude Managed Agents",
-     "summary": "A private beta lets customers run the agent harness, sandboxes and session history in their own cloud or on their own servers, and choose where Claude requests go, according to the ClaudeDevs account cited by Latent Space. The roundup says it adds agent identity, telemetry, kill switches and an evaluation product.",
-     "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
+     "headline": "OpenAI launches ChatGPT Wallet for agent purchases",
+     "summary": "OpenAI's agents, called dots, can complete purchases using a payment token rather than raw card details. It starts with a limited number of US Pro subscribers, who approve each purchase with a security check.",
+     "source": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
      "published": "2026-11-13",
-     "status": "claimed"
+     "status": "confirmed"
     },
     {
-     "headline": "Claude Meetings enters beta for Team and Enterprise plans",
-     "summary": "The feature lets Claude join video calls and build documents and whiteboards in real time, according to the Claude account as cited by Latent Space. The roundup ranks the announcement as the most-engaged post of the day, at 59.3 thousand.",
-     "source": "Latent Space",
-     "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/",
-     "published": "2026-11-13",
-     "status": "claimed"
+     "headline": "United Airlines moves to block third-party AI agents from booking",
+     "summary": "United said sharing credentials with outside AI assistants can lead to unintended purchases and may conflict with federal check-in rules. It will restrict access directly and through travel agencies and aggregators.",
+     "source": "TechCrunch",
+     "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+     "published": "2026-11-12",
+     "status": "confirmed"
     },
     {
-     "headline": "Meta's Muse agent can phone US businesses for paying users",
-     "summary": "Alexandr Wang, Meta's chief AI officer, announced the feature on November 12 after a September test. Plans start at $20 a month. TechCrunch notes some businesses hang up when they detect an AI caller.",
+     "headline": "Meta's Muse agent can now call US businesses for paying users",
+     "summary": "Alexandr Wang, Meta's chief AI officer, announced the feature for paid US subscribers. Muse plans start at $20 a month, and Meta says the agent has over 10 million users.",
      "source": "TechCrunch",
      "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
      "published": "2026-11-12",
      "status": "confirmed"
     },
     {
-     "headline": "From November 10: Grok Build share links expose thousands of projects",
-     "summary": "Security firm Claroc says the share links of the coding agent from SpaceXSI can be enumerated, exposing business data from thousands of apps, including 24 built by SpaceXSI itself. Ars Technica reports the company began removing its own links within hours of being asked questions.",
+     "headline": "From November 10: Claroc reports Grok Build sharing links expose user data",
+     "summary": "Claroc says shared Grok Build apps could be enumerated, exposing business and personal data, including from 24 SpaceXSI apps. SpaceXSI began removing the links after Ars Technica sent questions.",
      "source": "Ars Technica",
      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
      "published": "2026-11-10",
@@ -422,68 +394,32 @@
   },
   {
    "id": "industry",
-   "summary": "Nvidia's leadership change dominates, with Congress and Democrats both opening lines of inquiry. Elsewhere, Anthropic put numbers on its offering, Nebius laid out a large spending plan and the FAA widened an AI scheduling tool.",
+   "summary": "Money flowed toward the labs and their tooling: TSMC planned stakes in two labs and LangChain doubled its valuation. Analysts quoted by the Wall Street Journal cautioned about circular financing.",
    "sources": [
     {
-     "name": "TechCrunch: Nvidia",
-     "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+     "name": "Ars Technica: TSMC",
+     "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
     },
     {
-     "name": "Anthropic: roadshow",
-     "url": "https://www.anthropic.com/news/roadshow-launch"
-    },
-    {
-     "name": "TechCrunch: Nebius",
-     "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
+     "name": "TechCrunch: LangChain",
+     "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
     }
    ],
    "items": [
     {
-     "headline": "Nvidia names Colette Kress interim chief after Huang resigns",
-     "summary": "Nvidia's board said Huang left as president, chief executive and director effective immediately. Kress, chief financial officer since 2013, keeps that job while leading the company. Latent Space reports the board has opened a search and named Harvey Jones its first chair.",
-     "source": "TechCrunch",
-     "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
-     "published": "2026-11-12",
-     "status": "confirmed"
-    },
-    {
-     "headline": "Huang agrees to testify to House committees by Thanksgiving",
-     "summary": "House Foreign Affairs chairman Brian Mast said Huang agreed on Wednesday to appear after lawmakers threatened a subpoena, according to Bloomberg and NBC News. The session will be closed to the public but recorded and transcribed.",
-     "source": "TechCrunch",
-     "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
-     "published": "2026-11-12",
+     "headline": "From November 11: TSMC plans up to $1 billion in OpenAI and Anthropic",
+     "summary": "Reuters reports the board approved up to $500 million of OpenAI preferred stock and $500 million of Anthropic shares at the expected IPO price. The Wall Street Journal quotes analysts warning that circular financing obscures real demand.",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
+     "published": "2026-11-11",
      "status": "corroborated"
     },
     {
-     "headline": "Neal and Wyden open an inquiry into how chip licences were handled",
-     "summary": "The two Democrats asked Commerce Secretary Howard Lutnick to preserve records on the arrangement under which H200 chips were routed through the United States and taxed before export to China. They allege the arrangement is illegal; as minority members they cannot compel answers.",
+     "headline": "LangChain raises $300 million at a $3 billion valuation",
+     "summary": "CapitalG led the Series C, more than double the company's valuation a year ago. LangChain says it has 7,000 LangSmith customers, including Nvidia, Toyota and Salesforce.",
      "source": "TechCrunch",
-     "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-     "published": "2026-11-12",
-     "status": "claimed"
-    },
-    {
-     "headline": "From November 10: Anthropic offers 825 million shares in its IPO",
-     "summary": "Anthropic said 801,351,354 shares come from the company and 23,648,646 from existing stockholders at an expected $70 to $78 each. It applied to list on Nasdaq as ANT, and underwriters hold an option on 123,750,000 more shares.",
-     "source": "Anthropic",
-     "url": "https://www.anthropic.com/news/roadshow-launch",
-     "published": "2026-11-10",
-     "status": "confirmed"
-    },
-    {
-     "headline": "Nebius plans $40 billion of 2027 spending as site delays persist",
-     "summary": "The neocloud company said on its earnings call it will fund the buildout with customer prepayments and loans backed by contracts. Only about half of the Microsoft capacity at its Vineland, New Jersey site is due this year, and its chief executive said delays affect the industry.",
-     "source": "TechCrunch",
-     "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
-     "published": "2026-11-12",
-     "status": "confirmed"
-    },
-    {
-     "headline": "FAA extends its SMART scheduling tool to every air traffic centre",
-     "summary": "The FAA says the $875 million system rerouted 180 flights in Washington airspace since September 21, saving about 10 minutes per flight, and will now cover all 22 centres. These are the agency's figures. The controllers' union says it was not involved in the design or testing.",
-     "source": "Ars Technica",
-     "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
-     "published": "2026-11-12",
+     "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+     "published": "2026-11-13",
      "status": "claimed"
     }
    ]
@@ -491,15 +427,8 @@
  ],
  "upcoming": [
   {
-   "date": "2026-11-17",
-   "title": "Nvidia reports quarterly earnings",
-   "detail": "The first report under interim chief executive Colette Kress, who is expected to say more about plans for the company.",
-   "topic": "industry",
-   "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
-  },
-  {
    "date": "2026-11-18",
-   "title": "Anthropic IPO reportedly prices",
+   "title": "Anthropic IPO pricing reportedly set",
    "detail": "Latent Space cites a post saying pricing is set for next Wednesday; Anthropic's own notice gives only the expected $70 to $78 range.",
    "topic": "industry",
    "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
@@ -507,151 +436,158 @@
   {
    "date": "2026-11-26",
    "title": "Huang due to testify by Thanksgiving",
-   "detail": "Closed-door testimony to House committees, which are expected to record and transcribe it.",
+   "detail": "Closed-door testimony to House committees, expected to be recorded and transcribed, per Chairman Brian Mast.",
    "topic": "industry",
    "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
   },
   {
    "date": "2026-12-01",
    "title": "Gemini Carbon and Argon prices reportedly double",
-   "detail": "The roundup says Simon Willison notes both models reportedly double in price on December 1, which affects how Hydrogen's discount compares.",
+   "detail": "Ars Technica says the prices rise from $2 and $10 to $4 and $20 next month; Latent Space dates it December 1.",
    "topic": "models",
-   "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+   "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
   }
  ],
  "explainer": {
-  "title": "What a mixture-of-experts model is, and what 'active parameters' means",
-  "text": "A mixture-of-experts model is built from several expert networks plus a gating function. For each input, the gate produces weights that decide how much each expert contributes, and the outputs are combined into one answer. Wikipedia describes the idea as dividing a problem into regions, with different experts covering different regions.\n\nThis is why model announcements often quote two sizes. A newsletter describes Thinking Machines' Inkling 2 Small as 594 billion total and 17 billion active parameters. Total counts every expert; active counts the part used at a time. When you compare models, check which of the two figures a company is quoting before drawing conclusions from the headline number.",
+  "title": "What a system one model is, and how it differs from a chatbot",
+  "text": "A system one model does not write paragraphs. It returns a structured choice, a score or a probability, for example which category a request belongs to. Latent Space describes these as non-generative models that are typically much faster and cheaper than reasoning language models, which it calls system two models.\n\nAt this week's AI Engineer Code Summit, speakers argued these models belong inside application code, where a program needs a reliable decision rather than a long answer. Diogo Almeida of TypeSafe AI said language models can be brilliant most of the time and poor the rest, which is hard to automate around.\n\nChinmay Goyal of Glean said the company uses such models next to language models and does not need to fine-tune them again when its categories change.",
   "sources": [
    {
-    "name": "Wikipedia: Mixture of experts",
-    "url": "https://en.wikipedia.org/wiki/Mixture_of_experts"
-   },
-   {
-    "name": "Latent Space: Inkling 2 Small",
-    "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
+    "name": "Latent Space: system one models",
+    "url": "https://www.latent.space/p/jev-revolution/"
    }
   ]
  },
  "playbook": [
   {
-   "title": "Quiz yourself on the agent's patch before you accept it",
-   "who": "Mihail Eric, who teaches The Modern Software Developer at Stanford and leads AI at Monaco",
-   "summary": "Eric argues that understanding the change is now the bottleneck, since an agent can write a feature in an afternoon. He points to Geoffrey Litt's explain-diff skill, which turns a change into a visual walkthrough and then quizzes you on it. Use it on any patch your agent just produced.",
+   "title": "Score whole conversations against an expert rubric, not single refusals",
+   "who": "Anthropic, in its post on building strong safety evaluations",
+   "summary": "A refusal rate can reward a model that simply declines everything. Anthropic recommends judging whether the model behaved appropriately across a whole simulated conversation, using a rubric written by domain experts. Use it when you test any assistant for risky topics.",
    "steps": [
-    "Run an explain-diff style skill on the change the agent just wrote, to get a walkthrough of what changed.",
-    "Answer the quiz questions without looking at the code, and note which question makes you reopen it.",
-    "Spend your review time on the parts you could not answer from the walkthrough.",
-    "Give background agents a workspace where they can run the product, reproduce a failure and test their patch before you review."
+    "Have a domain expert write a rubric for the risk area that defines an appropriate response.",
+    "Pair harmful prompts with benign ones on the same topic to catch over-refusal.",
+    "Fix the first user turn and let a model play the user for later turns.",
+    "Fail the whole conversation if any single turn goes wrong.",
+    "Run the evals in a sandbox with no internet and monitor them live."
+   ],
+   "source": "Anthropic",
+   "url": "https://www.anthropic.com/research/building-strong-safety-evaluations",
+   "published": "2026-11-13"
+  },
+  {
+   "title": "Call a fast classifier model inside your code when you need a decision",
+   "who": "Diogo Almeida, co-founder and CEO of TypeSafe AI, and Chinmay Goyal of Glean",
+   "summary": "Reasoning models are slow and sometimes unreliable for simple decisions. System one models return a choice, score or probability quickly and cheaply, so they can sit inside ordinary code. Use them for routing, labelling and extraction, and keep language models for open-ended writing.",
+   "steps": [
+    "Pick a decision in your app that currently relies on a long prompt, such as routing or labelling.",
+    "Replace it with a call to a system one model that returns a structured choice or score.",
+    "Keep that call inside your application code so the result drives normal program logic.",
+    "When your categories change, change the label set instead of fine-tuning again, as Glean describes."
    ],
    "source": "Latent Space",
-   "url": "https://www.latent.space/p/cs146s/",
-   "published": "2026-11-08"
+   "url": "https://www.latent.space/p/jev-revolution/",
+   "published": "2026-11-12"
   },
   {
-   "title": "Use voice as a control plane for your coding agents",
-   "who": "Dominik Kundel and Charlie Guo, Developer Experience engineers at OpenAI",
-   "summary": "At the AI Engineer Code Summit, the two described using voice for more than dictation. Guo treats it as a way to manage the whole set of agent threads, and Kundel hands local work to the cloud and starts tasks from a personal agent before he reaches his desk.",
+   "title": "Reproduce a paper's claim yourself with its published prompts and a local model",
+   "who": "Simon Willison, on his weblog",
+   "summary": "When a hot paper makes a big claim, run its published prompts against a model on your own machine. Willison did this with a paper's grid-game weights using the llm tool and Qwen 3.8 27B. Treat claims about raw reading and claims about tool use as separate questions.",
    "steps": [
-    "Use voice to check in on running threads, start new ones and pull data from other apps, not only to dictate prompts.",
-    "Ask your local Codex to hand a task to a cloud environment when you want it to keep running without your laptop.",
-    "Turn the effort level down when a task does not need heavy reasoning.",
-    "Ask the agents themselves for help with the tool, and do not get attached to your current way of working."
-   ],
-   "source": "Latent Space",
-   "url": "https://www.latent.space/p/codex-work/",
-   "published": "2026-11-11"
-  },
-  {
-   "title": "Keep Claude Code's local settings file out of git and use auto mode",
-   "who": "Boris Cherny, Claude Code at Anthropic, quoted by Ars Technica",
-   "summary": "Researchers at Apiiro found over 100,000 public repositories containing the file where Claude Code stores approved shell commands, and about 1,100 held secrets. Cherny's advice, given in a Hacker News thread, is to avoid checking the file in and to let auto mode handle routine permission prompts.",
-   "steps": [
-    "Do not commit the local settings file, which Cherny says should pretty much never be checked in.",
-    "Use auto mode, which routes routine permission prompts through classifiers, instead of hand-maintaining allow and deny lists.",
-    "Run a secret scanner over your repositories, remembering Apiiro found 215 secrets that two popular scanners missed."
-   ],
-   "source": "Ars Technica",
-   "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
-   "published": "2026-11-09"
-  },
-  {
-   "title": "From October: Name the library, then tell the model to make it more fun",
-   "who": "Simon Willison, developer and author of Simon Willison's Weblog",
-   "summary": "Included from October 28 because it is the clearest recent write-up of prompts that produced playable browser games. Willison says telling models to use three.js works well, and that a follow-up asking for much more fun improved his results.",
-   "steps": [
-    "Name the technology you want, such as three.js, in the first prompt.",
-    "State the quality bar in the prompt, for example asking the model to think hard about making the result both fun and beautiful.",
-    "After a working first build, send a plain follow-up such as asking it to make the result a lot more fun."
+    "Find the prompt files in the paper's repository and pass a prompt URL to the llm tool with its fragment option.",
+    "Load the local model with a long context window, since the default 8192 failed with errors.",
+    "Raise the timeout for the run, because one answer took 46 minutes.",
+    "Judge the no-tools question separately from what the model can do once it has code execution."
    ],
    "source": "Simon Willison's Weblog",
-   "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
-   "published": "2026-10-28"
+   "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+   "published": "2026-11-03"
+  },
+  {
+   "title": "From May: Cap an agent's blast radius with a sandbox instead of more approval prompts",
+   "who": "Anthropic engineers, in How we contain Claude across products",
+   "summary": "Anthropic found users approved roughly 93% of permission prompts, so oversight wore thin. It recommends restricting what an agent can reach. Still worth reading because it covers pre-trust configuration risks that newer agent tools repeat.",
+   "steps": [
+    "Run the agent in a sandbox that allows workspace writes and denies network access by default.",
+    "Keep credentials out of the sandbox so they cannot be exfiltrated.",
+    "Give agents read-only access where possible instead of write access to production.",
+    "Defer parsing project-local settings until the user accepts the trust prompt."
+   ],
+   "source": "Anthropic",
+   "url": "https://www.anthropic.com/research/how-we-contain-claude",
+   "published": "2026-05-25"
   }
  ],
  "audio": {
-  "script": "This is The A I Dispatch for Friday, November thirteenth, twenty twenty six. The bottom line. Nvidia announced that Jensen Huang has resigned as chief executive, president and board member, and chief financial officer Colette Kress is interim chief executive. Congress and two Democrats have opened separate lines of inquiry, and Anthropic's roadshow names its share count and price range.\n\nStart with the models. Thinking Machines released Inkling 2 Small as open weights under an Apache two point oh licence. A Latent Space roundup describes it as a mixture of experts model with five hundred ninety four billion total parameters and seventeen billion active. The same roundup reports that it ranks as the top American open model on the Code Arena web development leaderboard. That is a leaderboard result relayed by one newsletter, so treat it as a claim.\n\nIndependent testing of Google's Gemini 4 Hydrogen gave a mixed picture. Artificial Analysis scored it fifty four at the highest thinking level, one point behind two rivals, with an eight percent hallucination rate. On Terminal Bench four point oh it scored fifty four percent, below the sixty four percent reported for Claude Sonnet five point five. Some testers also saw runaway reasoning on certain prompts. Perplexity also released open Decider models that can now return the positions of spans in text. Perplexity says they are six point five four points more accurate than its production classifiers across sixty three tasks.\n\nNow research. From November tenth, Google DeepMind says Gemini Robotics two point five has a thirty to one hundred percent higher success rate than the last version. In European Mercedes Benz factories, humanoid robots using it kitted car parts with a ninety six percent success rate. A DeepMind director called closing the last four percent a steep road. Separately, researcher Will Depue says patterns in released model weights show six Chinese models started training on Blackwell chips. Critics say the scale is small and the use was already known. And Mercor, which owns a new engineering benchmark, reports that Fable five point two scored fifty four point six percent, ahead of two rival models. Those scores come from the benchmark's owner.\n\nOn tools and builders, Anthropic is previewing self hosted Claude Managed Agents, so customers can run the harness and sandboxes in their own cloud. It has also put Claude Meetings into beta for Team and Enterprise plans. Meta's Muse agent can now phone United States businesses for paying users, and plans start at twenty dollars a month. A caution from November tenth: security firm Claroc says share links from the Grok Build coding agent can be enumerated, exposing business data from thousands of apps.\n\nIn industry and policy, Nvidia's board said Huang left effective immediately, after reports of affairs including one with a woman accused of being a Chinese spy. Kress has been chief financial officer since twenty thirteen. House Foreign Affairs chairman Brian Mast said Huang agreed to testify behind closed doors by Thanksgiving. Representative Richard Neal and Senator Ron Wyden asked Commerce Secretary Howard Lutnick to preserve records on how chip licences for China were handled. As minority members, they cannot compel answers.\n\nAnthropic's roadshow offers eight hundred twenty five million Class A shares at an expected seventy to seventy eight dollars each, and it has applied to list on Nasdaq as A N T. Nebius outlined forty billion dollars of spending for twenty twenty seven, funded by customer prepayments and contract backed loans. And the F A A says its eight hundred seventy five million dollar scheduling tool will now cover all twenty two air traffic centres. Those figures are the agency's own, and the controllers' union says it was not consulted.\n\nNow the Playbook, four techniques from people who build these tools.\n\nOne. From Mihail Eric, who teaches at Stanford and leads A I at Monaco. Quiz yourself on the agent's patch before you accept it. Run an explain diff skill on the change, answer its questions without looking at the code, and spend your review time on the question that sent you back into the code.\n\nTwo. From Dominik Kundel and Charlie Guo, developer experience engineers at OpenAI. Use voice as a control plane. Use it to check in on threads, start new ones and hand work to the cloud, and turn the effort level down when a task is simple.\n\nThree. From Boris Cherny of Claude Code. Do not commit the local settings file, use auto mode instead of hand kept allow and deny lists, and run a secret scanner, knowing that researchers found secrets two popular scanners missed.\n\nFour. From October, Simon Willison. Name the library in your first prompt, say you want the result fun and beautiful, then follow up asking for a lot more fun.\n\nLearn one thing. A mixture of experts model has several expert networks and a gating function that decides how much each contributes to an answer. That is why announcements quote two sizes. Total counts every expert. Active counts the part used at a time. Check which one a company is quoting.\n\nThe days ahead. Nvidia reports earnings on Tuesday, November seventeenth. Anthropic's offering is reportedly set to price on Wednesday, November eighteenth. Huang is due to testify by Thanksgiving, November twenty sixth. And on December first, Gemini Carbon and Argon prices reportedly double. That is The A I Dispatch."
+  "script": "Saturday, November 14, 2026. This is The A I Dispatch.\n\nThe bottom line. Software agents are starting to spend money, and to be turned away at the door. OpenAI launched a wallet that lets its agents check out on a user's behalf, while United Airlines said it will block outside A I agents from booking flights. Google shipped Gemini 4 Hydrogen, and a new research claim says some of China's leading open models bear the fingerprints of banned Nvidia chips.\n\nModels first. Google released Gemini 4 Hydrogen, which replaces Gemini 3.8 Flash across its products. According to Ars Technica, Google says it is two and a half times faster than the model it replaces and produces more than five times fewer fabricated claims. Those are Google's own figures. The newsletter Latent Space adds independent measurements from Artificial Analysis, which rated the model strong on hallucination but weaker than two rivals on a terminal coding test. A P I pricing is one dollar fifty per million input tokens and seven dollars fifty per million output tokens. Separately, from November tenth, Latent Space tested a new open weights coding model from a company called Naive A I, which promises very high speed. Its reviewer found the coding quality holds up against DeepSeek, at a slightly higher cost per question.\n\nResearch. A report from November eleventh says Google DeepMind used an agent to formally verify key cryptographic guarantees in the Signal protocol in four weeks. The work found no new flaws in the parts it covered, and the researchers say there is a long way to go before this scales. Also today, TechCrunch reports that a researcher named Will DePue analysed the weights of open models from DeepSeek, Moonshot, MiniMax and Ant Group, and found evidence of training on Blackwell chips, which are banned from export to China. The article notes the chips could have been used in an offshore data center, so a rule may not have been broken. Anthropic published guidance on building strong safety evaluations, and it is also the source of one of today's playbook techniques. And Ars Technica covers a lecture in which Paul Cristiano, a member of the OpenAI Foundation board, said he sees a meaningful risk of an A I takeover. He also said there is no quantitative model behind the number.\n\nTools and builders. OpenAI's new ChatGPT Wallet lets its agents, called dots, complete purchases. It is limited at first to some US Pro subscribers, and users approve each purchase with a fingerprint or face check. Meta's Muse agent can now place phone calls to US businesses for paying subscribers. On the other side, United Airlines said it will restrict unauthorized third party A I agents from booking and managing flights, citing security risks and federal rules. And from November tenth, security firm Claroc reported that shared apps built with Grok Build were exposing private data, including from SpaceXSI itself. The company began removing the links after Ars Technica sent questions.\n\nPolicy and industry. From November eleventh, Reuters reported, through Ars Technica, that TSMC's board approved plans to invest up to one billion dollars across Anthropic and OpenAI. Analysts quoted by the Wall Street Journal warned that circular financing makes real demand hard to judge. LangChain raised a three hundred million dollar Series C at a three billion dollar valuation, and says it has seven thousand customers of its LangSmith product.\n\nNow the playbook, four techniques from people who build these tools.\n\nOne. From Anthropic, in its post on safety evaluations: score whole conversations, not single replies. Have domain experts write a rubric, pair harmful prompts with harmless ones on the same topic, simulate multi turn chats, and fail the whole conversation if any turn goes wrong.\n\nTwo. From Diogo Almeida of Type Safe A I, and Glean's Chinmay Goyal: call a fast system one model inside your code when you need a choice, a score or a probability, and keep large language models for open ended writing.\n\nThree. From Simon Willison: test a paper's claim yourself. Feed the paper's published prompts to a local model with the L L M command line tool, raise the context window above the default, and raise the timeout, because a single run can take close to an hour.\n\nFour, from May, from Anthropic's engineers: limit what an agent can reach with a sandbox. Keep credentials out of it, deny network access by default, and do not read project settings until the user trusts the folder.\n\nLearn one thing. A system one model does not write text. It returns a structured choice, a score or a probability, and it is usually much faster and cheaper than a reasoning model. At the Latent Space code summit this week, speakers argued these models belong inside application code, so that software can make reliable decisions. Glean said it uses one next to large language models and does not need to retrain it when its categories change.\n\nThe days ahead. Reports say Anthropic's share pricing is set for next Wednesday, November eighteenth, though Anthropic's own notice gives only the expected range of seventy to seventy eight dollars. Jensen Huang has agreed to testify to House committees by Thanksgiving, November twenty sixth. And Google's Carbon and Argon models are reported to double in price on December first.\n\nThat is the brief for Saturday, November fourteenth."
  },
  "sources": [
   {
-   "title": "Jensen Huang is out at Nvidia, TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+   "title": "Google rolls out Gemini 4 Hydrogen, Ars Technica",
+   "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
   },
   {
-   "title": "Jensen Huang resigns after 33 years leading NVIDIA, Latent Space",
+   "title": "ChatGPT's new Wallet lets AI agents shop, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
+  },
+  {
+   "title": "United Airlines blocks AI agents, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/"
+  },
+  {
+   "title": "TSMC to invest $1B in Anthropic, OpenAI, Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/"
+  },
+  {
+   "title": "Export-banned Nvidia chips behind China's models, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/"
+  },
+  {
+   "title": "Building strong safety evaluations, Anthropic",
+   "url": "https://www.anthropic.com/research/building-strong-safety-evaluations"
+  },
+  {
+   "title": "Latent Space AI News, November 13",
    "url": "https://www.latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
   },
   {
-   "title": "Anthropic launches roadshow for proposed IPO, Anthropic",
-   "url": "https://www.anthropic.com/news/roadshow-launch"
+   "title": "The Jev Revolution, Latent Space",
+   "url": "https://www.latent.space/p/jev-revolution/"
   },
   {
-   "title": "Jensen Huang agrees to testify before Congress, TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
+   "title": "Qwen 3.8 27B can interpret model weights, Simon Willison",
+   "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
   },
   {
-   "title": "Democrats launch Nvidia investigation, TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+   "title": "How we contain Claude across products, Anthropic",
+   "url": "https://www.anthropic.com/research/how-we-contain-claude"
   },
   {
-   "title": "Nebius tests the neocloud playbook, TechCrunch",
-   "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
+   "title": "Signal verified by DeepMind, Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/"
   },
   {
-   "title": "Muse can now place calls to US businesses, TechCrunch",
+   "title": "LangChain hits $3B valuation, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
+  },
+  {
+   "title": "Muse can place calls, TechCrunch",
    "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/"
   },
   {
-   "title": "DeepMind reveals Gemini Robotics 2.5, Ars Technica",
-   "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
-  },
-  {
-   "title": "Grok Build coding agent leaks confidential info, Ars Technica",
+   "title": "Grok Build leaks, Ars Technica",
    "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/"
   },
   {
-   "title": "FAA expands AI advice to manage air traffic, Ars Technica",
-   "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
+   "title": "NaiveAI coding test, Latent Space",
+   "url": "https://www.latent.space/p/naiveai/"
   },
   {
-   "title": "Claude Code is accidentally exposing secrets on GitHub, Ars Technica",
-   "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/"
+   "title": "OpenAI board member warns of takeover, Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/"
   },
   {
-   "title": "How Stanford Teaches AI-Native Engineering, Latent Space",
-   "url": "https://www.latent.space/p/cs146s/"
-  },
-  {
-   "title": "AI Engineer Code Summit: OpenAI on Codex, Latent Space",
-   "url": "https://www.latent.space/p/codex-work/"
-  },
-  {
-   "title": "The October inflection point for vibe game development, Simon Willison",
-   "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/"
-  },
-  {
-   "title": "Mixture of experts, Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Mixture_of_experts"
+   "title": "Huang agrees to testify, TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/"
   }
  ]
 }
